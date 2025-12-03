@@ -11,6 +11,7 @@
 <!-- Social Badges -->
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourprofile)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your.email@example.com)
+[![YouTube Music](https://img.shields.io/badge/YouTube%20Music-FF0000?style=for-the-badge&logo=youtube-music&logoColor=white)](https://music.youtube.com)
 [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/O-2wice)
 
 <img src="https://komarev.com/ghpvc/?username=O-2wice&style=for-the-badge&color=blue" alt="Profile Views"/>
@@ -37,6 +38,14 @@ class DataScientist:
 
 me = DataScientist()
 `
+
+---
+
+## GitHub Trophies
+
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=O-2wice&theme=tokyonight&no-frame=true&no-bg=true&column=7&margin-w=15&margin-h=15" alt="GitHub Trophies"/>
+</div>
 
 ---
 
@@ -102,6 +111,15 @@ me = DataScientist()
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=O-2wice&theme=tokyonight&hide_border=true&border_radius=10" alt="GitHub Streak"/>
 </div>
 
+<!-- Contribution Snake Animation -->
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/O-2wice/O-2wice/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/O-2wice/O-2wice/output/github-snake.svg" />
+    <img alt="github-snake" src="https://raw.githubusercontent.com/O-2wice/O-2wice/output/github-snake.svg" />
+  </picture>
+</div>
+
 <div align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=O-2wice&theme=tokyo-night&hide_border=true&radius=10" width="95%"/>
 </div>
@@ -111,7 +129,7 @@ me = DataScientist()
 ## Currently...
 
 - Working on **Financial Risk ML models** with SAP integration
-- Learning **Deep Learning for Time Series** forecasting
+- Learning **Deep Learning for Time Series** forecasting  
 - Exploring **MLOps** and production deployment pipelines
 - Open to **collaboration** on Data Science & ML projects
 
@@ -126,6 +144,10 @@ me = DataScientist()
 </a>
 
 <br/><br/>
+
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Random Dev Quote"/>
+
+<br/>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer"/>
 
