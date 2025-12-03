@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Animated Header -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Robert%20Ouko%20Oyombe&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=Data%20Scientist%20|%20ML%20Engineer%20|%20SAP%20Analytics&descSize=18&descAlignY=52"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=O_2wice&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=Data%20Scientist%20|%20ML%20Engineer%20|%20SAP%20Analytics&descSize=18&descAlignY=52"/>
 
 <!-- Typing Animation -->
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=6AD3F7&center=true&vCenter=true&repeat=true&width=600&height=50&lines=Turning+Data+into+Decisions;Building+ML+Systems+that+Scale;Bridging+SAP+%2B+Machine+Learning" alt="Typing SVG" /></a>
@@ -27,7 +27,7 @@
 ```python
 class DataScientist:
     def __init__(self):
-        self.name = "Robert Ouko Oyombe"
+        self.name = "O_2wice"
         self.role = "Data Science & ML Engineer"
         self.university = "ELTE (Eotvos Lorand University) - Budapest"
         self.interests = ["Machine Learning", "Financial Analytics", 
