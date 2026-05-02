@@ -157,7 +157,7 @@ me = DataScientist()
 
 | Project | Description | Tech Stack |
 |---------|-------------|------------|
-| [NL-to-SQL for ERP Event Logs](https://github.com/O-2wice/correctness-aware-nl-query-translation-ocel) | Schema-constrained NL query translation for SAP OCEL data with zero join hallucination | LLM, DuckDB, Python, SAP |
+| [NL-to-SQL for ERP Systems](https://github.com/O-2wice/correctness-aware-nl-query-translation-ocel) | Natural language query translation over enterprise event log data | LLM, DuckDB, Python |
 | [Financial Risk Forecasting](https://github.com/O-2wice/DS_Lab_Project) | ML system for predicting financial distress using SAP S/4HANA data | XGBoost, SMOTE, SHAP, SAP |
 
 ---
