@@ -4,14 +4,14 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=O_2wice&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=Data%20Scientist%20|%20ML%20Engineer%20|%20SAP%20Analytics&descSize=18&descAlignY=52"/>
 
 <!-- Typing Animation -->
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=6AD3F7&center=true&vCenter=true&repeat=true&width=600&height=50&lines=Turning+Data+into+Decisions;Building+ML+Systems+that+Scale;Bridging+SAP+%2B+Machine+Learning" alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1500&color=6AD3F7&center=true&vCenter=true&repeat=true&width=600&height=50&lines=Turning+Data+into+Decisions;Building+ML+Systems+that+Scale;Natural+Language+to+SQL+for+ERP+Systems" alt="Typing SVG" /></a>
 
 <br/><br/>
 
 <!-- Social Badges -->
-<a href="https://linkedin.com/in/yourprofile"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-<a href="mailto:your.email@example.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-<a href="https://music.youtube.com"><img src="https://img.shields.io/badge/YouTube%20Music-FF0000?style=for-the-badge&logo=youtube-music&logoColor=white"/></a>
+<a href="https://www.linkedin.com/in/ouko-robert/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+<a href="mailto:oukoor@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+<a href="https://music.youtube.com/@O_2wice"><img src="https://img.shields.io/badge/YouTube%20Music-FF0000?style=for-the-badge&logo=youtube-music&logoColor=white"/></a>
 <a href="https://github.com/O-2wice"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=github&logoColor=white"/></a>
 
 <br/><br/>
@@ -29,13 +29,15 @@ class DataScientist:
     def __init__(self):
         self.name = "O_2wice"
         self.role = "Data Science & ML Engineer"
-        self.university = "ELTE (Eotvos Lorand University) - Budapest"
-        self.interests = ["Machine Learning", "Financial Analytics", 
-                          "SAP S/4HANA", "Risk Modeling"]
-        
+        self.location = "Budapest, Hungary"
+        self.university = "ELTE (Eotvos Lorand University)"
+        self.interests = ["Machine Learning", "Financial Analytics",
+                          "ERP Analytics", "Risk Modeling"]
+        self.current_project = "Natural Language to SQL for ERP Systems"
+
     def current_focus(self):
         return "Building ML systems that transform enterprise data into actionable insights"
-    
+
     def fun_fact(self):
         return "I bridge the gap between traditional ERP systems and modern AI"
 
@@ -47,7 +49,7 @@ me = DataScientist()
 ## GitHub Trophies
 
 <div align="center">
-<img src="https://github-profile-trophy.vercel.app/?username=O-2wice&theme=tokyonight&no-frame=true&no-bg=true&column=7&margin-w=15&margin-h=15"/>
+<img src="https://github-profile-trophy.vercel.app/?username=O-2wice&theme=tokyonight&no-frame=true&no-bg=true&column=4&margin-w=15&margin-h=15"/>
 </div>
 
 ---
@@ -84,6 +86,18 @@ me = DataScientist()
 
 <br/>
 
+**Databases (SQL & NoSQL)**
+
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![DuckDB](https://img.shields.io/badge/DuckDB-FFF000?style=for-the-badge&logo=duckdb&logoColor=black)
+![MSSQL](https://img.shields.io/badge/SQL%20Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![Cassandra](https://img.shields.io/badge/Cassandra-1287B1?style=for-the-badge&logo=apache-cassandra&logoColor=white)
+![Elasticsearch](https://img.shields.io/badge/Elasticsearch-005571?style=for-the-badge&logo=elasticsearch&logoColor=white)
+
+<br/>
+
 **Data Engineering & Streaming**
 
 ![Apache Kafka](https://img.shields.io/badge/Apache%20Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white)
@@ -109,18 +123,21 @@ me = DataScientist()
 
 <br/>
 
-**Also Work With**
+**LLM & NLP**
 
-![Kafka](https://img.shields.io/badge/-Kafka-231F20?style=flat-square&logo=apache-kafka&logoColor=white)
-![Grafana](https://img.shields.io/badge/-Grafana-F46800?style=flat-square&logo=grafana&logoColor=white)
-![Prometheus](https://img.shields.io/badge/-Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white)
-![TimescaleDB](https://img.shields.io/badge/-TimescaleDB-FDB515?style=flat-square&logo=timescale&logoColor=black)
-![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![Redis](https://img.shields.io/badge/-Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/-K8s-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
-![Linux](https://img.shields.io/badge/-Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
-![Nginx](https://img.shields.io/badge/-Nginx-009639?style=flat-square&logo=nginx&logoColor=white)
-![Apache Spark](https://img.shields.io/badge/-Spark-E25A1C?style=flat-square&logo=apache-spark&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
+![Anthropic](https://img.shields.io/badge/Anthropic-191919?style=for-the-badge&logo=anthropic&logoColor=white)
+
+<br/>
+
+**Infrastructure & DevOps**
+
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
+![Apache Spark](https://img.shields.io/badge/Apache%20Spark-E25A1C?style=for-the-badge&logo=apache-spark&logoColor=white)
 
 </div>
 
@@ -129,6 +146,10 @@ me = DataScientist()
 ## Featured Projects
 
 <div align="center">
+<a href="https://github.com/O-2wice/correctness-aware-nl-query-translation-ocel">
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=O-2wice&repo=correctness-aware-nl-query-translation-ocel&theme=tokyonight&hide_border=true"/>
+</a>
+&nbsp;
 <a href="https://github.com/O-2wice/DS_Lab_Project">
 <img src="https://github-readme-stats.vercel.app/api/pin/?username=O-2wice&repo=DS_Lab_Project&theme=tokyonight&hide_border=true"/>
 </a>
@@ -136,6 +157,7 @@ me = DataScientist()
 
 | Project | Description | Tech Stack |
 |---------|-------------|------------|
+| [NL-to-SQL for ERP Event Logs](https://github.com/O-2wice/correctness-aware-nl-query-translation-ocel) | Schema-constrained NL query translation for SAP OCEL data with zero join hallucination | LLM, DuckDB, Python, SAP |
 | [Financial Risk Forecasting](https://github.com/O-2wice/DS_Lab_Project) | ML system for predicting financial distress using SAP S/4HANA data | XGBoost, SMOTE, SHAP, SAP |
 
 ---
@@ -146,6 +168,10 @@ me = DataScientist()
 
 <img src="https://github-readme-stats.vercel.app/api?username=O-2wice&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" height="180"/>
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=O-2wice&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" height="180"/>
+
+<br/>
+
+<img src="https://github-readme-stats.vercel.app/api/wakatime?username=O_2wice&theme=tokyonight&hide_border=true&layout=compact&langs_count=8" width="95%"/>
 
 <br/>
 
@@ -169,10 +195,10 @@ me = DataScientist()
 
 ## Currently
 
-- Working on **Financial Risk ML models** with SAP integration
-- Learning **Deep Learning for Time Series** forecasting
-- Exploring **MLOps** and production deployment pipelines
-- Open to **collaboration** on Data Science & ML projects
+- Writing my **MSc thesis** on correctness-aware NL-to-SQL translation for SAP OCEL event logs (ELTE Budapest)
+- Building **schema-constrained LLM pipelines** that eliminate join hallucination by construction
+- Exploring **process mining** with OCEL 2.0 and Object-Centric Event Logs
+- Open to **collaboration** on Data Science, ML, and enterprise AI projects
 
 ---
 
@@ -180,9 +206,9 @@ me = DataScientist()
 
 ### Let's Connect
 
-<a href="https://linkedin.com/in/yourprofile">
-<img src="https://img.shields.io/badge/Let's%20Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
-</a>
+<a href="https://www.linkedin.com/in/ouko-robert/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+<a href="mailto:oukoor@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+<a href="https://music.youtube.com/@O_2wice"><img src="https://img.shields.io/badge/YouTube%20Music-FF0000?style=for-the-badge&logo=youtube-music&logoColor=white"/></a>
 
 <br/><br/>
 
