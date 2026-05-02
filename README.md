@@ -195,9 +195,8 @@ me = DataScientist()
 
 ## Currently
 
-- Writing my **MSc thesis** on correctness-aware NL-to-SQL translation for SAP OCEL event logs (ELTE Budapest)
-- Building **schema-constrained LLM pipelines** that eliminate join hallucination by construction
-- Exploring **process mining** with OCEL 2.0 and Object-Centric Event Logs
+- Building **Natural Language to SQL** systems for ERP data
+- Exploring **process mining** and event-driven analytics
 - Open to **collaboration** on Data Science, ML, and enterprise AI projects
 
 ---
