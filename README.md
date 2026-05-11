@@ -171,8 +171,8 @@ me = DataScientist()
 
 <br/>
 
-<img src="https://wakatime.com/share/@0_2wice/langs.svg" width="48%"/>
-<img src="https://wakatime.com/share/@0_2wice/editors.svg" width="48%"/>
+<img src="https://wakatime.com/share/@O_2wice/langs.svg" width="48%"/>
+<img src="https://wakatime.com/share/@O_2wice/editors.svg" width="48%"/>
 
 <br/>
 
