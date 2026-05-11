@@ -171,7 +171,8 @@ me = DataScientist()
 
 <br/>
 
-<img src="https://github-readme-stats.vercel.app/api/wakatime?username=O_2wice&theme=tokyonight&hide_border=true&layout=compact&langs_count=8" width="95%"/>
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
 
 <br/>
 
