@@ -172,6 +172,55 @@ me = DataScientist()
 <br/>
 
 <!--START_SECTION:waka-->
+![Code Time](http://img.shields.io/badge/Code%20Time-131%20hrs%2040%20mins-blue?style=flat)
+
+![Profile Views](http://img.shields.io/badge/Profile%20Views-1-blue?style=flat)
+
+**🐱 My GitHub Data** 
+
+> 📦 93.1 kB Used in GitHub's Storage 
+ > 
+> 🏆 28 Contributions in the Year 2026
+ > 
+> 🚫 Not Opted to Hire
+ > 
+> 📜 23 Public Repositories 
+ > 
+> 🔑 8 Private Repositories 
+ > 
+📊 **This Week I Spent My Time On** 
+
+```text
+💬 Programming Languages: 
+Markdown                 19 hrs 18 mins      ████████████░░░░░░░░░░░░░   46.54 % 
+TeX                      13 hrs 14 mins      ████████░░░░░░░░░░░░░░░░░   31.92 % 
+Other                    5 hrs 28 mins       ███░░░░░░░░░░░░░░░░░░░░░░   13.19 % 
+Python                   1 hr 48 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   04.36 % 
+Git Config               24 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.97 % 
+
+🔥 Editors: 
+VS Code                  41 hrs 27 mins      █████████████████████████   99.91 % 
+Claude Code              2 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.09 % 
+```
+
+**I Mostly Code in Jupyter Notebook** 
+
+```text
+Jupyter Notebook         4 repos             ████████░░░░░░░░░░░░░░░░░   30.77 % 
+Python                   4 repos             ████████░░░░░░░░░░░░░░░░░   30.77 % 
+TeX                      2 repos             ████░░░░░░░░░░░░░░░░░░░░░   15.38 % 
+JavaScript               1 repo              ██░░░░░░░░░░░░░░░░░░░░░░░   07.69 % 
+PLSQL                    1 repo              ██░░░░░░░░░░░░░░░░░░░░░░░   07.69 % 
+```
+
+
+
+**Timeline**
+
+![Lines of Code chart](https://raw.githubusercontent.com/O-2wice/O-2wice/main/assets/bar_graph.png)
+
+
+ Last Updated on 22/05/2026 13:30:52 UTC
 <!--END_SECTION:waka-->
 
 <br/>
