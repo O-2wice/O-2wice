@@ -146,12 +146,12 @@ me = DataScientist()
 ## Featured Projects
 
 <div align="center">
-<a href="https://github.com/O-2wice/correctness-aware-nl-query-translation-ocel">
-<img src="https://github-readme-stats-three-inky-85.vercel.app/api/pin/?username=O-2wice&repo=correctness-aware-nl-query-translation-ocel&theme=tokyonight&hide_border=true"/>
+<a href="https://github.com/O-2wice/Federated-Learning-Anomaly-Detection">
+<img src="https://github-readme-stats-three-inky-85.vercel.app/api/pin/?username=O-2wice&repo=Federated-Learning-Anomaly-Detection&theme=tokyonight&hide_border=true"/>
 </a>
 &nbsp;
-<a href="https://github.com/O-2wice/DS_Lab_Project">
-<img src="https://github-readme-stats-three-inky-85.vercel.app/api/pin/?username=O-2wice&repo=DS_Lab_Project&theme=tokyonight&hide_border=true"/>
+<a href="https://github.com/O-2wice/ev-charging-network-oracle-project">
+<img src="https://github-readme-stats-three-inky-85.vercel.app/api/pin/?username=O-2wice&repo=ev-charging-network-oracle-project&theme=tokyonight&hide_border=true"/>
 </a>
 </div>
 
