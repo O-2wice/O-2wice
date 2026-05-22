@@ -49,7 +49,7 @@ me = DataScientist()
 ## GitHub Trophies
 
 <div align="center">
-<img src="https://github-profile-trophy.vercel.app/?username=O-2wice&theme=tokyonight&no-frame=true&no-bg=true&column=4&margin-w=15&margin-h=15"/>
+<img src="https://github-profile-trophy.vercel.app/?username=O-2wice&theme=tokyonight&no-frame=true&no-bg=true&column=4&margin-w=15&margin-h=15&rank=SECRET,SSS,SS,S,AAA,AA,A,B,C"/>
 </div>
 
 ---
