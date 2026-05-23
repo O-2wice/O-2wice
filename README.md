@@ -232,7 +232,7 @@ PLSQL                    1 repo              ██░░░░░░░░░�
 
 <br/><br/>
 
-<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight"/>
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" width="95%"/>
 
 <br/>
 
