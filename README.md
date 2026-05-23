@@ -36,7 +36,7 @@ class DataScientist:
         self.current_project = "Natural Language to SQL for ERP Systems"
 
     def current_focus(self):
-        return "Building ML systems that transform enterprise data into actionable insights"
+        return "I bridge the gap between traditional ERP systems and modern AI"
 
     def fun_fact(self):
         return [
