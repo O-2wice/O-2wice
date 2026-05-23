@@ -39,7 +39,10 @@ class DataScientist:
         return "Building ML systems that transform enterprise data into actionable insights"
 
     def fun_fact(self):
-        return "I bridge the gap between traditional ERP systems and modern AI"
+        return [
+            "⚽ I can explain gradient descent using football tactics",
+            "🚙 My search history is 50% research papers, 50% Hilux specs — my MSc supervisor only knows about one of them"
+        ]
 
 me = DataScientist()
 ```
