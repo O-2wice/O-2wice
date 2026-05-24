@@ -222,15 +222,7 @@ PLSQL                    1 repo              ██░░░░░░░░░�
 
 <div align="center">
 
-### Let's Connect
-
-<a href="https://www.linkedin.com/in/ouko-robert/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-<a href="mailto:oukoor@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-<a href="https://music.youtube.com/@O_2wice"><img src="https://img.shields.io/badge/YouTube%20Music-FF0000?style=for-the-badge&logo=youtube-music&logoColor=white"/></a>
-
-<br/><br/>
-
-<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" width="95%"/>
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" width="720" alt="Quote"/>
 
 <br/>
 
