@@ -143,13 +143,13 @@ me = DataScientist()
 <br/>
 
 <!--START_SECTION:waka-->
-![Profile Views](http://img.shields.io/badge/Profile%20Views-1-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-136%20hrs%2026%20mins-blue?style=flat)
 
 **🐱 My GitHub Data** 
 
 > 📦 93.2 kB Used in GitHub's Storage 
  > 
-> 🏆 38 Contributions in the Year 2026
+> 🏆 40 Contributions in the Year 2026
  > 
 > 💼 Opted to Hire
  > 
@@ -161,15 +161,15 @@ me = DataScientist()
 
 ```text
 💬 Programming Languages: 
-Markdown                 18 hrs 54 mins      ███████████░░░░░░░░░░░░░░   44.29 % 
-TeX                      13 hrs 12 mins      ████████░░░░░░░░░░░░░░░░░   30.95 % 
-Other                    6 hrs 43 mins       ████░░░░░░░░░░░░░░░░░░░░░   15.74 % 
-Python                   1 hr 43 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   04.03 % 
-Git Config               1 hr 1 min          █░░░░░░░░░░░░░░░░░░░░░░░░   02.40 % 
+Markdown                 12 hrs 25 mins      █████████░░░░░░░░░░░░░░░░   36.01 % 
+TeX                      12 hrs 6 mins       █████████░░░░░░░░░░░░░░░░   35.08 % 
+Other                    8 hrs 40 mins       ██████░░░░░░░░░░░░░░░░░░░   25.17 % 
+Git Config               37 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.80 % 
+TOML                     32 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.57 % 
 
 🔥 Editors: 
-VS Code                  42 hrs 39 mins      █████████████████████████   99.91 % 
-Claude Code              2 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.09 % 
+VS Code                  34 hrs 27 mins      █████████████████████████   99.89 % 
+Claude Code              2 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.11 % 
 ```
 
 **I Mostly Code in Jupyter Notebook** 
@@ -189,7 +189,7 @@ PLSQL                    1 repo              ██░░░░░░░░░�
 ![Lines of Code chart](https://raw.githubusercontent.com/O-2wice/O-2wice/main/assets/bar_graph.png)
 
 
- Last Updated on 24/05/2026 00:31:39 UTC
+ Last Updated on 25/05/2026 00:32:52 UTC
 <!--END_SECTION:waka-->
 
 <br/>
