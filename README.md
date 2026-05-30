@@ -143,18 +143,34 @@ me = DataScientist()
 <br/>
 
 <!--START_SECTION:waka-->
+![Code Time](http://img.shields.io/badge/Code%20Time-147%20hrs-blue?style=flat)
+
 **🐱 My GitHub Data** 
 
 > 📦 93.2 kB Used in GitHub's Storage 
  > 
-> 🏆 40 Contributions in the Year 2026
+> 🏆 42 Contributions in the Year 2026
  > 
 > 💼 Opted to Hire
  > 
-> 📜 24 Public Repositories 
+> 📜 26 Public Repositories 
  > 
 > 🔑 8 Private Repositories 
  > 
+📊 **This Week I Spent My Time On** 
+
+```text
+💬 Programming Languages: 
+Other                    6 hrs 16 mins       █████████░░░░░░░░░░░░░░░░   34.59 % 
+Markdown                 3 hrs 38 mins       █████░░░░░░░░░░░░░░░░░░░░   20.08 % 
+TeX                      3 hrs 10 mins       ████░░░░░░░░░░░░░░░░░░░░░   17.52 % 
+TOML                     1 hr 25 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   07.82 % 
+BibTeX                   1 hr 15 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   06.96 % 
+
+🔥 Editors: 
+VS Code                  18 hrs 9 mins       █████████████████████████   100.00 % 
+```
+
 **I Mostly Code in Jupyter Notebook** 
 
 ```text
@@ -172,7 +188,7 @@ PLSQL                    1 repo              ██░░░░░░░░░�
 ![Lines of Code chart](https://raw.githubusercontent.com/O-2wice/O-2wice/main/assets/bar_graph.png)
 
 
- Last Updated on 29/05/2026 00:35:58 UTC
+ Last Updated on 30/05/2026 00:32:47 UTC
 <!--END_SECTION:waka-->
 
 <br/>
