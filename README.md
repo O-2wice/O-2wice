@@ -143,43 +143,43 @@ me = DataScientist()
 <br/>
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-180%20hrs%2049%20mins-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-183%20hrs%201%20min-blue?style=flat)
 
 **🐱 My GitHub Data** 
 
 > 📦 93.2 kB Used in GitHub's Storage 
  > 
-> 🏆 43 Contributions in the Year 2026
+> 🏆 44 Contributions in the Year 2026
  > 
 > 💼 Opted to Hire
  > 
-> 📜 27 Public Repositories 
+> 📜 28 Public Repositories 
  > 
-> 🔑 8 Private Repositories 
+> 🔑 9 Private Repositories 
  > 
 📊 **This Week I Spent My Time On** 
 
 ```text
 💬 Programming Languages: 
-Markdown                 9 hrs 10 mins       ██████████░░░░░░░░░░░░░░░   38.35 % 
-PowerShell               4 hrs 56 mins       █████░░░░░░░░░░░░░░░░░░░░   20.65 % 
-Python                   2 hrs 7 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   08.91 % 
-C++                      1 hr 39 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   06.92 % 
-Text                     1 hr 31 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   06.36 % 
+Markdown                 8 hrs 8 mins        █████████░░░░░░░░░░░░░░░░   34.07 % 
+PowerShell               5 hrs 2 mins        █████░░░░░░░░░░░░░░░░░░░░   21.07 % 
+Python                   2 hrs 22 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   09.92 % 
+Text                     1 hr 50 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   07.71 % 
+C++                      1 hr 39 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   06.93 % 
 
 🔥 Editors: 
-VS Code                  23 hrs 49 mins      █████████████████████████   99.58 % 
-Claude Code              6 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.42 % 
+VS Code                  23 hrs 26 mins      █████████████████████████   98.16 % 
+Claude Code              26 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.84 % 
 ```
 
 **I Mostly Code in Jupyter Notebook** 
 
 ```text
-Jupyter Notebook         4 repos             ████████░░░░░░░░░░░░░░░░░   30.77 % 
-Python                   4 repos             ████████░░░░░░░░░░░░░░░░░   30.77 % 
-TeX                      2 repos             ████░░░░░░░░░░░░░░░░░░░░░   15.38 % 
-JavaScript               1 repo              ██░░░░░░░░░░░░░░░░░░░░░░░   07.69 % 
-PLSQL                    1 repo              ██░░░░░░░░░░░░░░░░░░░░░░░   07.69 % 
+Jupyter Notebook         4 repos             ███████░░░░░░░░░░░░░░░░░░   28.57 % 
+HTML                     2 repos             ████░░░░░░░░░░░░░░░░░░░░░   14.29 % 
+TeX                      2 repos             ████░░░░░░░░░░░░░░░░░░░░░   14.29 % 
+JavaScript               1 repo              ██░░░░░░░░░░░░░░░░░░░░░░░   07.14 % 
+PLSQL                    1 repo              ██░░░░░░░░░░░░░░░░░░░░░░░   07.14 % 
 ```
 
 
@@ -189,7 +189,7 @@ PLSQL                    1 repo              ██░░░░░░░░░�
 ![Lines of Code chart](https://raw.githubusercontent.com/O-2wice/O-2wice/main/assets/bar_graph.png)
 
 
- Last Updated on 11/06/2026 00:38:41 UTC
+ Last Updated on 12/06/2026 00:39:54 UTC
 <!--END_SECTION:waka-->
 
 <br/>
