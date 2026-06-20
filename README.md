@@ -143,11 +143,11 @@ me = DataScientist()
 <br/>
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-223%20hrs%201%20min-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-223%20hrs%2055%20mins-blue?style=flat)
 
 **🐱 My GitHub Data** 
 
-> 📦 93.3 kB Used in GitHub's Storage 
+> 📦 93.9 kB Used in GitHub's Storage 
  > 
 > 🏆 44 Contributions in the Year 2026
  > 
@@ -161,16 +161,15 @@ me = DataScientist()
 
 ```text
 💬 Programming Languages: 
-Other                    8 hrs 5 mins        █████░░░░░░░░░░░░░░░░░░░░   20.03 % 
-C                        7 hrs 43 mins       █████░░░░░░░░░░░░░░░░░░░░   19.11 % 
-JSON                     4 hrs 45 mins       ███░░░░░░░░░░░░░░░░░░░░░░   11.79 % 
-Markdown                 4 hrs 1 min         ██░░░░░░░░░░░░░░░░░░░░░░░   09.96 % 
-PowerShell               3 hrs 19 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   08.21 % 
+C                        7 hrs 43 mins       ██████░░░░░░░░░░░░░░░░░░░   25.23 % 
+Other                    6 hrs 13 mins       █████░░░░░░░░░░░░░░░░░░░░   20.34 % 
+PowerShell               4 hrs 4 mins        ███░░░░░░░░░░░░░░░░░░░░░░   13.30 % 
+Markdown                 3 hrs 55 mins       ███░░░░░░░░░░░░░░░░░░░░░░   12.84 % 
+JSON                     2 hrs 38 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   08.63 % 
 
 🔥 Editors: 
-VS Code                  40 hrs 3 mins       █████████████████████████   99.07 % 
-Claude Code              19 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.82 % 
-Antigravityide           2 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.11 % 
+VS Code                  30 hrs 17 mins      █████████████████████████   98.91 % 
+Claude Code              19 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.09 % 
 ```
 
 **I Mostly Code in Jupyter Notebook** 
@@ -190,7 +189,7 @@ PLSQL                    1 repo              ██░░░░░░░░░�
 ![Lines of Code chart](https://raw.githubusercontent.com/O-2wice/O-2wice/main/assets/bar_graph.png)
 
 
- Last Updated on 19/06/2026 00:44:15 UTC
+ Last Updated on 20/06/2026 00:35:16 UTC
 <!--END_SECTION:waka-->
 
 <br/>
