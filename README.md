@@ -143,7 +143,7 @@ me = DataScientist()
 <br/>
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-241%20hrs%2026%20mins-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-246%20hrs%2055%20mins-blue?style=flat)
 
 **🐱 My GitHub Data** 
 
@@ -161,16 +161,16 @@ me = DataScientist()
 
 ```text
 💬 Programming Languages: 
-Other                    6 hrs 42 mins       ██████████░░░░░░░░░░░░░░░   38.25 % 
-Markdown                 5 hrs 17 mins       ████████░░░░░░░░░░░░░░░░░   30.23 % 
-Python                   1 hr 56 mins        ███░░░░░░░░░░░░░░░░░░░░░░   11.11 % 
-Bash                     1 hr 1 min          █░░░░░░░░░░░░░░░░░░░░░░░░   05.89 % 
-Git Config               49 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   04.69 % 
+Markdown                 7 hrs 26 mins       █████████░░░░░░░░░░░░░░░░   37.57 % 
+Python                   4 hrs 31 mins       ██████░░░░░░░░░░░░░░░░░░░   22.90 % 
+Other                    4 hrs 25 mins       ██████░░░░░░░░░░░░░░░░░░░   22.40 % 
+Bash                     1 hr 3 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   05.31 % 
+JSON                     46 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   03.89 % 
 
 🔥 Editors: 
-Claude Code              11 hrs 33 mins      ████████████████░░░░░░░░░   65.92 % 
-VS Code                  4 hrs 52 mins       ███████░░░░░░░░░░░░░░░░░░   27.82 % 
-Codex CLI                1 hr 5 mins         ██░░░░░░░░░░░░░░░░░░░░░░░   06.26 % 
+Claude Code              15 hrs 41 mins      ████████████████████░░░░░   79.27 % 
+VS Code                  3 hrs               ████░░░░░░░░░░░░░░░░░░░░░   15.17 % 
+Codex CLI                1 hr 6 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   05.56 % 
 ```
 
 **I Mostly Code in Jupyter Notebook** 
@@ -190,7 +190,7 @@ PLSQL                    1 repo              ██░░░░░░░░░�
 ![Lines of Code chart](https://raw.githubusercontent.com/O-2wice/O-2wice/main/assets/bar_graph.png)
 
 
- Last Updated on 27/06/2026 00:33:57 UTC
+ Last Updated on 28/06/2026 00:34:00 UTC
 <!--END_SECTION:waka-->
 
 <br/>
