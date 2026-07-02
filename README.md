@@ -161,16 +161,16 @@ me = DataScientist()
 
 ```text
 💬 Programming Languages: 
-Python                   7 hrs 15 mins       ███████████░░░░░░░░░░░░░░   45.69 % 
-Markdown                 3 hrs 46 mins       ██████░░░░░░░░░░░░░░░░░░░   23.76 % 
-Other                    1 hr 33 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   09.77 % 
-HTML                     1 hr 3 mins         ██░░░░░░░░░░░░░░░░░░░░░░░   06.68 % 
-TeX                      53 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   05.57 % 
+Python                   5 hrs 56 mins       ████████████░░░░░░░░░░░░░   47.87 % 
+Markdown                 2 hrs 29 mins       █████░░░░░░░░░░░░░░░░░░░░   20.08 % 
+Other                    1 hr 28 mins        ███░░░░░░░░░░░░░░░░░░░░░░   11.85 % 
+HTML                     1 hr 3 mins         ██░░░░░░░░░░░░░░░░░░░░░░░   08.54 % 
+TeX                      53 mins             ██░░░░░░░░░░░░░░░░░░░░░░░   07.12 % 
 
 🔥 Editors: 
-Claude Code              10 hrs 39 mins      █████████████████░░░░░░░░   67.06 % 
-VS Code                  5 hrs 4 mins        ████████░░░░░░░░░░░░░░░░░   31.98 % 
-Codex CLI                9 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.95 % 
+Claude Code              8 hrs 2 mins        ████████████████░░░░░░░░░   64.71 % 
+VS Code                  4 hrs 21 mins       █████████░░░░░░░░░░░░░░░░   35.08 % 
+Codex CLI                1 min               ░░░░░░░░░░░░░░░░░░░░░░░░░   00.22 % 
 ```
 
 **I Mostly Code in Jupyter Notebook** 
@@ -190,7 +190,7 @@ PLSQL                    1 repo              ██░░░░░░░░░�
 ![Lines of Code chart](https://raw.githubusercontent.com/O-2wice/O-2wice/main/assets/bar_graph.png)
 
 
- Last Updated on 01/07/2026 00:35:15 UTC
+ Last Updated on 02/07/2026 00:34:34 UTC
 <!--END_SECTION:waka-->
 
 <br/>
