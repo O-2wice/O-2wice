@@ -161,15 +161,15 @@ me = DataScientist()
 
 ```text
 💬 Programming Languages: 
-Python                   5 hrs 33 mins       ███████████░░░░░░░░░░░░░░   43.73 % 
-HTML                     3 hrs 34 mins       ███████░░░░░░░░░░░░░░░░░░   28.09 % 
-Markdown                 2 hrs 10 mins       ████░░░░░░░░░░░░░░░░░░░░░   17.10 % 
-Bash                     55 mins             ██░░░░░░░░░░░░░░░░░░░░░░░   07.25 % 
-JavaScript               11 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.47 % 
+Python                   5 hrs 32 mins       █████████████░░░░░░░░░░░░   50.72 % 
+HTML                     3 hrs 34 mins       ████████░░░░░░░░░░░░░░░░░   32.68 % 
+Bash                     49 mins             ██░░░░░░░░░░░░░░░░░░░░░░░   07.61 % 
+Markdown                 46 mins             ██░░░░░░░░░░░░░░░░░░░░░░░   07.06 % 
+JavaScript               11 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.71 % 
 
 🔥 Editors: 
-Claude Code              10 hrs 15 mins      ████████████████████░░░░░   80.82 % 
-VS Code                  2 hrs 26 mins       █████░░░░░░░░░░░░░░░░░░░░   19.18 % 
+Claude Code              8 hrs 29 mins       ███████████████████░░░░░░   77.81 % 
+VS Code                  2 hrs 25 mins       ██████░░░░░░░░░░░░░░░░░░░   22.19 % 
 ```
 
 **I Mostly Code in Jupyter Notebook** 
@@ -189,7 +189,7 @@ PLSQL                    1 repo              ██░░░░░░░░░�
 ![Lines of Code chart](https://raw.githubusercontent.com/O-2wice/O-2wice/main/assets/bar_graph.png)
 
 
- Last Updated on 12/07/2026 00:25:24 UTC
+ Last Updated on 13/07/2026 00:25:36 UTC
 <!--END_SECTION:waka-->
 
 <br/>
