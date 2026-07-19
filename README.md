@@ -161,13 +161,10 @@ me = DataScientist()
 
 ```text
 💬 Programming Languages: 
-HTML                     1 hr 23 mins        ███████████████████████░░   91.87 % 
-Python                   4 mins              █░░░░░░░░░░░░░░░░░░░░░░░░   04.48 % 
-Markdown                 3 mins              █░░░░░░░░░░░░░░░░░░░░░░░░   03.65 % 
+No Activity Tracked This Week
 
 🔥 Editors: 
-Claude Code              1 hr 17 mins        █████████████████████░░░░   85.54 % 
-VS Code                  13 mins             ████░░░░░░░░░░░░░░░░░░░░░   14.46 % 
+No Activity Tracked This Week
 ```
 
 **I Mostly Code in Jupyter Notebook** 
@@ -187,7 +184,7 @@ PLSQL                    1 repo              ██░░░░░░░░░�
 ![Lines of Code chart](https://raw.githubusercontent.com/O-2wice/O-2wice/main/assets/bar_graph.png)
 
 
- Last Updated on 18/07/2026 00:23:03 UTC
+ Last Updated on 19/07/2026 00:24:54 UTC
 <!--END_SECTION:waka-->
 
 <br/>
