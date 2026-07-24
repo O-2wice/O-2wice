@@ -143,8 +143,6 @@ me = DataScientist()
 <br/>
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-278%20hrs%2046%20mins-blue?style=flat)
-
 **🐱 My GitHub Data** 
 
 > 📦 93.9 kB Used in GitHub's Storage 
@@ -184,7 +182,7 @@ PLSQL                    1 repo              ██░░░░░░░░░�
 ![Lines of Code chart](https://raw.githubusercontent.com/O-2wice/O-2wice/main/assets/bar_graph.png)
 
 
- Last Updated on 23/07/2026 00:25:30 UTC
+ Last Updated on 24/07/2026 00:23:31 UTC
 <!--END_SECTION:waka-->
 
 <br/>
