@@ -155,16 +155,6 @@ me = DataScientist()
  > 
 > 🔑 9 Private Repositories 
  > 
-📊 **This Week I Spent My Time On** 
-
-```text
-💬 Programming Languages: 
-No Activity Tracked This Week
-
-🔥 Editors: 
-No Activity Tracked This Week
-```
-
 **I Mostly Code in Jupyter Notebook** 
 
 ```text
@@ -182,7 +172,7 @@ PLSQL                    1 repo              ██░░░░░░░░░�
 ![Lines of Code chart](https://raw.githubusercontent.com/O-2wice/O-2wice/main/assets/bar_graph.png)
 
 
- Last Updated on 24/07/2026 00:23:31 UTC
+ Last Updated on 25/07/2026 00:26:49 UTC
 <!--END_SECTION:waka-->
 
 <br/>
