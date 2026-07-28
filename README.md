@@ -143,7 +143,9 @@ me = DataScientist()
 <br/>
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-285%20hrs%2036%20mins-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-246%20hrs%2035%20mins-blue?style=flat)
+
+![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-284%20hrs%2022%20mins-blue?style=flat)
 
 **🐱 My GitHub Data** 
 
@@ -167,6 +169,12 @@ No Activity Tracked This Week
 No Activity Tracked This Week
 ```
 
+🤖 **AI Coding This Week** 
+
+```text
+No AI Coding Activity Tracked This Week
+```
+
 **I Mostly Code in Jupyter Notebook** 
 
 ```text
@@ -184,7 +192,7 @@ PLSQL                    1 repo              ██░░░░░░░░░�
 ![Lines of Code chart](https://raw.githubusercontent.com/O-2wice/O-2wice/main/assets/bar_graph.png)
 
 
- Last Updated on 27/07/2026 00:27:32 UTC
+ Last Updated on 28/07/2026 00:24:38 UTC
 <!--END_SECTION:waka-->
 
 <br/>
