@@ -143,19 +143,19 @@ me = DataScientist()
 <br/>
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-247%20hrs%201%20min-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-248%20hrs%2037%20mins-blue?style=flat)
 
-![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-284%20hrs%2050%20mins-blue?style=flat)
+![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-287%20hrs%206%20mins-blue?style=flat)
 
 **🐱 My GitHub Data** 
 
-> 📦 94.0 kB Used in GitHub's Storage 
+> 📦 95.8 kB Used in GitHub's Storage 
  > 
-> 🏆 44 Contributions in the Year 2026
+> 🏆 58 Contributions in the Year 2026
  > 
 > 💼 Opted to Hire
  > 
-> 📜 28 Public Repositories 
+> 📜 29 Public Repositories 
  > 
 > 🔑 9 Private Repositories 
  > 
@@ -163,47 +163,50 @@ me = DataScientist()
 
 ```text
 💬 Programming Languages: 
-JSON                     21 mins             ███████████████████░░░░░░   76.95 % 
-HTML                     5 mins              █████░░░░░░░░░░░░░░░░░░░░   20.27 % 
-Other                    0 secs              █░░░░░░░░░░░░░░░░░░░░░░░░   02.78 % 
+Other                    4 hrs 8 mins        ███████████░░░░░░░░░░░░░░   43.87 % 
+Markdown                 1 hr 48 mins        █████░░░░░░░░░░░░░░░░░░░░   19.10 % 
+HTML                     1 hr 5 mins         ███░░░░░░░░░░░░░░░░░░░░░░   11.52 % 
+Python                   58 mins             ███░░░░░░░░░░░░░░░░░░░░░░   10.31 % 
+Bash                     35 mins             ██░░░░░░░░░░░░░░░░░░░░░░░   06.30 % 
 
 🔥 Editors: 
-Claude Code              25 mins             ███████████████████████░░   93.53 % 
-VS Code                  1 min               █░░░░░░░░░░░░░░░░░░░░░░░░   05.65 % 
-Codex CLI                0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.82 % 
+Claude Code              8 hrs 20 mins       ██████████████████████░░░   88.27 % 
+VS Code                  52 mins             ██░░░░░░░░░░░░░░░░░░░░░░░   09.18 % 
+Codex CLI                14 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   02.54 % 
 ```
 
 🤖 **AI Coding This Week** 
 
 ```text
-⏱ AI Coding Time: 27 mins (99.94%)
+⏱ AI Coding Time: 9 hrs 14 mins (97.87%)
 
-✍️ 20 lines written by AI, 9 lines written by hand (68.97% AI-written)
+✍️ 753 lines written by AI, 10 lines written by hand (98.69% AI-written)
 
-🔤 5,087,861 Input Tokens, 20,101 Output Tokens
+🔤 362,734,266 Input Tokens, 442,042 Output Tokens
 
-💵 $25.94 Estimated AI Cost This Week
+💵 $1824.75 Estimated AI Cost This Week
 
-🧠 3 AI Sessions, 9 AI Prompts
+🧠 13 AI Sessions, 81 AI Prompts
 
-Opus                     20 lines            █████████████████████████   100.00 % 
-GPT                      0 lines             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 % 
+Opus                     512 lines           ███████████████░░░░░░░░░░   60.52 % 
+GPT                      334 lines           ██████████░░░░░░░░░░░░░░░   39.48 % 
+Claude-Code              0 lines             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 % 
 
 🔎 AI Coding Insights:
-🤖 AI-Driven — 68.97% of written lines came from AI
-📝 Concise Prompter — average 58 characters per prompt
-🔁 Iterative Prompter — average 3 prompts per session
-🚀 High AI Trust — 31.03% of changed lines were hand-edited
+🤖 AI-Driven — 98.69% of written lines came from AI
+📝 Concise Prompter — average 210 characters per prompt
+🔁 Iterative Prompter — average 6 prompts per session
+🚀 High AI Trust — 1.17% of changed lines were hand-edited
 ```
 
 **I Mostly Code in Jupyter Notebook** 
 
 ```text
-Jupyter Notebook         4 repos             ███████░░░░░░░░░░░░░░░░░░   28.57 % 
-HTML                     2 repos             ████░░░░░░░░░░░░░░░░░░░░░   14.29 % 
-TeX                      2 repos             ████░░░░░░░░░░░░░░░░░░░░░   14.29 % 
-JavaScript               1 repo              ██░░░░░░░░░░░░░░░░░░░░░░░   07.14 % 
-PLSQL                    1 repo              ██░░░░░░░░░░░░░░░░░░░░░░░   07.14 % 
+Jupyter Notebook         5 repos             ████████░░░░░░░░░░░░░░░░░   33.33 % 
+HTML                     2 repos             ███░░░░░░░░░░░░░░░░░░░░░░   13.33 % 
+TeX                      2 repos             ███░░░░░░░░░░░░░░░░░░░░░░   13.33 % 
+JavaScript               1 repo              ██░░░░░░░░░░░░░░░░░░░░░░░   06.67 % 
+PLSQL                    1 repo              ██░░░░░░░░░░░░░░░░░░░░░░░   06.67 % 
 ```
 
 
@@ -213,7 +216,7 @@ PLSQL                    1 repo              ██░░░░░░░░░�
 ![Lines of Code chart](https://raw.githubusercontent.com/O-2wice/O-2wice/main/assets/bar_graph.png)
 
 
- Last Updated on 03/08/2026 00:26:57 UTC
+ Last Updated on 05/08/2026 00:26:18 UTC
 <!--END_SECTION:waka-->
 
 <br/>
