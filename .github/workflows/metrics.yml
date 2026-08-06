@@ -36,11 +36,12 @@ jobs:
           base: ""
           config_timezone: Europe/Budapest
           plugin_habits: yes
-          plugin_habits_from: 200
+          plugin_habits_from: 50
           plugin_habits_days: 14
           plugin_habits_facts: yes
           plugin_habits_charts: yes
           plugin_habits_trim: yes
+          plugin_habits_skipped: O-2wice/O-2wice
 
       - name: Achievements
         uses: lowlighter/metrics@latest
