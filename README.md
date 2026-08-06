@@ -162,7 +162,7 @@ PLSQL                    1 repo              ██░░░░░░░░░�
 
 <br/>
 
-<img src="metrics/isocalendar.svg" width="49%"/> <img src="metrics/music.svg" width="49%"/>
+<img src="metrics/panels.svg" width="100%"/>
 
 <br/>
 
