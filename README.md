@@ -162,7 +162,7 @@ PLSQL                    1 repo              ██░░░░░░░░░�
 
 <br/>
 
-<img src="metrics/panels.svg" width="86%"/>
+<img src="metrics/music.svg" width="46%"/>
 
 <sub><a href="https://music.youtube.com/playlist?list=PLWJzcQJwrVbM">▶ open the playlist on YouTube Music</a></sub>
 
