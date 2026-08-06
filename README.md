@@ -49,14 +49,6 @@ me = DataScientist()
 
 ---
 
-## GitHub Trophies
-
-<div align="center">
-<img src="https://github-profile-trophy.vercel.app/?username=O-2wice&theme=tokyonight&no-frame=true&no-bg=true&column=4&margin-w=15&margin-h=15&rank=SECRET,SSS,SS,S,AAA,AA,A,B,C"/>
-</div>
-
----
-
 ## Tech Stack
 
 <div align="center">
@@ -66,7 +58,6 @@ me = DataScientist()
 <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/></a>
 <a href="https://www.r-project.org/"><img src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white"/></a>
 <a href="https://en.wikipedia.org/wiki/SQL"><img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white"/></a>
-<a href="https://www.r-project.org/"><img src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white"/></a>
 
 **Machine Learning**
 
