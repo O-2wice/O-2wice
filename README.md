@@ -53,6 +53,8 @@ me = DataScientist()
 
 ## Tech Stack
 
+<div align="center">
+
 **Languages**<br/>
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white"/> <img src="https://img.shields.io/badge/R-276DC3?style=flat&logo=r&logoColor=white"/> <img src="https://img.shields.io/badge/SQL-4479A1?style=flat&logo=postgresql&logoColor=white"/>
 
@@ -70,6 +72,8 @@ me = DataScientist()
 
 **AI & Dev**<br/>
 <img src="https://img.shields.io/badge/OpenAI-412991?style=flat&logo=openai&logoColor=white"/> <img src="https://img.shields.io/badge/Anthropic-191919?style=flat&logo=anthropic&logoColor=white"/> <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat&logo=langchain&logoColor=white"/> <img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white"/> <img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white"/> <img src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black"/> <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=jupyter&logoColor=white"/> <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=flat&logo=visual-studio-code&logoColor=white"/>
+
+</div>
 
 ---
 
