@@ -143,15 +143,15 @@ me = DataScientist()
 <br/>
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-248%20hrs%2037%20mins-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-256%20hrs%207%20mins-blue?style=flat)
 
-![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-287%20hrs%206%20mins-blue?style=flat)
+![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-299%20hrs%2058%20mins-blue?style=flat)
 
 **🐱 My GitHub Data** 
 
 > 📦 95.8 kB Used in GitHub's Storage 
  > 
-> 🏆 58 Contributions in the Year 2026
+> 🏆 57 Contributions in the Year 2026
  > 
 > 💼 Opted to Hire
  > 
@@ -163,40 +163,40 @@ me = DataScientist()
 
 ```text
 💬 Programming Languages: 
-Other                    4 hrs 8 mins        ███████████░░░░░░░░░░░░░░   43.87 % 
-Markdown                 1 hr 48 mins        █████░░░░░░░░░░░░░░░░░░░░   19.10 % 
-HTML                     1 hr 5 mins         ███░░░░░░░░░░░░░░░░░░░░░░   11.52 % 
-Python                   58 mins             ███░░░░░░░░░░░░░░░░░░░░░░   10.31 % 
-Bash                     35 mins             ██░░░░░░░░░░░░░░░░░░░░░░░   06.30 % 
+Other                    6 hrs 30 mins       ██████████░░░░░░░░░░░░░░░   40.60 % 
+Markdown                 2 hrs 52 mins       ████░░░░░░░░░░░░░░░░░░░░░   17.98 % 
+Python                   1 hr 42 mins        ███░░░░░░░░░░░░░░░░░░░░░░   10.69 % 
+HTML                     1 hr 18 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   08.21 % 
+YAML                     1 hr 15 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   07.86 % 
 
 🔥 Editors: 
-Claude Code              8 hrs 20 mins       ██████████████████████░░░   88.27 % 
-VS Code                  52 mins             ██░░░░░░░░░░░░░░░░░░░░░░░   09.18 % 
-Codex CLI                14 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   02.54 % 
+Claude Code              14 hrs 36 mins      ███████████████████████░░   91.17 % 
+VS Code                  1 hr 10 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   07.33 % 
+Codex CLI                14 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.50 % 
 ```
 
 🤖 **AI Coding This Week** 
 
 ```text
-⏱ AI Coding Time: 9 hrs 14 mins (97.87%)
+⏱ AI Coding Time: 15 hrs 35 mins (97.38%)
 
-✍️ 753 lines written by AI, 10 lines written by hand (98.69% AI-written)
+✍️ 3,317 lines written by AI, 12 lines written by hand (99.64% AI-written)
 
-🔤 362,734,266 Input Tokens, 442,042 Output Tokens
+🔤 757,768,548 Input Tokens, 668,173 Output Tokens
 
-💵 $1824.75 Estimated AI Cost This Week
+💵 $3805.57 Estimated AI Cost This Week
 
-🧠 13 AI Sessions, 81 AI Prompts
+🧠 15 AI Sessions, 145 AI Prompts
 
-Opus                     512 lines           ███████████████░░░░░░░░░░   60.52 % 
-GPT                      334 lines           ██████████░░░░░░░░░░░░░░░   39.48 % 
+Opus                     3,141 lines         ███████████████████████░░   90.39 % 
+GPT                      334 lines           ██░░░░░░░░░░░░░░░░░░░░░░░   09.61 % 
 Claude-Code              0 lines             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 % 
 
 🔎 AI Coding Insights:
-🤖 AI-Driven — 98.69% of written lines came from AI
-📝 Concise Prompter — average 210 characters per prompt
-🔁 Iterative Prompter — average 6 prompts per session
-🚀 High AI Trust — 1.17% of changed lines were hand-edited
+🤖 AI-Driven — 99.64% of written lines came from AI
+📝 Concise Prompter — average 174 characters per prompt
+🔁 Iterative Prompter — average 10 prompts per session
+🚀 High AI Trust — 0.34% of changed lines were hand-edited
 ```
 
 **I Mostly Code in Jupyter Notebook** 
@@ -216,7 +216,7 @@ PLSQL                    1 repo              ██░░░░░░░░░�
 ![Lines of Code chart](https://raw.githubusercontent.com/O-2wice/O-2wice/main/assets/bar_graph.png)
 
 
- Last Updated on 05/08/2026 00:26:18 UTC
+ Last Updated on 06/08/2026 00:22:35 UTC
 <!--END_SECTION:waka-->
 
 <br/>
