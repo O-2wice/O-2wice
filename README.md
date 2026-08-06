@@ -96,6 +96,20 @@ me = DataScientist()
 
 ---
 
+## Debug Soundtrack
+
+<div align="center">
+
+<img src="metrics/music.svg" width="500" alt="YouTube Music playlist"/>
+
+<br/>
+
+<sub>What stays on while coding, debugging, and writing — <a href="https://music.youtube.com/playlist?list=PLWJzcQJwrVbM">open the playlist on YouTube Music</a></sub>
+
+</div>
+
+---
+
 ## GitHub Stats
 
 <div align="center">
@@ -159,12 +173,6 @@ PLSQL                    1 repo              ██░░░░░░░░░�
 <br/>
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=O-2wice&theme=tokyo-night&hide_border=true" width="95%"/>
-
-<br/>
-
-<img src="metrics/music.svg" width="46%"/>
-
-<sub><a href="https://music.youtube.com/playlist?list=PLWJzcQJwrVbM">▶ open the playlist on YouTube Music</a></sub>
 
 <br/>
 
