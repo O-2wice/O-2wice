@@ -162,21 +162,13 @@ PLSQL                    1 repo              ██░░░░░░░░░�
 
 <br/>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="metrics/panels.dark.svg"/>
-  <source media="(prefers-color-scheme: light)" srcset="metrics/panels.light.svg"/>
-  <img src="metrics/panels.dark.svg" width="86%"/>
-</picture>
+<img src="metrics/panels.svg" width="86%"/>
 
 <sub><a href="https://music.youtube.com/playlist?list=PLWJzcQJwrVbM">▶ open the playlist on YouTube Music</a></sub>
 
 <br/>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/O-2wice/O-2wice/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/O-2wice/O-2wice/output/github-snake.svg" />
-  <img alt="github contribution snake animation" src="https://raw.githubusercontent.com/O-2wice/O-2wice/output/github-snake.svg" />
-</picture>
+<img src="metrics/panels.svg" width="86%"/>
 
 </div>
 
