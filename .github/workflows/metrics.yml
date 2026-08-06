@@ -26,31 +26,3 @@ jobs:
           config_timezone: Europe/Budapest
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
-
-      - name: Coding habits
-        uses: lowlighter/metrics@latest
-        with:
-          token: ${{ secrets.GH_TOKEN }}
-          user: O-2wice
-          filename: metrics/habits.svg
-          base: ""
-          config_timezone: Europe/Budapest
-          plugin_habits: yes
-          plugin_habits_from: 50
-          plugin_habits_days: 14
-          plugin_habits_facts: yes
-          plugin_habits_charts: yes
-          plugin_habits_trim: yes
-          plugin_habits_skipped: O-2wice/O-2wice
-
-      - name: Achievements
-        uses: lowlighter/metrics@latest
-        with:
-          token: ${{ secrets.GH_TOKEN }}
-          user: O-2wice
-          filename: metrics/achievements.svg
-          base: ""
-          plugin_achievements: yes
-          plugin_achievements_threshold: C
-          plugin_achievements_display: compact
-          plugin_achievements_secrets: yes
