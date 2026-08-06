@@ -162,7 +162,13 @@ PLSQL                    1 repo              ██░░░░░░░░░�
 
 <br/>
 
-<img src="metrics/panels.svg" width="100%"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="metrics/panels.dark.svg"/>
+  <source media="(prefers-color-scheme: light)" srcset="metrics/panels.light.svg"/>
+  <img src="metrics/panels.dark.svg" width="86%"/>
+</picture>
+
+<sub><a href="https://music.youtube.com/playlist?list=PLWJzcQJwrVbM">▶ open the playlist on YouTube Music</a></sub>
 
 <br/>
 
@@ -178,14 +184,10 @@ PLSQL                    1 repo              ██░░░░░░░░░�
 
 ## Daily Drivers
 
-Tools I actually run every day — the forks on my profile are these, not abandoned experiments.
+Forks I keep current — most recently touched first. Regenerated daily.
 
-| Tool | What it does |
-|------|--------------|
-| [scrcpy](https://github.com/O-2wice/scrcpy) | Android screen mirroring over USB/wifi |
-| [Sefirah](https://github.com/O-2wice/Sefirah) | Phone Link / KDE Connect alternative |
-| [vicinae](https://github.com/O-2wice/vicinae) | Raycast-style launcher for Linux |
-| [flare](https://github.com/O-2wice/flare) | Native Signal client |
+<!--START_SECTION:drivers-->
+<!--END_SECTION:drivers-->
 
 ---
 

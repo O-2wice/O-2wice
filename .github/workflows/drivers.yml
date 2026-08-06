@@ -1,0 +1,52 @@
+name: Daily Drivers
+
+on:
+  schedule:
+    - cron: '30 3 * * *'
+  workflow_dispatch:
+  push:
+    branches: [preview]
+    paths: ['.github/workflows/drivers.yml']
+
+permissions:
+  contents: write
+
+jobs:
+  drivers:
+    name: Refresh daily drivers table
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build table from forks
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          gh api "users/O-2wice/repos?type=owner&sort=pushed&per_page=100" \
+            --jq '[.[] | select(.fork == true and .archived == false)][:6][]
+                  | "| [\(.name)](\(.html_url)) | \(.description // "—") |"' > rows.txt
+          {
+            echo "| Tool | What it does |"
+            echo "|------|--------------|"
+            cat rows.txt
+          } > table.md
+          python3 - <<'PY'
+          import re, pathlib
+          readme = pathlib.Path("README.md")
+          s = readme.read_text()
+          table = pathlib.Path("table.md").read_text().strip()
+          s = re.sub(
+              r"(<!--START_SECTION:drivers-->).*?(<!--END_SECTION:drivers-->)",
+              lambda m: f"{m.group(1)}\n{table}\n{m.group(2)}",
+              s, flags=re.S)
+          readme.write_text(s)
+          PY
+          rm -f rows.txt table.md
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --staged --quiet || git commit -m "Refresh daily drivers table"
+          git push
