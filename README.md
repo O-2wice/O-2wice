@@ -187,6 +187,14 @@ PLSQL                    1 repo              ██░░░░░░░░░�
 Forks I keep current — most recently touched first. Regenerated daily.
 
 <!--START_SECTION:drivers-->
+| Tool | What it does |
+|------|--------------|
+| [pear-desktop](https://github.com/O-2wice/pear-desktop) | Pear 🍐 is extension for music player |
+| [scrcpy](https://github.com/O-2wice/scrcpy) | Display and control your Android device |
+| [MicaForEveryone](https://github.com/O-2wice/MicaForEveryone) | Mica For Everyone is a tool to enable backdrop effects on the title bars of Win32 apps on Windows 11. |
+| [Sefirah](https://github.com/O-2wice/Sefirah) | Phone Link / KDE Connect alternative |
+| [Fabric](https://github.com/O-2wice/Fabric) | Fabric is an open-source framework for augmenting humans using AI. It provides a modular system for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere. |
+| [humanizer](https://github.com/O-2wice/humanizer) | Claude Code skill that removes signs of AI-generated writing from text |
 <!--END_SECTION:drivers-->
 
 ---
