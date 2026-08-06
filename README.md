@@ -134,15 +134,13 @@ me = DataScientist()
 <br/>
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-256%20hrs%207%20mins-blue?style=flat)
-
-![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-299%20hrs%2058%20mins-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-264%20hrs%2045%20mins-blue?style=flat)
 
 **🐱 My GitHub Data** 
 
 > 📦 95.8 kB Used in GitHub's Storage 
  > 
-> 🏆 57 Contributions in the Year 2026
+> 🏆 58 Contributions in the Year 2026
  > 
 > 💼 Opted to Hire
  > 
@@ -154,40 +152,16 @@ me = DataScientist()
 
 ```text
 💬 Programming Languages: 
-Other                    6 hrs 30 mins       ██████████░░░░░░░░░░░░░░░   40.60 % 
-Markdown                 2 hrs 52 mins       ████░░░░░░░░░░░░░░░░░░░░░   17.98 % 
-Python                   1 hr 42 mins        ███░░░░░░░░░░░░░░░░░░░░░░   10.69 % 
-HTML                     1 hr 18 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   08.21 % 
-YAML                     1 hr 15 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   07.86 % 
+Other                    6 hrs 57 mins       ███████░░░░░░░░░░░░░░░░░░   27.72 % 
+Python                   6 hrs 19 mins       ██████░░░░░░░░░░░░░░░░░░░   25.23 % 
+HTML                     3 hrs 36 mins       ████░░░░░░░░░░░░░░░░░░░░░   14.41 % 
+Markdown                 3 hrs 25 mins       ███░░░░░░░░░░░░░░░░░░░░░░   13.63 % 
+RMarkdown                1 hr 22 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   05.45 % 
 
 🔥 Editors: 
-Claude Code              14 hrs 36 mins      ███████████████████████░░   91.17 % 
-VS Code                  1 hr 10 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   07.33 % 
-Codex CLI                14 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.50 % 
-```
-
-🤖 **AI Coding This Week** 
-
-```text
-⏱ AI Coding Time: 15 hrs 35 mins (97.38%)
-
-✍️ 3,317 lines written by AI, 12 lines written by hand (99.64% AI-written)
-
-🔤 757,768,548 Input Tokens, 668,173 Output Tokens
-
-💵 $3805.57 Estimated AI Cost This Week
-
-🧠 15 AI Sessions, 145 AI Prompts
-
-Opus                     3,141 lines         ███████████████████████░░   90.39 % 
-GPT                      334 lines           ██░░░░░░░░░░░░░░░░░░░░░░░   09.61 % 
-Claude-Code              0 lines             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 % 
-
-🔎 AI Coding Insights:
-🤖 AI-Driven — 99.64% of written lines came from AI
-📝 Concise Prompter — average 174 characters per prompt
-🔁 Iterative Prompter — average 10 prompts per session
-🚀 High AI Trust — 0.34% of changed lines were hand-edited
+Claude Code              21 hrs 17 mins      █████████████████████░░░░   84.81 % 
+VS Code                  3 hrs 33 mins       ████░░░░░░░░░░░░░░░░░░░░░   14.15 % 
+Codex CLI                15 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.04 % 
 ```
 
 **I Mostly Code in Jupyter Notebook** 
@@ -202,12 +176,8 @@ PLSQL                    1 repo              ██░░░░░░░░░�
 
 
 
-**Timeline**
 
-![Lines of Code chart](https://raw.githubusercontent.com/O-2wice/O-2wice/main/assets/bar_graph.png)
-
-
- Last Updated on 06/08/2026 00:22:35 UTC
+ Last Updated on 06/08/2026 13:19:07 UTC
 <!--END_SECTION:waka-->
 
 <br/>
