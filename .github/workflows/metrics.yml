@@ -32,6 +32,6 @@ jobs:
           plugin_music_provider: youtube
           plugin_music_mode: playlist
           plugin_music_playlist: https://music.youtube.com/playlist?list=PLWJzcQJwrVbM
-          plugin_music_limit: 4
+          plugin_music_limit: 8
 
 # retrigger

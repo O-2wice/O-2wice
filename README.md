@@ -98,15 +98,11 @@ me = DataScientist()
 
 ## Debug Soundtrack
 
-<div align="center">
+What stays on while coding, debugging, and writing. Refreshed daily — click through to open it on YouTube Music.
 
-<img src="metrics/music.svg" width="500" alt="YouTube Music playlist"/>
-
-<br/>
-
-<sub>What stays on while coding, debugging, and writing — <a href="https://music.youtube.com/playlist?list=PLWJzcQJwrVbM">open the playlist on YouTube Music</a></sub>
-
-</div>
+<a href="https://music.youtube.com/playlist?list=PLWJzcQJwrVbM">
+<img src="metrics/music.svg" width="480" alt="Current rotation — opens the playlist on YouTube Music"/>
+</a>
 
 ---
 
