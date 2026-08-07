@@ -48,5 +48,17 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git diff --staged --quiet || git commit -m "Refresh daily drivers table"
-          git push
+          if git diff --staged --quiet; then
+            echo "Drivers table unchanged; nothing to commit."
+            exit 0
+          fi
+          git commit -m "Refresh daily drivers table"
+          for attempt in 1 2 3; do
+            if git pull --rebase --autostash && git push; then
+              exit 0
+            fi
+            echo "Push attempt $attempt failed; another job may have pushed first. Retrying."
+            sleep 5
+          done
+          echo "Could not push after 3 attempts." >&2
+          exit 1

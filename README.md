@@ -188,7 +188,7 @@ PLSQL                    1 repo              ██░░░░░░░░░�
 
 ## Daily Drivers
 
-Forks I keep current — most recently touched first. Regenerated daily.
+Forks I actually run, most recently touched first. Regenerated daily.
 
 <!--START_SECTION:drivers-->
 | Tool | What it does |
