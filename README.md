@@ -120,13 +120,13 @@ me = DataScientist()
 <br/>
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-264%20hrs%2045%20mins-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-270%20hrs%2038%20mins-blue?style=flat)
 
 **🐱 My GitHub Data** 
 
-> 📦 95.8 kB Used in GitHub's Storage 
+> 📦 96.2 kB Used in GitHub's Storage 
  > 
-> 🏆 58 Contributions in the Year 2026
+> 🏆 80 Contributions in the Year 2026
  > 
 > 💼 Opted to Hire
  > 
@@ -138,16 +138,16 @@ me = DataScientist()
 
 ```text
 💬 Programming Languages: 
-Other                    6 hrs 57 mins       ███████░░░░░░░░░░░░░░░░░░   27.72 % 
-Python                   6 hrs 19 mins       ██████░░░░░░░░░░░░░░░░░░░   25.23 % 
-HTML                     3 hrs 36 mins       ████░░░░░░░░░░░░░░░░░░░░░   14.41 % 
-Markdown                 3 hrs 25 mins       ███░░░░░░░░░░░░░░░░░░░░░░   13.63 % 
-RMarkdown                1 hr 22 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   05.45 % 
+Python                   7 hrs 57 mins       ██████░░░░░░░░░░░░░░░░░░░   25.11 % 
+Other                    7 hrs 39 mins       ██████░░░░░░░░░░░░░░░░░░░   24.17 % 
+Markdown                 5 hrs 58 mins       █████░░░░░░░░░░░░░░░░░░░░   18.84 % 
+HTML                     4 hrs 9 mins        ███░░░░░░░░░░░░░░░░░░░░░░   13.13 % 
+YAML                     2 hrs 12 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   06.97 % 
 
 🔥 Editors: 
-Claude Code              21 hrs 17 mins      █████████████████████░░░░   84.81 % 
-VS Code                  3 hrs 33 mins       ████░░░░░░░░░░░░░░░░░░░░░   14.15 % 
-Codex CLI                15 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.04 % 
+Claude Code              26 hrs 47 mins      █████████████████████░░░░   84.61 % 
+VS Code                  4 hrs 17 mins       ███░░░░░░░░░░░░░░░░░░░░░░   13.53 % 
+Codex CLI                35 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.86 % 
 ```
 
 **I Mostly Code in Jupyter Notebook** 
@@ -163,7 +163,7 @@ PLSQL                    1 repo              ██░░░░░░░░░�
 
 
 
- Last Updated on 06/08/2026 13:19:07 UTC
+ Last Updated on 07/08/2026 11:20:18 UTC
 <!--END_SECTION:waka-->
 
 <br/>
