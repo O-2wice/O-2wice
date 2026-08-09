@@ -134,16 +134,16 @@ What stays on while coding, debugging, and writing. Refreshed daily — click th
 
 ```text
 💬 Programming Languages: 
-Python                   7 hrs 57 mins       ██████░░░░░░░░░░░░░░░░░░░   25.11 % 
-Other                    7 hrs 39 mins       ██████░░░░░░░░░░░░░░░░░░░   24.17 % 
-Markdown                 5 hrs 58 mins       █████░░░░░░░░░░░░░░░░░░░░   18.84 % 
-HTML                     4 hrs 9 mins        ███░░░░░░░░░░░░░░░░░░░░░░   13.13 % 
-YAML                     2 hrs 12 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   06.97 % 
+Other                    7 hrs 40 mins       ██████░░░░░░░░░░░░░░░░░░░   22.73 % 
+Python                   7 hrs 27 mins       ██████░░░░░░░░░░░░░░░░░░░   22.10 % 
+Markdown                 6 hrs 16 mins       █████░░░░░░░░░░░░░░░░░░░░   18.61 % 
+HTML                     4 hrs 36 mins       ███░░░░░░░░░░░░░░░░░░░░░░   13.66 % 
+YAML                     2 hrs 12 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   06.54 % 
 
 🔥 Editors: 
-Claude Code              26 hrs 47 mins      █████████████████████░░░░   84.61 % 
-VS Code                  4 hrs 17 mins       ███░░░░░░░░░░░░░░░░░░░░░░   13.53 % 
-Codex CLI                35 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.86 % 
+Claude Code              27 hrs 10 mins      ████████████████████░░░░░   80.53 % 
+VS Code                  4 hrs 20 mins       ███░░░░░░░░░░░░░░░░░░░░░░   12.85 % 
+Codex CLI                2 hrs 13 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   06.62 % 
 ```
 
 **I Mostly Code in Jupyter Notebook** 
@@ -159,7 +159,7 @@ PLSQL                    1 repo              ██░░░░░░░░░�
 
 
 
- Last Updated on 08/08/2026 00:11:48 UTC
+ Last Updated on 09/08/2026 00:11:33 UTC
 <!--END_SECTION:waka-->
 
 <br/>
