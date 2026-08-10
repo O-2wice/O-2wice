@@ -20,7 +20,7 @@ jobs:
 
       - name: Build table from forks
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh api "users/O-2wice/repos?type=owner&sort=pushed&per_page=100" \
             --jq '[.[] | select(.fork == true and .archived == false)][:6][]
