@@ -20,9 +20,9 @@
 
 ## About Me
 
-Actuarial Science graduate, now an MSc Data Science candidate at ELTE Budapest.
+Actuarial Science degree, now doing an MSc in Data Science at ELTE Budapest.
 
-Before that: IT risk and business continuity, investment and portfolio analysis, and years running technical infrastructure. That mix is why I work where enterprise systems, risk and machine learning overlap — natural-language querying over ERP event logs, and financial-distress models on SAP S/4HANA data.
+I came to data science from IT risk and business continuity, with a stint in investment analysis and several years running technical infrastructure. That is why most of what I build sits on enterprise systems. Right now I'm working on turning plain English into SQL over ERP event logs, and on predicting financial distress from SAP S/4HANA data.
 
 ---
 
@@ -143,10 +143,10 @@ JavaScript               1 repo              ██░░░░░░░░░�
 
 ## Debug Soundtrack
 
-What stays on while coding, debugging, and writing. Refreshed daily — click through to open it on YouTube Music.
+What stays on while I code. Refreshed daily. Click through to open the playlist.
 
 <a href="https://music.youtube.com/playlist?list=PLWJzcQJwrVbM">
-<img src="metrics/music.svg" width="860" alt="Current rotation — opens the playlist on YouTube Music"/>
+<img src="metrics/music.svg" width="860" alt="Current rotation, opens the playlist on YouTube Music"/>
 </a>
 
 ---
