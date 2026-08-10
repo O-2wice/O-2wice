@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Animated Header -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=O_2wice&fontSize=42&fontColor=fff&animation=fadeIn&fontAlignY=32&desc=Data%20Scientist%20|%20ML%20Engineer%20|%20ERP%20Analytics&descSize=18&descAlignY=52"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1b27,50:414868,100:7aa2f7&height=180&section=header&text=O_2wice&fontSize=42&fontColor=fff&animation=fadeIn&fontAlignY=32&desc=Data%20Scientist%20|%20ML%20Engineer%20|%20ERP%20Analytics&descSize=18&descAlignY=52"/>
 
 <!-- Typing Animation -->
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1500&color=6AD3F7&center=true&vCenter=true&repeat=true&width=600&height=50&lines=Turning+Data+into+Decisions;Building+ML+Systems+that+Scale;Natural+Language+to+SQL+for+ERP+Systems" alt="Typing SVG" /></a>
@@ -14,10 +14,6 @@
 <a href="https://music.youtube.com/@O_2wice"><img src="https://img.shields.io/badge/YouTube%20Music-FF0000?style=for-the-badge&logo=youtube-music&logoColor=white"/></a>
 <a href="https://github.com/O-2wice"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=github&logoColor=white"/></a>
 
-<br/><br/>
-
-<img src="https://komarev.com/ghpvc/?username=O-2wice&style=for-the-badge&color=blue" alt="Profile Views"/>
-
 </div>
 
 ---
@@ -26,28 +22,6 @@
 
 I build machine learning systems for enterprise data — natural-language querying over ERP event logs, and risk models on SAP financials. MSc at ELTE Budapest.
 
-```python
-class DataScientist:
-    def __init__(self):
-        self.name = "O_2wice"
-        self.role = "Data Science & ML Engineer"
-        self.location = "Budapest, Hungary"
-        self.university = "ELTE (Eotvos Lorand University)"
-        self.interests = ["Machine Learning", "Financial Analytics",
-                          "ERP Analytics", "Risk Modeling"]
-        self.current_project = "Natural Language to SQL for ERP Systems"
-
-    def current_focus(self):
-        return "I bridge the gap between traditional ERP systems and modern AI"
-
-    def fun_fact(self):
-        return [
-            "⚽ I can explain gradient descent using football tactics",
-            "🚙 My search history is 50% research papers, 50% Hilux specs — my MSc supervisor only knows about one of them"
-        ]
-
-me = DataScientist()
-```
 
 ---
 
@@ -55,23 +29,7 @@ me = DataScientist()
 
 <div align="center">
 
-**Languages**<br/>
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white"/> <img src="https://img.shields.io/badge/R-276DC3?style=flat&logo=r&logoColor=white"/> <img src="https://img.shields.io/badge/SQL-4479A1?style=flat&logo=postgresql&logoColor=white"/>
-
-**ML & Modeling**<br/>
-<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white"/> <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white"/> <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat&logo=scikit-learn&logoColor=white"/> <img src="https://img.shields.io/badge/XGBoost-FF6600?style=flat&logo=xgboost&logoColor=white"/> <img src="https://img.shields.io/badge/pandas-150458?style=flat&logo=pandas&logoColor=white"/> <img src="https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white"/>
-
-**Databases**<br/>
-<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white"/> <img src="https://img.shields.io/badge/DuckDB-FFF000?style=flat&logo=duckdb&logoColor=black"/> <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white"/> <img src="https://img.shields.io/badge/SQL%20Server-CC2927?style=flat&logo=microsoft-sql-server&logoColor=white"/> <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white"/> <img src="https://img.shields.io/badge/Elasticsearch-005571?style=flat&logo=elasticsearch&logoColor=white"/> <img src="https://img.shields.io/badge/TimescaleDB-FDB515?style=flat&logo=timescale&logoColor=black"/>
-
-**Streaming & Compute**<br/>
-<img src="https://img.shields.io/badge/Apache%20Kafka-231F20?style=flat&logo=apachekafka&logoColor=white"/> <img src="https://img.shields.io/badge/Apache%20Flink-E6526F?style=flat&logo=apacheflink&logoColor=white"/> <img src="https://img.shields.io/badge/Apache%20Spark-E25A1C?style=flat&logo=apache-spark&logoColor=white"/>
-
-**Enterprise & BI**<br/>
-<img src="https://img.shields.io/badge/SAP%20S/4HANA-0FAAFF?style=flat&logo=sap&logoColor=white"/> <img src="https://img.shields.io/badge/Power%20BI-F2C811?style=flat&logo=powerbi&logoColor=black"/> <img src="https://img.shields.io/badge/Tableau-E97627?style=flat&logo=tableau&logoColor=white"/> <img src="https://img.shields.io/badge/Grafana-F46800?style=flat&logo=grafana&logoColor=white"/> <img src="https://img.shields.io/badge/Prometheus-E6522C?style=flat&logo=prometheus&logoColor=white"/> <img src="https://img.shields.io/badge/Excel-217346?style=flat&logo=microsoft-excel&logoColor=white"/>
-
-**AI & Dev**<br/>
-<img src="https://img.shields.io/badge/OpenAI-412991?style=flat&logo=openai&logoColor=white"/> <img src="https://img.shields.io/badge/Anthropic-191919?style=flat&logo=anthropic&logoColor=white"/> <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat&logo=langchain&logoColor=white"/> <img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white"/> <img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white"/> <img src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black"/> <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=jupyter&logoColor=white"/> <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=flat&logo=visual-studio-code&logoColor=white"/>
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white"/> <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white"/> <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat&logo=scikit-learn&logoColor=white"/> <img src="https://img.shields.io/badge/pandas-150458?style=flat&logo=pandas&logoColor=white"/> <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white"/> <img src="https://img.shields.io/badge/DuckDB-FFF000?style=flat&logo=duckdb&logoColor=black"/> <img src="https://img.shields.io/badge/Apache%20Spark-E25A1C?style=flat&logo=apache-spark&logoColor=white"/> <img src="https://img.shields.io/badge/SAP%20S/4HANA-0FAAFF?style=flat&logo=sap&logoColor=white"/> <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat&logo=langchain&logoColor=white"/> <img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white"/>
 
 </div>
 
@@ -96,21 +54,11 @@ me = DataScientist()
 
 ---
 
-## Debug Soundtrack
-
-What stays on while coding, debugging, and writing. Refreshed daily — click through to open it on YouTube Music.
-
-<a href="https://music.youtube.com/playlist?list=PLWJzcQJwrVbM">
-<img src="metrics/music.svg" width="860" alt="Current rotation — opens the playlist on YouTube Music"/>
-</a>
-
----
-
 ## GitHub Stats
 
 <div align="center">
 
-<img src="https://github-readme-stats-three-inky-85.vercel.app/api?username=O-2wice&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" height="180"/>
+<img src="https://github-readme-stats-three-inky-85.vercel.app/api?username=O-2wice&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&hide=prs,issues,stars" height="180"/>
 <img src="https://github-readme-stats-three-inky-85.vercel.app/api/top-langs/?username=O-2wice&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" height="180"/>
 
 <br/>
@@ -182,6 +130,16 @@ JavaScript               1 repo              ██░░░░░░░░░�
 
 ---
 
+## Debug Soundtrack
+
+What stays on while coding, debugging, and writing. Refreshed daily — click through to open it on YouTube Music.
+
+<a href="https://music.youtube.com/playlist?list=PLWJzcQJwrVbM">
+<img src="metrics/music.svg" width="860" alt="Current rotation — opens the playlist on YouTube Music"/>
+</a>
+
+---
+
 ## Daily Drivers
 
 Forks I actually run, most recently touched first. Regenerated daily.
@@ -213,6 +171,6 @@ Forks I actually run, most recently touched first. Regenerated daily.
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1b27,50:414868,100:7aa2f7&height=100&section=footer"/>
 
 </div>
