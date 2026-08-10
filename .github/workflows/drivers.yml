@@ -45,8 +45,8 @@ jobs:
 
       - name: Commit
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "profile-bot"
+          git config user.email "profile-bot@o-2wice.noreply.invalid"
           git add README.md
           if git diff --staged --quiet; then
             echo "Drivers table unchanged; nothing to commit."

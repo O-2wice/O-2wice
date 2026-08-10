@@ -16,6 +16,8 @@ jobs:
     name: Generate metrics panels
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+
       - name: Music panel
         uses: lowlighter/metrics@latest
         with:
@@ -23,6 +25,9 @@ jobs:
           user: O-2wice
           filename: metrics/music.svg
           base: ""
+          # Render only - the commit is made below so it is not attributed
+          # to github-actions[bot].
+          output_action: none
           config_timezone: Europe/Budapest
           extras_css: |
             svg { background: #1a1b27; border-radius: 10px; }
@@ -34,4 +39,25 @@ jobs:
           plugin_music_playlist: https://music.youtube.com/playlist?list=PLWJzcQJwrVbM
           plugin_music_limit: 8
 
-# retrigger
+      - name: Commit
+        run: |
+          # metrics renders into a host folder outside the workspace
+          sudo cp /metrics_renders/metrics/music.svg metrics/music.svg
+          sudo chown "$(id -u):$(id -g)" metrics/music.svg
+          git config user.name "profile-bot"
+          git config user.email "profile-bot@o-2wice.noreply.invalid"
+          git add metrics/music.svg
+          if git diff --staged --quiet; then
+            echo "Music panel unchanged; nothing to commit."
+            exit 0
+          fi
+          git commit -m "Update metrics/music.svg"
+          for attempt in 1 2 3; do
+            if git pull --rebase --autostash && git push; then
+              exit 0
+            fi
+            echo "Push attempt $attempt failed; another job may have pushed first. Retrying."
+            sleep 5
+          done
+          echo "Could not push after 3 attempts." >&2
+          exit 1
