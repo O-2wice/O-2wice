@@ -1,0 +1,53 @@
+name: Debug Soundtrack
+
+on:
+  schedule:
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+  push:
+    branches: [preview]
+    paths:
+      - '.github/workflows/music.yml'
+      - 'scripts/build_music_panel.py'
+
+permissions:
+  contents: write
+
+jobs:
+  panel:
+    name: Rebuild music panel
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - run: pip install --quiet Pillow
+
+      - name: Render panel
+        env:
+          PLAYLIST_URL: https://music.youtube.com/playlist?list=PLWJzcQJwrVbM
+          TRACK_LIMIT: '6'
+        run: python3 scripts/build_music_panel.py
+
+      - name: Commit
+        run: |
+          git config user.name "profile-bot"
+          git config user.email "profile-bot@o-2wice.noreply.invalid"
+          git add metrics/music.svg
+          if git diff --staged --quiet; then
+            echo "Panel unchanged; nothing to commit."
+            exit 0
+          fi
+          git commit -m "Refresh Debug Soundtrack panel"
+          for attempt in 1 2 3; do
+            if git pull --rebase --autostash && git push; then
+              exit 0
+            fi
+            echo "Push attempt $attempt failed; another job may have pushed first. Retrying."
+            sleep 5
+          done
+          echo "Could not push after 3 attempts." >&2
+          exit 1
