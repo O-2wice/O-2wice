@@ -120,15 +120,15 @@ What stays on while coding, debugging, and writing. Refreshed daily — click th
 
 **🐱 My GitHub Data** 
 
-> 📦 96.3 kB Used in GitHub's Storage 
+> 📦 ? Used in GitHub's Storage 
  > 
-> 🏆 156 Contributions in the Year 2026
+> 🏆 92 Contributions in the Year 2026
  > 
 > 💼 Opted to Hire
  > 
 > 📜 29 Public Repositories 
  > 
-> 🔑 9 Private Repositories 
+> 🔑 0 Private Repositories 
  > 
 📊 **This Week I Spent My Time On** 
 
@@ -146,20 +146,20 @@ VS Code                  3 hrs 58 mins       ███░░░░░░░░�
 Codex CLI                35 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   02.03 % 
 ```
 
-**I Mostly Code in Jupyter Notebook** 
+**I Mostly Code in Python** 
 
 ```text
-Jupyter Notebook         5 repos             ████████░░░░░░░░░░░░░░░░░   33.33 % 
-HTML                     2 repos             ███░░░░░░░░░░░░░░░░░░░░░░   13.33 % 
-TeX                      2 repos             ███░░░░░░░░░░░░░░░░░░░░░░   13.33 % 
-JavaScript               1 repo              ██░░░░░░░░░░░░░░░░░░░░░░░   06.67 % 
-PLSQL                    1 repo              ██░░░░░░░░░░░░░░░░░░░░░░░   06.67 % 
+Python                   5 repos             ████████░░░░░░░░░░░░░░░░░   31.25 % 
+Jupyter Notebook         5 repos             ████████░░░░░░░░░░░░░░░░░   31.25 % 
+HTML                     2 repos             ███░░░░░░░░░░░░░░░░░░░░░░   12.50 % 
+TeX                      2 repos             ███░░░░░░░░░░░░░░░░░░░░░░   12.50 % 
+JavaScript               1 repo              ██░░░░░░░░░░░░░░░░░░░░░░░   06.25 % 
 ```
 
 
 
 
- Last Updated on 10/08/2026 04:48:23 UTC
+ Last Updated on 10/08/2026 09:41:55 UTC
 <!--END_SECTION:waka-->
 
 <br/>
