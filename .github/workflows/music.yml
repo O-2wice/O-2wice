@@ -29,7 +29,7 @@ jobs:
       - name: Render panel
         env:
           PLAYLIST_URL: https://music.youtube.com/playlist?list=PLWJzcQJwrVbM
-          TRACK_LIMIT: '6'
+          TRACK_LIMIT: '8'
         run: python3 scripts/build_music_panel.py
 
       - name: Commit

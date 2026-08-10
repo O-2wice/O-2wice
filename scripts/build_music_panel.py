@@ -20,7 +20,7 @@ import urllib.request
 
 PLAYLIST = os.environ.get("PLAYLIST_URL", "https://music.youtube.com/playlist?list=PLWJzcQJwrVbM")
 OUT = os.environ.get("OUT_PATH", "metrics/music.svg")
-LIMIT = int(os.environ.get("TRACK_LIMIT", "6"))
+LIMIT = int(os.environ.get("TRACK_LIMIT", "8"))
 
 UA = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36")
@@ -33,11 +33,15 @@ MUTED = "#7f88a8"
 DIM = "#565f89"
 ROW = "#ffffff"
 
-W = 480
-PAD = 16
-ART = 34
-ROW_H = 46
-HEAD_H = 58
+# Sized to fill GitHub's README column instead of leaving a gap beside a
+# narrow card. Tracks run down one column then the next, so they are
+# numbered to keep the reading order unambiguous.
+W = 860
+PAD = 20
+GUTTER = 24
+ART = 40
+ROW_H = 54
+HEAD_H = 66
 FONT = "'Segoe UI',Ubuntu,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif"
 
 # Rough per-character advance ratios for proportional sans at 1px, used to
@@ -163,53 +167,69 @@ def artwork(url, px=68):
 
 
 def build(name, tracks):
-    height = HEAD_H + len(tracks) * ROW_H + 12
-    dur_w = 44
-    title_max = W - PAD * 2 - ART - 12 - dur_w - 8
+    cols = 2 if len(tracks) > 4 else 1
+    per_col = -(-len(tracks) // cols)
+    col_w = (W - PAD * 2 - GUTTER * (cols - 1)) / cols
+    height = HEAD_H + per_col * ROW_H + 16
+
+    num_w = 20
+    dur_w = 42
+    text_x = num_w + ART + 14
+    title_max = col_w - text_x - dur_w - 10
 
     out = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{height}" '
         f'viewBox="0 0 {W} {height}" role="img" aria-label="Debug Soundtrack">',
         "<defs>",
-        '<clipPath id="art"><rect width="%d" height="%d" rx="5"/></clipPath>' % (ART, ART),
+        f'<clipPath id="art"><rect width="{ART}" height="{ART}" rx="6"/></clipPath>',
+        f'<linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">'
+        f'<stop offset="0" stop-color="{ACCENT}"/><stop offset="1" stop-color="#bb9af7"/>'
+        f"</linearGradient>",
         "</defs>",
-        f'<rect width="{W}" height="{height}" rx="10" fill="{BG}"/>',
+        f'<rect width="{W}" height="{height}" rx="12" fill="{BG}"/>',
+        f'<rect width="{W}" height="3" rx="1.5" fill="url(#accent)" opacity="0.85"/>',
         f'<g font-family="{FONT}">',
         # header
-        f'<circle cx="{PAD + 7}" cy="24" r="7.5" fill="none" stroke="{ACCENT}" stroke-width="1.5"/>',
-        f'<path d="M{PAD + 5} 20.5 L{PAD + 10.5} 24 L{PAD + 5} 27.5 Z" fill="{ACCENT}"/>',
-        f'<text x="{PAD + 22}" y="28" fill="{ACCENT}" font-size="14" font-weight="600">Debug Soundtrack</text>',
-        f'<text x="{W - PAD}" y="28" fill="{DIM}" font-size="10" text-anchor="end">YouTube Music</text>',
-        f'<text x="{PAD}" y="45" fill="{MUTED}" font-size="10.5">'
-        f'{html.escape(truncate(name, 10.5, W - PAD * 2 - 90))} · refreshed daily</text>',
+        f'<circle cx="{PAD + 8}" cy="30" r="8.5" fill="none" stroke="{ACCENT}" stroke-width="1.6"/>',
+        f'<path d="M{PAD + 5.5} 25.5 L{PAD + 12.5} 30 L{PAD + 5.5} 34.5 Z" fill="{ACCENT}"/>',
+        f'<text x="{PAD + 25}" y="35" fill="{ACCENT}" font-size="15.5" font-weight="600">Debug Soundtrack</text>',
+        f'<text x="{W - PAD}" y="35" fill="{DIM}" font-size="11" text-anchor="end">YouTube Music</text>',
+        f'<text x="{PAD}" y="53" fill="{MUTED}" font-size="11">'
+        f'{html.escape(truncate(name, 11, W - PAD * 2 - 140))} · {len(tracks)} tracks · refreshed daily</text>',
     ]
 
-    y = HEAD_H
     for i, t in enumerate(tracks):
-        if i % 2 == 0:
-            out.append(f'<rect x="{PAD - 6}" y="{y}" width="{W - (PAD - 6) * 2}" height="{ROW_H - 4}" '
-                       f'rx="6" fill="{ROW}" fill-opacity="0.025"/>')
-        art_y = y + (ROW_H - 4 - ART) / 2
+        col, row = divmod(i, per_col)
+        x0 = PAD + col * (col_w + GUTTER)
+        y = HEAD_H + row * ROW_H
+
+        if row % 2 == 0:
+            out.append(f'<rect x="{x0 - 8}" y="{y}" width="{col_w + 16}" height="{ROW_H - 6}" '
+                       f'rx="7" fill="{ROW}" fill-opacity="0.03"/>')
+
+        out.append(f'<text x="{x0 + 6}" y="{y + 28}" fill="{DIM}" font-size="11" text-anchor="middle" '
+                   f'font-family="ui-monospace,SFMono-Regular,Consolas,monospace">{i + 1}</text>')
+
+        art_x, art_y = x0 + num_w, y + (ROW_H - 6 - ART) / 2
         if t.get("data"):
-            out.append(f'<g transform="translate({PAD},{art_y})">'
+            out.append(f'<g transform="translate({art_x},{art_y})">'
                        f'<image href="{t["data"]}" width="{ART}" height="{ART}" clip-path="url(#art)"/>'
-                       f'<rect width="{ART}" height="{ART}" rx="5" fill="none" '
-                       f'stroke="{ROW}" stroke-opacity="0.08"/></g>')
+                       f'<rect width="{ART}" height="{ART}" rx="6" fill="none" '
+                       f'stroke="{ROW}" stroke-opacity="0.1"/></g>')
         else:
-            out.append(f'<rect x="{PAD}" y="{art_y}" width="{ART}" height="{ART}" rx="5" '
+            out.append(f'<rect x="{art_x}" y="{art_y}" width="{ART}" height="{ART}" rx="6" '
                        f'fill="{ROW}" fill-opacity="0.06"/>')
 
-        tx = PAD + ART + 12
-        out.append(f'<text x="{tx}" y="{y + 18}" fill="{TITLE}" font-size="12.5" font-weight="500">'
-                   f'{html.escape(truncate(t["title"], 12.5, title_max))}</text>')
+        tx = x0 + text_x
+        out.append(f'<text x="{tx}" y="{y + 22}" fill="{TITLE}" font-size="13" font-weight="500">'
+                   f'{html.escape(truncate(t["title"], 13, title_max))}</text>')
         if t["artist"]:
-            out.append(f'<text x="{tx}" y="{y + 32}" fill="{MUTED}" font-size="10.5">'
-                       f'{html.escape(truncate(t["artist"], 10.5, title_max))}</text>')
+            out.append(f'<text x="{tx}" y="{y + 37}" fill="{MUTED}" font-size="11">'
+                       f'{html.escape(truncate(t["artist"], 11, title_max))}</text>')
         if t["duration"]:
-            out.append(f'<text x="{W - PAD}" y="{y + 25}" fill="{DIM}" font-size="10.5" '
+            out.append(f'<text x="{x0 + col_w}" y="{y + 29}" fill="{DIM}" font-size="11" '
                        f'text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">'
                        f'{html.escape(t["duration"])}</text>')
-        y += ROW_H
 
     out.append("</g></svg>")
     return "\n".join(out)

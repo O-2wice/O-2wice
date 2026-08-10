@@ -101,7 +101,7 @@ me = DataScientist()
 What stays on while coding, debugging, and writing. Refreshed daily — click through to open it on YouTube Music.
 
 <a href="https://music.youtube.com/playlist?list=PLWJzcQJwrVbM">
-<img src="metrics/music.svg" width="480" alt="Current rotation — opens the playlist on YouTube Music"/>
+<img src="metrics/music.svg" width="860" alt="Current rotation — opens the playlist on YouTube Music"/>
 </a>
 
 ---
