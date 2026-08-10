@@ -16,7 +16,11 @@ jobs:
       - uses: anmol098/waka-readme-stats@master
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          # Read-only PAT: needed for cross-repo stats (private repo count,
+          # language-per-repo). It deliberately has no write access.
           GH_TOKEN: ${{ secrets.O_2WICE_PAT_KEY }}
+          # The push uses Actions' own token, scoped to this repo only.
+          PUSH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Keeps the commit off github-actions[bot]'s contributor entry.
           COMMIT_USERNAME: "profile-bot"
           COMMIT_EMAIL: "profile-bot@o-2wice.noreply.invalid"
