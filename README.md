@@ -1,10 +1,10 @@
 <div align="center">
 
 <!-- Animated Header -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1b27,50:414868,100:7aa2f7&height=180&section=header&text=O_2wice&fontSize=42&fontColor=fff&animation=fadeIn&fontAlignY=32&desc=Data%20Scientist%20|%20ML%20Engineer%20|%20ERP%20Analytics&descSize=18&descAlignY=52"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1b27,50:414868,100:7aa2f7&height=180&section=header&text=O_2wice&fontSize=42&fontColor=fff&animation=fadeIn&fontAlignY=32&desc=Data%20Scientist%20|%20ML%20Engineer%20|%20Risk%20&%20ERP%20Analytics&descSize=18&descAlignY=52"/>
 
 <!-- Typing Animation -->
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1500&color=6AD3F7&center=true&vCenter=true&repeat=true&width=600&height=50&lines=Turning+Data+into+Decisions;Building+ML+Systems+that+Scale;Natural+Language+to+SQL+for+ERP+Systems" alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1500&color=6AD3F7&center=true&vCenter=true&repeat=true&width=600&height=50&lines=Actuarial+Science+to+Machine+Learning;Turning+Data+into+Decisions;Building+ML+Systems+that+Scale;Natural+Language+to+SQL+for+ERP+Systems" alt="Typing SVG" /></a>
 
 <br/>
 
@@ -20,8 +20,9 @@
 
 ## About Me
 
-I build machine learning systems for enterprise data — natural-language querying over ERP event logs, and risk models on SAP financials. MSc at ELTE Budapest.
+Actuarial Science graduate, now an MSc Data Science candidate at ELTE Budapest.
 
+Before that: IT risk and business continuity, investment and portfolio analysis, and years running technical infrastructure. That mix is why I work where enterprise systems, risk and machine learning overlap — natural-language querying over ERP event logs, and financial-distress models on SAP S/4HANA data.
 
 ---
 
@@ -29,7 +30,17 @@ I build machine learning systems for enterprise data — natural-language queryi
 
 <div align="center">
 
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white"/> <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white"/> <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat&logo=scikit-learn&logoColor=white"/> <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white"/> <img src="https://img.shields.io/badge/DuckDB-FFF000?style=flat&logo=duckdb&logoColor=black"/> <img src="https://img.shields.io/badge/Apache%20Spark-E25A1C?style=flat&logo=apache-spark&logoColor=white"/> <img src="https://img.shields.io/badge/SAP%20S/4HANA-0FAAFF?style=flat&logo=sap&logoColor=white"/> <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat&logo=langchain&logoColor=white"/> <img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white"/>
+**Languages & Stats**<br/>
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white"/> <img src="https://img.shields.io/badge/R-276DC3?style=flat&logo=r&logoColor=white"/> <img src="https://img.shields.io/badge/SQL-4479A1?style=flat&logo=postgresql&logoColor=white"/> <img src="https://img.shields.io/badge/SPSS-052FAD?style=flat&logo=ibm&logoColor=white"/>
+
+**ML & Modeling**<br/>
+<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white"/> <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white"/> <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat&logo=scikit-learn&logoColor=white"/> <img src="https://img.shields.io/badge/XGBoost-FF6600?style=flat&logo=xgboost&logoColor=white"/> <img src="https://img.shields.io/badge/pandas-150458?style=flat&logo=pandas&logoColor=white"/> <img src="https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white"/>
+
+**Data & Streaming**<br/>
+<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white"/> <img src="https://img.shields.io/badge/Oracle-F80000?style=flat&logo=oracle&logoColor=white"/> <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white"/> <img src="https://img.shields.io/badge/DuckDB-FFF000?style=flat&logo=duckdb&logoColor=black"/> <img src="https://img.shields.io/badge/Elasticsearch-005571?style=flat&logo=elasticsearch&logoColor=white"/> <img src="https://img.shields.io/badge/Apache%20Kafka-231F20?style=flat&logo=apachekafka&logoColor=white"/> <img src="https://img.shields.io/badge/Apache%20Flink-E6526F?style=flat&logo=apacheflink&logoColor=white"/> <img src="https://img.shields.io/badge/Apache%20Spark-E25A1C?style=flat&logo=apache-spark&logoColor=white"/>
+
+**Enterprise & Platform**<br/>
+<img src="https://img.shields.io/badge/SAP%20S/4HANA-0FAAFF?style=flat&logo=sap&logoColor=white"/> <img src="https://img.shields.io/badge/Power%20BI-F2C811?style=flat&logo=powerbi&logoColor=black"/> <img src="https://img.shields.io/badge/Tableau-E97627?style=flat&logo=tableau&logoColor=white"/> <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat&logo=langchain&logoColor=white"/> <img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white"/> <img src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black"/>
 
 </div>
 
