@@ -33,5 +33,8 @@ jobs:
         with:
           target_branch: output
           build_dir: dist
+          # Keep the bot off the contributors list
+          committer: profile-bot <profile-bot@o-2wice.noreply.invalid>
+          author: profile-bot <profile-bot@o-2wice.noreply.invalid>
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
