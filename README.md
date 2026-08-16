@@ -134,18 +134,18 @@ What stays on while coding, debugging, and writing. Refreshed daily — click th
 
 ```text
 💬 Programming Languages: 
-TypeScript               6 hrs 57 mins       ██████░░░░░░░░░░░░░░░░░░░   22.80 % 
-Python                   6 hrs 23 mins       █████░░░░░░░░░░░░░░░░░░░░   20.95 % 
-Markdown                 4 hrs 5 mins        ███░░░░░░░░░░░░░░░░░░░░░░   13.42 % 
-HTML                     3 hrs 54 mins       ███░░░░░░░░░░░░░░░░░░░░░░   12.82 % 
-Other                    3 hrs 34 mins       ███░░░░░░░░░░░░░░░░░░░░░░   11.69 % 
+TypeScript               7 hrs 2 mins        █████░░░░░░░░░░░░░░░░░░░░   21.71 % 
+Python                   6 hrs 14 mins       █████░░░░░░░░░░░░░░░░░░░░   19.25 % 
+Markdown                 4 hrs 57 mins       ████░░░░░░░░░░░░░░░░░░░░░   15.30 % 
+HTML                     4 hrs 30 mins       ███░░░░░░░░░░░░░░░░░░░░░░   13.89 % 
+Other                    4 hrs 2 mins        ███░░░░░░░░░░░░░░░░░░░░░░   12.46 % 
 
 🔥 Editors: 
-Claude Code              16 hrs 30 mins      ██████████████░░░░░░░░░░░   54.06 % 
-Codex Vscode             11 hrs 23 mins      █████████░░░░░░░░░░░░░░░░   37.30 % 
-Codex CLI                1 hr 49 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   05.96 % 
-Antigravity IDE          26 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.47 % 
-VS Code                  22 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.21 % 
+Claude Code              18 hrs 22 mins      ██████████████░░░░░░░░░░░   56.68 % 
+Codex Vscode             11 hrs 21 mins      █████████░░░░░░░░░░░░░░░░   35.05 % 
+Codex CLI                1 hr 51 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   05.75 % 
+Antigravity IDE          26 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.38 % 
+VS Code                  22 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.14 % 
 ```
 
 **I Mostly Code in Python** 
@@ -161,7 +161,7 @@ JavaScript               1 repo              █░░░░░░░░░░�
 
 
 
- Last Updated on 15/08/2026 00:21:44 UTC
+ Last Updated on 16/08/2026 00:23:21 UTC
 <!--END_SECTION:waka-->
 
 <br/>
