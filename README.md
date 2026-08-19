@@ -116,7 +116,7 @@ What stays on while coding, debugging, and writing. Refreshed daily — click th
 <br/>
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-297%20hrs%2035%20mins-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-299%20hrs%2029%20mins-blue?style=flat)
 
 **🐱 My GitHub Data** 
 
@@ -134,18 +134,18 @@ What stays on while coding, debugging, and writing. Refreshed daily — click th
 
 ```text
 💬 Programming Languages: 
-TypeScript               7 hrs 2 mins        █████░░░░░░░░░░░░░░░░░░░░   21.71 % 
-Python                   6 hrs 14 mins       █████░░░░░░░░░░░░░░░░░░░░   19.25 % 
-Markdown                 4 hrs 57 mins       ████░░░░░░░░░░░░░░░░░░░░░   15.30 % 
-HTML                     4 hrs 30 mins       ███░░░░░░░░░░░░░░░░░░░░░░   13.89 % 
-Other                    4 hrs 2 mins        ███░░░░░░░░░░░░░░░░░░░░░░   12.46 % 
+TypeScript               5 hrs 33 mins       █████░░░░░░░░░░░░░░░░░░░░   20.89 % 
+Other                    4 hrs 33 mins       ████░░░░░░░░░░░░░░░░░░░░░   17.11 % 
+HTML                     4 hrs 23 mins       ████░░░░░░░░░░░░░░░░░░░░░   16.48 % 
+Markdown                 4 hrs 10 mins       ████░░░░░░░░░░░░░░░░░░░░░   15.68 % 
+Python                   3 hrs 59 mins       ████░░░░░░░░░░░░░░░░░░░░░   14.99 % 
 
 🔥 Editors: 
-Claude Code              18 hrs 22 mins      ██████████████░░░░░░░░░░░   56.68 % 
-Codex Vscode             11 hrs 21 mins      █████████░░░░░░░░░░░░░░░░   35.05 % 
-Codex CLI                1 hr 51 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   05.75 % 
-Antigravity IDE          26 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.38 % 
-VS Code                  22 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.14 % 
+Claude Code              13 hrs 46 mins      █████████████░░░░░░░░░░░░   51.72 % 
+Codex Vscode             10 hrs 22 mins      ██████████░░░░░░░░░░░░░░░   38.98 % 
+Codex CLI                1 hr 54 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   07.15 % 
+Antigravity IDE          26 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.68 % 
+VS Code                  7 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.47 % 
 ```
 
 **I Mostly Code in Python** 
@@ -161,7 +161,7 @@ JavaScript               1 repo              █░░░░░░░░░░�
 
 
 
- Last Updated on 18/08/2026 00:22:07 UTC
+ Last Updated on 19/08/2026 00:22:01 UTC
 <!--END_SECTION:waka-->
 
 <br/>
