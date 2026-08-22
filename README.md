@@ -116,7 +116,7 @@ What stays on while coding, debugging, and writing. Refreshed daily — click th
 <br/>
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-302%20hrs%2058%20mins-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-304%20hrs%2038%20mins-blue?style=flat)
 
 **🐱 My GitHub Data** 
 
@@ -134,17 +134,16 @@ What stays on while coding, debugging, and writing. Refreshed daily — click th
 
 ```text
 💬 Programming Languages: 
-Markdown                 2 hrs 40 mins       █████░░░░░░░░░░░░░░░░░░░░   18.48 % 
-Other                    2 hrs 21 mins       ████░░░░░░░░░░░░░░░░░░░░░   16.25 % 
-HTML                     2 hrs 17 mins       ████░░░░░░░░░░░░░░░░░░░░░   15.75 % 
-TeX                      2 hrs 14 mins       ████░░░░░░░░░░░░░░░░░░░░░   15.40 % 
-Python                   1 hr 41 mins        ███░░░░░░░░░░░░░░░░░░░░░░   11.63 % 
+Other                    3 hrs 34 mins       ████████░░░░░░░░░░░░░░░░░   33.68 % 
+TeX                      1 hr 52 mins        ████░░░░░░░░░░░░░░░░░░░░░   17.55 % 
+YAML                     1 hr 11 mins        ███░░░░░░░░░░░░░░░░░░░░░░   11.14 % 
+HTML                     1 hr 6 mins         ███░░░░░░░░░░░░░░░░░░░░░░   10.40 % 
+Python                   1 hr 5 mins         ███░░░░░░░░░░░░░░░░░░░░░░   10.24 % 
 
 🔥 Editors: 
-Codex Vscode             6 hrs 57 mins       ████████████░░░░░░░░░░░░░   47.99 % 
-Claude Code              6 hrs 36 mins       ███████████░░░░░░░░░░░░░░   45.59 % 
-Codex CLI                54 mins             ██░░░░░░░░░░░░░░░░░░░░░░░   06.28 % 
-VS Code                  1 min               ░░░░░░░░░░░░░░░░░░░░░░░░░   00.15 % 
+Claude Code              6 hrs 41 mins       ████████████████░░░░░░░░░   62.92 % 
+Codex Vscode             3 hrs 52 mins       █████████░░░░░░░░░░░░░░░░   36.44 % 
+Codex CLI                4 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.65 % 
 ```
 
 **I Mostly Code in Python** 
@@ -160,7 +159,7 @@ JavaScript               1 repo              █░░░░░░░░░░�
 
 
 
- Last Updated on 21/08/2026 00:23:10 UTC
+ Last Updated on 22/08/2026 00:21:28 UTC
 <!--END_SECTION:waka-->
 
 <br/>
