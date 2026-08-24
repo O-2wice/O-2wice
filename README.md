@@ -116,7 +116,7 @@ What stays on while coding, debugging, and writing. Refreshed daily — click th
 <br/>
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-305%20hrs%2014%20mins-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-305%20hrs%2044%20mins-blue?style=flat)
 
 **🐱 My GitHub Data** 
 
@@ -134,17 +134,17 @@ What stays on while coding, debugging, and writing. Refreshed daily — click th
 
 ```text
 💬 Programming Languages: 
-Other                    7 hrs 51 mins       █████████████░░░░░░░░░░░░   50.65 % 
-TeX                      1 hr 52 mins        ███░░░░░░░░░░░░░░░░░░░░░░   12.04 % 
-Markdown                 1 hr 28 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   09.53 % 
-YAML                     1 hr 11 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   07.64 % 
-HTML                     1 hr 6 mins         ██░░░░░░░░░░░░░░░░░░░░░░░   07.13 % 
+Other                    10 hrs 46 mins      ██████████████░░░░░░░░░░░   56.97 % 
+TeX                      2 hrs               ███░░░░░░░░░░░░░░░░░░░░░░   10.59 % 
+Markdown                 1 hr 48 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   09.56 % 
+YAML                     1 hr 11 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   06.26 % 
+HTML                     1 hr 6 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   05.84 % 
 
 🔥 Editors: 
-Claude Code              8 hrs 18 mins       █████████████░░░░░░░░░░░░   53.56 % 
-Codex Vscode             6 hrs 53 mins       ███████████░░░░░░░░░░░░░░   44.43 % 
-Antigravity IDE          15 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.69 % 
-Codex CLI                3 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.32 % 
+Codex Vscode             9 hrs 53 mins       █████████████░░░░░░░░░░░░   52.29 % 
+Claude Code              8 hrs 18 mins       ███████████░░░░░░░░░░░░░░   43.89 % 
+Codex CLI                27 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   02.44 % 
+Antigravity IDE          15 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.38 % 
 ```
 
 **I Mostly Code in Python** 
@@ -160,7 +160,7 @@ JavaScript               1 repo              █░░░░░░░░░░�
 
 
 
- Last Updated on 23/08/2026 00:23:35 UTC
+ Last Updated on 24/08/2026 00:23:00 UTC
 <!--END_SECTION:waka-->
 
 <br/>
