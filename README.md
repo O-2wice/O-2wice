@@ -134,17 +134,17 @@ What stays on while coding, debugging, and writing. Refreshed daily — click th
 
 ```text
 💬 Programming Languages: 
-Other                    10 hrs 46 mins      ██████████████░░░░░░░░░░░   56.97 % 
-TeX                      2 hrs               ███░░░░░░░░░░░░░░░░░░░░░░   10.59 % 
-Markdown                 1 hr 48 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   09.56 % 
-YAML                     1 hr 11 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   06.26 % 
-HTML                     1 hr 6 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   05.84 % 
+Other                    11 hrs 34 mins      ███████████████░░░░░░░░░░   58.71 % 
+TeX                      2 hrs               ███░░░░░░░░░░░░░░░░░░░░░░   10.16 % 
+Markdown                 1 hr 48 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   09.18 % 
+YAML                     1 hr 11 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   06.01 % 
+HTML                     1 hr 6 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   05.61 % 
 
 🔥 Editors: 
-Codex Vscode             9 hrs 53 mins       █████████████░░░░░░░░░░░░   52.29 % 
-Claude Code              8 hrs 18 mins       ███████████░░░░░░░░░░░░░░   43.89 % 
-Codex CLI                27 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   02.44 % 
-Antigravity IDE          15 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.38 % 
+Codex Vscode             9 hrs 53 mins       █████████████░░░░░░░░░░░░   50.18 % 
+Claude Code              8 hrs 37 mins       ███████████░░░░░░░░░░░░░░   43.69 % 
+Codex CLI                56 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   04.80 % 
+Antigravity IDE          15 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.33 % 
 ```
 
 **I Mostly Code in Python** 
@@ -160,7 +160,7 @@ JavaScript               1 repo              █░░░░░░░░░░�
 
 
 
- Last Updated on 24/08/2026 00:23:00 UTC
+ Last Updated on 25/08/2026 00:22:36 UTC
 <!--END_SECTION:waka-->
 
 <br/>
