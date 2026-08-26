@@ -116,7 +116,7 @@ What stays on while coding, debugging, and writing. Refreshed daily — click th
 <br/>
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-305%20hrs%2044%20mins-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-307%20hrs-blue?style=flat)
 
 **🐱 My GitHub Data** 
 
@@ -134,17 +134,17 @@ What stays on while coding, debugging, and writing. Refreshed daily — click th
 
 ```text
 💬 Programming Languages: 
-Other                    11 hrs 34 mins      ███████████████░░░░░░░░░░   58.71 % 
-TeX                      2 hrs               ███░░░░░░░░░░░░░░░░░░░░░░   10.16 % 
-Markdown                 1 hr 48 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   09.18 % 
-YAML                     1 hr 11 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   06.01 % 
-HTML                     1 hr 6 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   05.61 % 
+Other                    10 hrs 54 mins      ███████████████░░░░░░░░░░   58.57 % 
+Markdown                 2 hrs 42 mins       ████░░░░░░░░░░░░░░░░░░░░░   14.57 % 
+TeX                      2 hrs               ███░░░░░░░░░░░░░░░░░░░░░░   10.76 % 
+YAML                     1 hr 11 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   06.36 % 
+Python                   1 hr                █░░░░░░░░░░░░░░░░░░░░░░░░   05.43 % 
 
 🔥 Editors: 
-Codex Vscode             9 hrs 53 mins       █████████████░░░░░░░░░░░░   50.18 % 
-Claude Code              8 hrs 37 mins       ███████████░░░░░░░░░░░░░░   43.69 % 
-Codex CLI                56 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   04.80 % 
-Antigravity IDE          15 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.33 % 
+Codex Vscode             9 hrs 26 mins       █████████████░░░░░░░░░░░░   50.65 % 
+Claude Code              7 hrs 40 mins       ██████████░░░░░░░░░░░░░░░   41.24 % 
+Codex CLI                1 hr 14 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   06.71 % 
+Antigravity IDE          15 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.41 % 
 ```
 
 **I Mostly Code in Python** 
@@ -160,7 +160,7 @@ JavaScript               1 repo              █░░░░░░░░░░�
 
 
 
- Last Updated on 25/08/2026 00:22:36 UTC
+ Last Updated on 26/08/2026 00:23:17 UTC
 <!--END_SECTION:waka-->
 
 <br/>
