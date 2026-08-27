@@ -52,6 +52,15 @@ def text_width(s, size):
     return total * size
 
 
+def mono_width(s, size):
+    """Monospace advance is a flat 0.6em, so the estimate is exact.
+
+    text_width models proportional sans and runs ~24% narrow on a mono
+    string, which is enough to clip a reveal animation.
+    """
+    return len(s) * 0.6 * size
+
+
 def truncate(s, size, max_px):
     if text_width(s, size) <= max_px:
         return s

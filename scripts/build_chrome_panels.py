@@ -15,7 +15,7 @@ import os
 import sys
 
 from svg_common import (ACCENT, ACCENT_ALT, BG, DIM, FONT, MONO, MUTED, ROW,
-                        TITLE, esc, text_width, write)
+                        TITLE, esc, mono_width, text_width, write)
 
 OUTDIR = os.environ.get("OUT_DIR", "metrics")
 NAME = os.environ.get("PROFILE_NAME", "O_2wice")
@@ -135,7 +135,7 @@ def typing(lines, width=620, height=52, hold=2.2, per_char=0.055):
     at = 0.0
     marks = []
     for i, (text, draw, hold_s, erase) in enumerate(steps):
-        w = text_width(text, 21) * 1.06
+        w = mono_width(text, 21)
         x0 = width / 2 - w / 2
         cycle = draw + hold_s + erase
         # 0 -> full while typing, full while held, back to 0 while erasing.
