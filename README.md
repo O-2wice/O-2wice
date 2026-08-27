@@ -20,9 +20,11 @@
 
 ## About Me
 
-Actuarial Science degree, now doing an MSc in Data Science at ELTE Budapest.
+I build machine learning systems on enterprise data.
 
-I came to data science from IT risk and business continuity, with a stint in investment analysis and several years running technical infrastructure. That is why most of what I build sits on enterprise systems. Right now I'm working on turning plain English into SQL over ERP event logs, and on predicting financial distress from SAP S/4HANA data.
+Currently: natural language to SQL over ERP event logs, where the model emits a typed IR and only plans the verifier accepts compile to SQL. Also financial distress prediction on SAP S/4HANA.
+
+MSc Data Science, ELTE Budapest.
 
 ---
 
@@ -50,11 +52,11 @@ I came to data science from IT risk and business continuity, with a stint in inv
 
 <div align="center">
 
-<a href="https://github.com/O-2wice/Federated-Learning-Anomaly-Detection"><img src="metrics/pin-Federated-Learning-Anomaly-Detection.svg" width="424"/></a>
-<a href="https://github.com/O-2wice/cifar10-image-colorization"><img src="metrics/pin-cifar10-image-colorization.svg" width="424"/></a>
+<a href="https://github.com/O-2wice/Federated-Learning-Anomaly-Detection"><img src="metrics/pin-Federated-Learning-Anomaly-Detection.svg" width="380"/></a>
+<a href="https://github.com/O-2wice/cifar10-image-colorization"><img src="metrics/pin-cifar10-image-colorization.svg" width="380"/></a>
 <br/>
-<a href="https://github.com/O-2wice/ev-charging-network-oracle-project"><img src="metrics/pin-ev-charging-network-oracle-project.svg" width="424"/></a>
-<a href="https://github.com/O-2wice/ds-lab-pr"><img src="metrics/pin-ds-lab-pr.svg" width="424"/></a>
+<a href="https://github.com/O-2wice/ev-charging-network-oracle-project"><img src="metrics/pin-ev-charging-network-oracle-project.svg" width="380"/></a>
+<a href="https://github.com/O-2wice/ds-lab-pr"><img src="metrics/pin-ds-lab-pr.svg" width="380"/></a>
 
 </div>
 
@@ -69,8 +71,7 @@ I came to data science from IT risk and business continuity, with a stint in inv
 
 <div align="center">
 
-<img src="metrics/stats.svg" width="424"/>
-<img src="metrics/top-langs.svg" width="424"/>
+<img src="metrics/stats.svg" width="860"/>
 
 <br/>
 
@@ -166,14 +167,6 @@ Forks I actually run, most recently touched first. Regenerated daily.
 | [Sefirah](https://github.com/O-2wice/Sefirah) | Phone Link / KDE Connect alternative |
 | [Fabric](https://github.com/O-2wice/Fabric) | Fabric is an open-source framework for augmenting humans using AI. It provides a modular system for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere. |
 <!--END_SECTION:drivers-->
-
----
-
-## Currently
-
-- Building **Natural Language to SQL** systems for ERP data
-- Exploring **process mining** and event-driven analytics
-- Open to **collaboration** on Data Science, ML, and enterprise AI projects
 
 ---
 

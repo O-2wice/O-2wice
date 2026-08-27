@@ -171,9 +171,14 @@ def fmt_range(start, end):
     return f"{d1.strftime('%b %-d')} – {d2.strftime('%b %-d, %Y')}"
 
 
-# Two cards sit side by side inside GitHub's README column, which the other
-# panels fill at 860px.
-HALF_W = 424
+# GitHub's README column is about 780px on the profile page, so two 424px
+# cards wrap to separate lines. The stats and language halves need no links,
+# so they are drawn into one full-width panel that cannot wrap at all; the
+# repo cards stay separate because each links to its own repo, and are sized
+# to fit two per row.
+FULL_W = 860
+HALF_W = FULL_W // 2
+PIN_W = 380
 PAD = 20
 
 
@@ -189,11 +194,9 @@ def stat_rows(rows, x, y, width, step=27):
     return out
 
 
-def build_stats(user, all_commits, total_contribs, stars):
-    h = 186
-    out = card_open(HALF_W, h, "GitHub statistics")
-    out.append(heading(PAD, 34, "GitHub Stats"))
-    out.append(f'<text x="{HALF_W - PAD}" y="34" fill="{DIM}" font-size="11" '
+def stats_half(user, all_commits, total_contribs, stars, x=0):
+    out = [heading(x + PAD, 34, "GitHub Stats")]
+    out.append(f'<text x="{x + HALF_W - PAD}" y="34" fill="{DIM}" font-size="11" '
                f'text-anchor="end">@{esc(user["login"])}</text>')
 
     year = dt.datetime.now(dt.timezone.utc).year
@@ -208,40 +211,37 @@ def build_stats(user, all_commits, total_contribs, stars):
     if stars:
         rows.append(("Stars earned", human(stars)))
 
-    out.append(f'<text x="{PAD}" y="52" fill="{MUTED}" font-size="11">'
+    out.append(f'<text x="{x + PAD}" y="52" fill="{MUTED}" font-size="11">'
                f'since {dt.date.fromisoformat(user["createdAt"][:10]).strftime("%B %Y")}</text>')
-    out += stat_rows(rows, PAD, 84, HALF_W - PAD * 2)
-    out += card_close()
-    return "\n".join(out)
+    out += stat_rows(rows, x + PAD, 84, HALF_W - PAD * 2)
+    return out
 
 
-def build_langs(agg, colours):
-    h = 186
+def langs_half(agg, colours, x=0):
     total = sum(agg.values()) or 1
     top = agg.most_common(6)
 
-    out = card_open(HALF_W, h, "Most used languages")
-    out.append(heading(PAD, 34, "Most Used Languages"))
+    out = [heading(x + PAD, 34, "Most Used Languages")]
 
     bar_y, bar_h, bar_w = 52, 10, HALF_W - PAD * 2
-    out.append(f'<clipPath id="bar"><rect x="{PAD}" y="{bar_y}" width="{bar_w}" '
+    out.append(f'<clipPath id="bar"><rect x="{x + PAD}" y="{bar_y}" width="{bar_w}" '
                f'height="{bar_h}" rx="5"/></clipPath>')
     out.append(f'<g clip-path="url(#bar)">')
-    x = PAD
+    bx = x + PAD
     for name, size in top:
         seg = bar_w * size / total
-        out.append(f'<rect x="{x:.2f}" y="{bar_y}" width="{seg + 0.5:.2f}" height="{bar_h}" '
+        out.append(f'<rect x="{bx:.2f}" y="{bar_y}" width="{seg + 0.5:.2f}" height="{bar_h}" '
                    f'fill="{colours.get(name) or ACCENT}"/>')
-        x += seg
-    if x < PAD + bar_w:
-        out.append(f'<rect x="{x:.2f}" y="{bar_y}" width="{PAD + bar_w - x:.2f}" '
+        bx += seg
+    if bx < x + PAD + bar_w:
+        out.append(f'<rect x="{bx:.2f}" y="{bar_y}" width="{x + PAD + bar_w - bx:.2f}" '
                    f'height="{bar_h}" fill="{ROW}" fill-opacity="0.08"/>')
     out.append("</g>")
 
     col_w = (HALF_W - PAD * 2) / 2
     for i, (name, size) in enumerate(top):
         col, row = divmod(i, 3)
-        cx = PAD + col * col_w
+        cx = x + PAD + col * col_w
         cy = 92 + row * 26
         pct = 100 * size / total
         out.append(f'<circle cx="{cx + 5}" cy="{cy - 4}" r="5" '
@@ -253,8 +253,19 @@ def build_langs(agg, colours):
 
     if EXCLUDE_LANGS:
         pretty = ", ".join(sorted(s.title() for s in EXCLUDE_LANGS))
-        out.append(f'<text x="{PAD}" y="{h - 16}" fill="{DIM}" font-size="10">'
+        out.append(f'<text x="{x + PAD}" y="170" fill="{DIM}" font-size="10">'
                    f'by bytes of source, excluding {esc(pretty)}</text>')
+    return out
+
+
+def build_overview(user, all_commits, total_contribs, stars, agg, colours):
+    """Stats and languages as two halves of one panel, so neither can wrap."""
+    h = 186
+    out = card_open(FULL_W, h, "GitHub statistics and most used languages")
+    out += stats_half(user, all_commits, total_contribs, stars, 0)
+    out.append(f'<line x1="{HALF_W}" y1="26" x2="{HALF_W}" y2="{h - 20}" '
+               f'stroke="{ROW}" stroke-opacity="0.08"/>')
+    out += langs_half(agg, colours, HALF_W)
     out += card_close()
     return "\n".join(out)
 
@@ -343,7 +354,7 @@ def build_activity(days, window=30):
 
 
 def build_pin(repo):
-    w, h = HALF_W, 140
+    w, h = PIN_W, 140
     out = card_open(w, h, f"{repo['name']} repository")
     out.append(f'<path d="M{PAD} 26 h11 a2 2 0 0 1 2 2 v12 a2 2 0 0 1 -2 2 h-11 z" fill="none" '
                f'stroke="{ACCENT}" stroke-width="1.4"/>')
@@ -415,8 +426,8 @@ def main():
 
     current, longest = streaks(days)
 
-    write(f"{OUTDIR}/stats.svg", build_stats(user, all_commits, year_total, stars))
-    write(f"{OUTDIR}/top-langs.svg", build_langs(agg, colours))
+    write(f"{OUTDIR}/stats.svg",
+          build_overview(user, all_commits, year_total, stars, agg, colours))
     write(f"{OUTDIR}/streak.svg", build_streak(days, current, longest))
     write(f"{OUTDIR}/activity.svg", build_activity(days))
     for repo in pins:
