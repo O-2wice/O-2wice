@@ -33,3 +33,12 @@ jobs:
           SHOW_AI_CODING: "False"
           SHOW_AI_CODE_TIME: "False"
           SHOW_LOC_CHART: "False"
+          # The short-info block repeated the stats panel and disagreed with
+          # it: it counts forks, so it claimed 31 public repos against the
+          # panel's 16, and its storage figure renders as "?".
+          SHOW_SHORT_INFO: "False"
+          # Repos-per-language is the languages panel again, by another name.
+          SHOW_LANGUAGE_PER_REPO: "False"
+          # Weekly time by language and editor is the one thing only WakaTime
+          # knows, so that stays.
+          SHOW_TOTAL_CODE_TIME: "True"
