@@ -1,0 +1,63 @@
+name: README panels
+
+on:
+  schedule:
+    - cron: '30 3 * * *'
+  workflow_dispatch:
+  push:
+    branches: [preview]
+    paths:
+      - '.github/workflows/panels.yml'
+      - 'scripts/build_stats_panels.py'
+      - 'scripts/build_chrome_panels.py'
+      - 'scripts/svg_common.py'
+
+permissions:
+  contents: write
+
+jobs:
+  panels:
+    name: Rebuild stats panels
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Render data panels
+        env:
+          # The contribution calendar and the commit search both need a user
+          # token; GITHUB_TOKEN is scoped to this repo and undercounts.
+          GH_TOKEN: ${{ secrets.O_2WICE_PAT_KEY }}
+          GH_LOGIN: O-2wice
+          OUT_DIR: metrics
+          PIN_REPOS: >-
+            Federated-Learning-Anomaly-Detection,cifar10-image-colorization,ev-charging-network-oracle-project,ds-lab-pr
+        run: python3 scripts/build_stats_panels.py
+
+      - name: Render chrome panels
+        env:
+          OUT_DIR: metrics
+        run: python3 scripts/build_chrome_panels.py
+
+      - name: Commit
+        run: |
+          git config user.name "profile-bot"
+          git config user.email "profile-bot@o-2wice.noreply.invalid"
+          git add metrics/
+          if git diff --staged --quiet; then
+            echo "Panels unchanged; nothing to commit."
+            exit 0
+          fi
+          git commit -m "Refresh README panels"
+          for attempt in 1 2 3; do
+            if git pull --rebase --autostash && git push; then
+              exit 0
+            fi
+            echo "Push attempt $attempt failed; another job may have pushed first. Retrying."
+            sleep 5
+          done
+          echo "Could not push after 3 attempts." >&2
+          exit 1

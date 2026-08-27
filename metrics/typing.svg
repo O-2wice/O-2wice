@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="52" viewBox="0 0 620 52" role="img" aria-label="Actuarial Science to Machine Learning · Turning Data into Decisions · Building ML Systems that Scale · Natural Language to SQL for ERP Systems">
+<defs>
+<clipPath id="t0"><rect x="118.1" y="0" height="52" width="0"><animate attributeName="width" values="0;0;383.8;383.8;0;0" keyTimes="0;0.0000;0.1069;0.2224;0.2652;1" dur="19.04s" repeatCount="indefinite"/></rect></clipPath>
+<clipPath id="t1"><rect x="173.3" y="0" height="52" width="0"><animate attributeName="width" values="0;0;273.4;273.4;0;0" keyTimes="0;0.2652;0.3432;0.4587;0.4899;1" dur="19.04s" repeatCount="indefinite"/></rect></clipPath>
+<clipPath id="t2"><rect x="149.4" y="0" height="52" width="0"><animate attributeName="width" values="0;0;321.2;321.2;0;0" keyTimes="0;0.4899;0.5765;0.6921;0.7267;1" dur="19.04s" repeatCount="indefinite"/></rect></clipPath>
+<clipPath id="t3"><rect x="100.3" y="0" height="52" width="0"><animate attributeName="width" values="0;0;419.4;419.4;0;0" keyTimes="0;0.7267;0.8394;0.9549;1.0000;1" dur="19.04s" repeatCount="indefinite"/></rect></clipPath>
+</defs>
+<g font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="21" font-weight="600" fill="#6AD3F7">
+<text x="118.1" y="32.76" clip-path="url(#t0)">Actuarial Science to Machine Learning</text>
+<rect y="13.52" width="2" height="22.88" fill="#6AD3F7" opacity="0" x="118.1"><animate attributeName="x" values="118.1;118.1;501.9;501.9;118.1;118.1" keyTimes="0;0.0000;0.1069;0.2224;0.2652;1" dur="19.04s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;1;1;0" keyTimes="0;0.0000;0.1069;0.2224;0.2652;1" dur="19.04s" repeatCount="indefinite"/></rect>
+<text x="173.3" y="32.76" clip-path="url(#t1)">Turning Data into Decisions</text>
+<rect y="13.52" width="2" height="22.88" fill="#6AD3F7" opacity="0" x="173.3"><animate attributeName="x" values="173.3;173.3;446.7;446.7;173.3;173.3" keyTimes="0;0.2652;0.3432;0.4587;0.4899;1" dur="19.04s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;1;1;0" keyTimes="0;0.2652;0.3432;0.4587;0.4899;1" dur="19.04s" repeatCount="indefinite"/></rect>
+<text x="149.4" y="32.76" clip-path="url(#t2)">Building ML Systems that Scale</text>
+<rect y="13.52" width="2" height="22.88" fill="#6AD3F7" opacity="0" x="149.4"><animate attributeName="x" values="149.4;149.4;470.6;470.6;149.4;149.4" keyTimes="0;0.4899;0.5765;0.6921;0.7267;1" dur="19.04s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;1;1;0" keyTimes="0;0.4899;0.5765;0.6921;0.7267;1" dur="19.04s" repeatCount="indefinite"/></rect>
+<text x="100.3" y="32.76" clip-path="url(#t3)">Natural Language to SQL for ERP Systems</text>
+<rect y="13.52" width="2" height="22.88" fill="#6AD3F7" opacity="0" x="100.3"><animate attributeName="x" values="100.3;100.3;519.7;519.7;100.3;100.3" keyTimes="0;0.7267;0.8394;0.9549;1.0000;1" dur="19.04s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;1;1;0" keyTimes="0;0.7267;0.8394;0.9549;1.0000;1" dur="19.04s" repeatCount="indefinite"/></rect>
+</g></svg>
