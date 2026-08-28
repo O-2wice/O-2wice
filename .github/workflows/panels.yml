@@ -10,6 +10,7 @@ on:
       - '.github/workflows/panels.yml'
       - 'scripts/build_stats_panels.py'
       - 'scripts/build_chrome_panels.py'
+      - 'scripts/build_tools_panel.py'
       - 'scripts/svg_common.py'
 
 permissions:
@@ -34,13 +35,18 @@ jobs:
           GH_LOGIN: O-2wice
           OUT_DIR: metrics
           PIN_REPOS: >-
-            Federated-Learning-Anomaly-Detection,cifar10-image-colorization,ev-charging-network-oracle-project,ds-lab-pr
+            correctness-aware-nl-query-translation-ocel,cifar10-image-colorization,Federated-Learning-Anomaly-Detection,ev-charging-network-oracle-project
         run: python3 scripts/build_stats_panels.py
 
       - name: Render chrome panels
         env:
           OUT_DIR: metrics
         run: python3 scripts/build_chrome_panels.py
+
+      - name: Render tech stack panel
+        env:
+          OUT_PATH: metrics/tools.svg
+        run: python3 scripts/build_tools_panel.py
 
       - name: Commit
         run: |

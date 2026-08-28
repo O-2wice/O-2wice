@@ -52,6 +52,20 @@ def graphql(query, **variables):
     return payload["data"]
 
 
+def pages_url(repo):
+    """The published GitHub Pages URL for a repo, or None.
+
+    Detected rather than configured so a write-up added later is picked up
+    without editing the workflow.
+    """
+    try:
+        return rest(f"repos/{LOGIN}/{repo}/pages").get("html_url")
+    except urllib.error.HTTPError as exc:
+        if exc.code == 404:
+            return None
+        raise
+
+
 def rest(path):
     req = urllib.request.Request(f"https://api.github.com/{path}", headers={
         "Authorization": f"bearer {TOKEN}",
@@ -182,38 +196,34 @@ PIN_W = 380
 PAD = 20
 
 
-def stat_rows(rows, x, y, width, step=27):
-    """Label on the left, value right-aligned in mono, one per line."""
-    out = []
-    for i, (label, value) in enumerate(rows):
-        yy = y + i * step
-        out.append(f'<circle cx="{x + 4}" cy="{yy - 4}" r="3" fill="{ACCENT}" opacity="0.75"/>')
-        out.append(f'<text x="{x + 16}" y="{yy}" fill="{TITLE}" font-size="13">{esc(label)}</text>')
-        out.append(f'<text x="{x + width}" y="{yy}" fill="{ACCENT}" font-size="13.5" '
-                   f'font-weight="600" text-anchor="end" font-family="{MONO}">{esc(value)}</text>')
-    return out
-
-
 def stats_half(user, all_commits, total_contribs, stars, x=0):
-    out = [heading(x + PAD, 34, "GitHub Stats")]
-    out.append(f'<text x="{x + HALF_W - PAD}" y="34" fill="{DIM}" font-size="11" '
-               f'text-anchor="end">@{esc(user["login"])}</text>')
+    """Four figures as the hero, two per row.
 
+    No card title and no @handle: the README section heading already says
+    "GitHub Stats", and the handle is on every other part of the page.
+    """
     year = dt.datetime.now(dt.timezone.utc).year
-    rows = [
-        ("Total commits", human(all_commits)),
-        (f"Contributions in {year}", human(total_contribs)),
-        ("Public repositories", human(user["repositories"]["totalCount"])),
-        ("Followers", human(user["followers"]["totalCount"])),
-    ]
-    # Only worth a line once there is something to show; a row of zeros reads
-    # worse than no row at all.
+    cells = [("Total commits", human(all_commits)),
+             (f"Contributions in {year}", human(total_contribs)),
+             ("Public repositories", human(user["repositories"]["totalCount"])),
+             ("Followers", human(user["followers"]["totalCount"]))]
+    # A row of zeros reads worse than no row at all.
     if stars:
-        rows.append(("Stars earned", human(stars)))
+        cells[3] = ("Stars earned", human(stars))
 
-    out.append(f'<text x="{x + PAD}" y="52" fill="{MUTED}" font-size="11">'
-               f'since {dt.date.fromisoformat(user["createdAt"][:10]).strftime("%B %Y")}</text>')
-    out += stat_rows(rows, x + PAD, 84, HALF_W - PAD * 2)
+    out = []
+    col_w = (HALF_W - PAD * 2) / 2
+    for i, (label, value) in enumerate(cells):
+        col, row = i % 2, i // 2
+        cx = x + PAD + col * col_w
+        ly = 54 + row * 68
+        out.append(f'<text x="{cx}" y="{ly}" fill="{MUTED}" font-size="11.5">{esc(label)}</text>')
+        out.append(f'<text x="{cx}" y="{ly + 33}" fill="{TITLE}" font-size="28" '
+                   f'font-weight="600" font-family="{MONO}">{esc(value)}</text>')
+
+    since = dt.date.fromisoformat(user["createdAt"][:10]).strftime("%B %Y")
+    out.append(f'<text x="{x + PAD}" y="196" fill="{DIM}" font-size="10">'
+               f'since {esc(since)}</text>')
     return out
 
 
@@ -221,49 +231,47 @@ def langs_half(agg, colours, x=0):
     total = sum(agg.values()) or 1
     top = agg.most_common(6)
 
-    out = [heading(x + PAD, 34, "Most Used Languages")]
-
-    bar_y, bar_h, bar_w = 52, 10, HALF_W - PAD * 2
-    out.append(f'<clipPath id="bar"><rect x="{x + PAD}" y="{bar_y}" width="{bar_w}" '
-               f'height="{bar_h}" rx="5"/></clipPath>')
-    out.append(f'<g clip-path="url(#bar)">')
+    bar_w = HALF_W - PAD * 2
+    out = [f'<text x="{x + PAD}" y="40" fill="{MUTED}" font-size="11.5">Most used languages</text>',
+           f'<clipPath id="bar"><rect x="{x + PAD}" y="52" width="{bar_w}" '
+           f'height="10" rx="5"/></clipPath>',
+           '<g clip-path="url(#bar)">']
     bx = x + PAD
     for name, size in top:
         seg = bar_w * size / total
-        out.append(f'<rect x="{bx:.2f}" y="{bar_y}" width="{seg + 0.5:.2f}" height="{bar_h}" '
+        out.append(f'<rect x="{bx:.2f}" y="52" width="{seg + 0.5:.2f}" height="10" '
                    f'fill="{colours.get(name) or ACCENT}"/>')
         bx += seg
     if bx < x + PAD + bar_w:
-        out.append(f'<rect x="{bx:.2f}" y="{bar_y}" width="{x + PAD + bar_w - bx:.2f}" '
-                   f'height="{bar_h}" fill="{ROW}" fill-opacity="0.08"/>')
+        out.append(f'<rect x="{bx:.2f}" y="52" width="{x + PAD + bar_w - bx:.2f}" '
+                   f'height="10" fill="{ROW}" fill-opacity="0.08"/>')
     out.append("</g>")
 
-    col_w = (HALF_W - PAD * 2) / 2
+    col_w = bar_w / 2
     for i, (name, size) in enumerate(top):
         col, row = divmod(i, 3)
         cx = x + PAD + col * col_w
         cy = 92 + row * 26
-        pct = 100 * size / total
         out.append(f'<circle cx="{cx + 5}" cy="{cy - 4}" r="5" '
                    f'fill="{colours.get(name) or ACCENT}"/>')
         out.append(f'<text x="{cx + 17}" y="{cy}" fill="{TITLE}" font-size="12">'
-                   f'{esc(truncate(name, 12, col_w - 72))}</text>')
-        out.append(f'<text x="{cx + col_w - 18}" y="{cy}" fill="{MUTED}" font-size="11.5" '
-                   f'text-anchor="end" font-family="{MONO}">{pct:.1f}%</text>')
+                   f'{esc(truncate(name, 12, col_w - 74))}</text>')
+        out.append(f'<text x="{cx + col_w - 20}" y="{cy}" fill="{MUTED}" font-size="11.5" '
+                   f'text-anchor="end" font-family="{MONO}">{100 * size / total:.1f}%</text>')
 
     if EXCLUDE_LANGS:
-        pretty = ", ".join(sorted(s.title() for s in EXCLUDE_LANGS))
-        out.append(f'<text x="{x + PAD}" y="170" fill="{DIM}" font-size="10">'
+        pretty = ", ".join(sorted(w.title() for w in EXCLUDE_LANGS))
+        out.append(f'<text x="{x + PAD}" y="196" fill="{DIM}" font-size="10">'
                    f'by bytes of source, excluding {esc(pretty)}</text>')
     return out
 
 
 def build_overview(user, all_commits, total_contribs, stars, agg, colours):
     """Stats and languages as two halves of one panel, so neither can wrap."""
-    h = 186
+    h = 212
     out = card_open(FULL_W, h, "GitHub statistics and most used languages")
     out += stats_half(user, all_commits, total_contribs, stars, 0)
-    out.append(f'<line x1="{HALF_W}" y1="26" x2="{HALF_W}" y2="{h - 20}" '
+    out.append(f'<line x1="{HALF_W}" y1="26" x2="{HALF_W}" y2="{h - 26}" '
                f'stroke="{ROW}" stroke-opacity="0.08"/>')
     out += langs_half(agg, colours, HALF_W)
     out += card_close()
@@ -358,8 +366,15 @@ def build_pin(repo):
     out = card_open(w, h, f"{repo['name']} repository")
     out.append(f'<path d="M{PAD} 26 h11 a2 2 0 0 1 2 2 v12 a2 2 0 0 1 -2 2 h-11 z" fill="none" '
                f'stroke="{ACCENT}" stroke-width="1.4"/>')
+    chip_w = 74
+    name_max = w - PAD * 2 - 26 - (chip_w + 10 if repo.get("pages") else 0)
     out.append(f'<text x="{PAD + 22}" y="40" fill="{ACCENT}" font-size="14.5" font-weight="600">'
-               f'{esc(truncate(repo["name"], 14.5, w - PAD * 2 - 26))}</text>')
+               f'{esc(truncate(repo["name"], 14.5, name_max))}</text>')
+    if repo.get("pages"):
+        out.append(f'<rect x="{w - PAD - chip_w}" y="24" width="{chip_w}" height="19" rx="9.5" '
+                   f'fill="{ACCENT_ALT}" fill-opacity="0.16"/>')
+        out.append(f'<text x="{w - PAD - chip_w / 2}" y="37.5" fill="{ACCENT_ALT}" '
+                   f'font-size="10.5" text-anchor="middle">Write-up →</text>')
 
     desc = repo.get("description") or ""
     words, line, lines = desc.split(), "", []
@@ -402,7 +417,11 @@ def main():
         created = dt.datetime.fromisoformat(user["createdAt"].replace("Z", "+00:00"))
         days = calendar_days(created)
         commits = rest(f"search/commits?q=author:{LOGIN}&per_page=1")["total_count"]
-        pins = [graphql(REPO_Q, owner=LOGIN, name=name)["repository"] for name in PINS]
+        pins = []
+        for name in PINS:
+            repo = graphql(REPO_Q, owner=LOGIN, name=name)["repository"]
+            repo["pages"] = pages_url(name)
+            pins.append(repo)
     except (urllib.error.URLError, urllib.error.HTTPError, RuntimeError, KeyError) as exc:
         print(f"::warning::GitHub API call failed ({exc}); keeping existing panels")
         return 0

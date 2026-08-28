@@ -22,7 +22,7 @@
 
 I build machine learning systems on enterprise data.
 
-Currently: natural language to SQL over ERP event logs, where the model emits a typed IR and only plans the verifier accepts compile to SQL. Also financial distress prediction on SAP S/4HANA.
+Right now: natural language to SQL over object-centric event logs. The model proposes a typed plan, deterministic code verifies that plan against the schema, and only what passes compiles. It holds relation-path violations at zero and gains 23 points of denotation accuracy over three published prompting baselines. [Read the write-up](https://o-2wice.github.io/correctness-aware-nl-query-translation-ocel/).
 
 MSc Data Science, ELTE Budapest.
 
@@ -32,17 +32,7 @@ MSc Data Science, ELTE Budapest.
 
 <div align="center">
 
-**Languages & Stats**<br/>
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white"/> <img src="https://img.shields.io/badge/R-276DC3?style=flat&logo=r&logoColor=white"/> <img src="https://img.shields.io/badge/SQL-4479A1?style=flat&logo=postgresql&logoColor=white"/> <img src="https://img.shields.io/badge/SPSS-052FAD?style=flat&logo=ibm&logoColor=white"/>
-
-**ML & Modeling**<br/>
-<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white"/> <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white"/> <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat&logo=scikit-learn&logoColor=white"/> <img src="https://img.shields.io/badge/XGBoost-FF6600?style=flat&logo=xgboost&logoColor=white"/> <img src="https://img.shields.io/badge/pandas-150458?style=flat&logo=pandas&logoColor=white"/> <img src="https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white"/>
-
-**Data & Streaming**<br/>
-<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white"/> <img src="https://img.shields.io/badge/Oracle-F80000?style=flat&logo=oracle&logoColor=white"/> <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white"/> <img src="https://img.shields.io/badge/DuckDB-FFF000?style=flat&logo=duckdb&logoColor=black"/> <img src="https://img.shields.io/badge/Elasticsearch-005571?style=flat&logo=elasticsearch&logoColor=white"/> <img src="https://img.shields.io/badge/Apache%20Kafka-231F20?style=flat&logo=apachekafka&logoColor=white"/> <img src="https://img.shields.io/badge/Apache%20Flink-E6526F?style=flat&logo=apacheflink&logoColor=white"/> <img src="https://img.shields.io/badge/Apache%20Spark-E25A1C?style=flat&logo=apache-spark&logoColor=white"/>
-
-**Enterprise & Platform**<br/>
-<img src="https://img.shields.io/badge/SAP%20S/4HANA-0FAAFF?style=flat&logo=sap&logoColor=white"/> <img src="https://img.shields.io/badge/Power%20BI-F2C811?style=flat&logo=powerbi&logoColor=black"/> <img src="https://img.shields.io/badge/Tableau-E97627?style=flat&logo=tableau&logoColor=white"/> <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat&logo=langchain&logoColor=white"/> <img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white"/> <img src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black"/>
+<img src="metrics/tools.svg" width="860" alt="Python, R, PostgreSQL, DuckDB, Oracle, MongoDB, Elasticsearch, pandas, NumPy, scikit-learn, PyTorch, TensorFlow, Kafka, Flink, Spark, SAP S/4HANA, Power BI, Tableau, XGBoost, LangChain, Docker, Jupyter, Git, Linux"/>
 
 </div>
 
@@ -52,17 +42,17 @@ MSc Data Science, ELTE Budapest.
 
 <div align="center">
 
-<a href="https://github.com/O-2wice/Federated-Learning-Anomaly-Detection"><img src="metrics/pin-Federated-Learning-Anomaly-Detection.svg" width="380"/></a>
-<a href="https://github.com/O-2wice/cifar10-image-colorization"><img src="metrics/pin-cifar10-image-colorization.svg" width="380"/></a>
+<a href="https://o-2wice.github.io/correctness-aware-nl-query-translation-ocel/"><img src="metrics/pin-correctness-aware-nl-query-translation-ocel.svg" width="380"/></a>
+<a href="https://o-2wice.github.io/cifar10-image-colorization/"><img src="metrics/pin-cifar10-image-colorization.svg" width="380"/></a>
 <br/>
+<a href="https://github.com/O-2wice/Federated-Learning-Anomaly-Detection"><img src="metrics/pin-Federated-Learning-Anomaly-Detection.svg" width="380"/></a>
 <a href="https://github.com/O-2wice/ev-charging-network-oracle-project"><img src="metrics/pin-ev-charging-network-oracle-project.svg" width="380"/></a>
-<a href="https://github.com/O-2wice/ds-lab-pr"><img src="metrics/pin-ds-lab-pr.svg" width="380"/></a>
 
 </div>
 
 | Project | Description | Tech Stack |
 |---------|-------------|------------|
-| [NL-to-SQL for ERP Systems](https://github.com/O-2wice/correctness-aware-nl-query-translation-ocel) | Natural language query translation over enterprise event log data | LLM, DuckDB, Python |
+| [NL-to-SQL for ERP Systems](https://o-2wice.github.io/correctness-aware-nl-query-translation-ocel/) | Natural language query translation over enterprise event log data | LLM, DuckDB, Python |
 | [Financial Risk Forecasting](https://github.com/O-2wice/DS_Lab_Project) | ML system for predicting financial distress using SAP S/4HANA data | XGBoost, SMOTE, SHAP, SAP |
 
 ---
