@@ -6,9 +6,9 @@
 <rect width="860" height="3" rx="1.5" fill="url(#accent)" opacity="0.85"/>
 <g font-family="'Segoe UI',Ubuntu,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif">
 <text x="20.0" y="54" fill="#7f88a8" font-size="14">Total commits</text>
-<text x="20.0" y="90" fill="#c0caf5" font-size="32" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">251</text>
+<text x="20.0" y="90" fill="#c0caf5" font-size="32" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">252</text>
 <text x="215.0" y="54" fill="#7f88a8" font-size="14">Contributions in 2026</text>
-<text x="215.0" y="90" fill="#c0caf5" font-size="32" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">170</text>
+<text x="215.0" y="90" fill="#c0caf5" font-size="32" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">198</text>
 <text x="20.0" y="122" fill="#7f88a8" font-size="14">Public repositories</text>
 <text x="20.0" y="158" fill="#c0caf5" font-size="32" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">16</text>
 <text x="215.0" y="122" fill="#7f88a8" font-size="14">Followers</text>
@@ -17,11 +17,11 @@
 <text x="450" y="40" fill="#7f88a8" font-size="14">Most used languages</text>
 <clipPath id="bar"><rect x="450" y="52" width="390" height="10" rx="5"/></clipPath>
 <g clip-path="url(#bar)">
-<rect x="450.00" y="52" width="231.60" height="10" fill="#3572A5"/>
-<rect x="681.10" y="52" width="67.45" height="10" fill="#3D6117"/>
-<rect x="748.05" y="52" width="67.14" height="10" fill="#e34c26"/>
+<rect x="450.00" y="52" width="231.59" height="10" fill="#3572A5"/>
+<rect x="681.09" y="52" width="67.45" height="10" fill="#3D6117"/>
+<rect x="748.04" y="52" width="67.15" height="10" fill="#e34c26"/>
 <rect x="814.69" y="52" width="9.53" height="10" fill="#dad8d8"/>
-<rect x="823.72" y="52" width="7.83" height="10" fill="#663399"/>
+<rect x="823.71" y="52" width="7.83" height="10" fill="#663399"/>
 <rect x="831.04" y="52" width="6.41" height="10" fill="#f1e05a"/>
 <rect x="836.95" y="52" width="3.05" height="10" fill="#ffffff" fill-opacity="0.08"/>
 </g>

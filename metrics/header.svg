@@ -8,6 +8,6 @@
 <path d="M-860,158.4 q86.0,-12.599999999999994 172.0,0 q86.0,12.599999999999994 172.0,0 q86.0,12.599999999999994 172.0,0 q86.0,-12.599999999999994 172.0,0 q86.0,-12.599999999999994 172.0,0 q86.0,12.599999999999994 172.0,0 q86.0,12.599999999999994 172.0,0 q86.0,-12.599999999999994 172.0,0 q86.0,-12.599999999999994 172.0,0 q86.0,12.599999999999994 172.0,0 q86.0,12.599999999999994 172.0,0 q86.0,-12.599999999999994 172.0,0 q86.0,-12.599999999999994 172.0,0 q86.0,12.599999999999994 172.0,0 q86.0,12.599999999999994 172.0,0 q86.0,-12.599999999999994 172.0,0 L1720,184 L-860,184 Z" fill="#12131c" opacity="0.75"><animateTransform attributeName="transform" type="translate" from="0 0" to="688.0 0" dur="24s" repeatCount="indefinite"/></path>
 <g font-family="'Segoe UI',Ubuntu,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif" text-anchor="middle">
 <text x="430.0" y="79.2" fill="#ffffff" font-size="42" font-weight="700" letter-spacing="1">O_2wice<animate attributeName="opacity" from="0" to="1" dur="1.2s" fill="freeze"/></text>
-<text x="430.0" y="111.6" fill="#dfe4f5" font-size="15" letter-spacing="0.6">Data Scientist  |  ML Engineer  |  Risk &amp; ERP Analytics<animate attributeName="opacity" from="0" to="1" dur="1.8s" fill="freeze"/></text>
+<text x="430.0" y="111.6" fill="#dfe4f5" font-size="15" letter-spacing="0.6">Data Scientist<animate attributeName="opacity" from="0" to="1" dur="1.8s" fill="freeze"/></text>
 </g>
 </svg>
