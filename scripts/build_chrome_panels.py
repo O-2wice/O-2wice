@@ -157,14 +157,18 @@ def typing(lines, width=620, height=52, hold=2.2, per_char=0.055):
         # Caret rides the right edge of the reveal, then blinks during the hold.
         keys = (f"0;{at / total:.4f};{(at + draw) / total:.4f};"
                 f"{(at + draw + hold_s) / total:.4f};{(at + cycle) / total:.4f};1")
+        # Opacity must sit at 0 across the whole lead-in and tail. Values of
+        # 0;1;...;1;0 interpolate linearly from the first keyTime, so every
+        # caret faded in over the preceding line and out over the following
+        # ones, leaving several bars stacked on the text at once.
         out.append(
             f'<rect y="{height * 0.26}" width="2" height="{height * 0.44}" '
             f'fill="#6AD3F7" opacity="0" x="{x0:.1f}">'
             f'<animate attributeName="x" values="{x0:.1f};{x0:.1f};{x0 + w:.1f};'
             f'{x0 + w:.1f};{x0:.1f};{x0:.1f}" keyTimes="{keys}" '
             f'dur="{total:.2f}s" repeatCount="indefinite"/>'
-            f'<animate attributeName="opacity" values="0;1;1;1;1;0" keyTimes="{keys}" '
-            f'dur="{total:.2f}s" repeatCount="indefinite"/></rect>')
+            f'<animate attributeName="opacity" values="0;1;1;1;0;0" keyTimes="{keys}" '
+            f'calcMode="discrete" dur="{total:.2f}s" repeatCount="indefinite"/></rect>')
 
     out.append("</g></svg>")
     return "\n".join(out)
