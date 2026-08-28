@@ -146,12 +146,17 @@ def build_tile(label, slug, colour, paths):
     return "\n".join(out)
 
 
-def markdown():
-    """The anchor row to paste into the README, printed for reference."""
-    return " ".join(
-        f'<a href="{link_for(label)}" title="{label}">'
-        f'<img src="metrics/tools/{slugify(label)}.svg" width="46" alt="{label}"/></a>'
-        for label, _, _ in TOOLS)
+def markdown(per_row=COLS):
+    """The anchor rows to paste into the README, printed for reference.
+
+    Broken into explicit rows: left to wrap on its own the run reflows to a
+    ragged 13 and 11 against GitHub's column.
+    """
+    tags = [f'<a href="{link_for(label)}" title="{label}">'
+            f'<img src="metrics/tools/{slugify(label)}.svg" width="46" alt="{label}"/></a>'
+            for label, _, _ in TOOLS]
+    rows = [" ".join(tags[i:i + per_row]) for i in range(0, len(tags), per_row)]
+    return "\n<br/>\n".join(rows)
 
 
 def main():
