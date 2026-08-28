@@ -12,12 +12,23 @@ caret still move.
 
 import datetime as dt
 import os
+import pathlib
+import re
 import sys
 
 from svg_common import (ACCENT, ACCENT_ALT, BG, DIM, FONT, MONO, MUTED, ROW,
-                        TITLE, esc, mono_width, text_width, write)
+                        TITLE, esc, fetch, mono_width, text_width, write)
 
 OUTDIR = os.environ.get("OUT_DIR", "metrics")
+README = os.environ.get("README_PATH", "README.md")
+
+# The live service returns a different quote per request, which the built
+# panel cannot do: an SVG loaded through <img> runs no script, so a
+# committed file can only cycle on a timer. Point at the service while it
+# answers and fall back to the committed panel when it does not, so an
+# outage costs freshness rather than leaving a broken image.
+QUOTE_SERVICE = ("https://quotes-github-readme.vercel.app/api"
+                 "?type=horizontal&theme=tokyonight")
 NAME = os.environ.get("PROFILE_NAME", "O_2wice")
 TAGLINE = os.environ.get("PROFILE_TAGLINE",
                          "Data Scientist  |  ML Engineer  |  Risk & ERP Analytics")
@@ -270,11 +281,34 @@ def quote_card(quotes, width=760, seconds_each=7.0, fade=0.5):
     return "\n".join(out)
 
 
+def quote_markup():
+    """The service if it is answering, otherwise the committed panel."""
+    try:
+        body = fetch(QUOTE_SERVICE, timeout=15).decode("utf-8", "replace")
+        if "<svg" not in body:
+            raise RuntimeError("response was not an SVG")
+        print("quote: live service is up, pointing at it")
+        return (f'<img src="{QUOTE_SERVICE}" width="760" alt="Quote"/>')
+    except Exception as exc:
+        print(f"::warning::quote service unavailable ({exc}); using the committed panel")
+        return '<img src="metrics/quote.svg" width="760" alt="Quote"/>'
+
+
 def main():
     write(f"{OUTDIR}/header.svg", banner(860, 180, NAME, TAGLINE))
     write(f"{OUTDIR}/footer.svg", banner(860, 100, flip=True))
     write(f"{OUTDIR}/typing.svg", typing(TYPING_LINES))
     write(f"{OUTDIR}/quote.svg", quote_card(todays_quotes(QUOTES, QUOTES_SHOWN)))
+
+    readme = pathlib.Path(README)
+    if readme.exists():
+        text = readme.read_text()
+        block = f"<!--START_SECTION:quote-->\n{quote_markup()}\n<!--END_SECTION:quote-->"
+        updated = re.sub(r"<!--START_SECTION:quote-->.*?<!--END_SECTION:quote-->",
+                         lambda _m: block, text, flags=re.S)
+        if updated != text:
+            readme.write_text(updated)
+            print("updated the quote block in README.md")
     return 0
 
 

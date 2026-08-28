@@ -118,7 +118,9 @@ Forks I actually run, most recently touched first. Regenerated daily.
 
 <div align="center">
 
-<img src="metrics/quote.svg" width="760" alt="Quote"/>
+<!--START_SECTION:quote-->
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" width="760" alt="Quote"/>
+<!--END_SECTION:quote-->
 
 <br/>
 
