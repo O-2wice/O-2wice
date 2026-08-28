@@ -46,13 +46,15 @@ jobs:
       - name: Render tech stack panel
         env:
           OUT_DIR: metrics/tools
+          GH_LOGIN: O-2wice
+          GH_TOKEN: ${{ secrets.O_2WICE_PAT_KEY }}
         run: python3 scripts/build_tools_panel.py
 
       - name: Commit
         run: |
           git config user.name "profile-bot"
           git config user.email "profile-bot@o-2wice.noreply.invalid"
-          git add metrics/
+          git add metrics/ README.md
           if git diff --staged --quiet; then
             echo "Panels unchanged; nothing to commit."
             exit 0

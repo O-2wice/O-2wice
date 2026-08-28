@@ -15,14 +15,22 @@ Exits 0 without touching the output when the icons cannot be fetched, so a
 CDN hiccup leaves the previous panel in place.
 """
 
+import json
 import os
+import pathlib
 import re
 import sys
+import time
+import urllib.parse
 import urllib.error
 
 from svg_common import BG, DIM, FONT, MONO, MUTED, ROW, TITLE, card_close, card_open, esc, fetch, write
 
 OUT_DIR = os.environ.get("OUT_DIR", "metrics/tools")
+README = os.environ.get("README_PATH", "README.md")
+LOGIN = os.environ.get("GH_LOGIN", "O-2wice")
+TOKEN = os.environ.get("GH_TOKEN", "")
+MARKER = "tools"
 CDN = "https://cdn.jsdelivr.net/npm/simple-icons@13/icons/{}.svg"
 
 W, PAD = 860, 20
@@ -87,11 +95,43 @@ def slugify(label):
     return re.sub(r"[^a-z0-9]+", "-", label.lower()).strip("-")
 
 
-def link_for(label):
+def repo_hits(term):
+    """How many of his own repositories mention this tool.
+
+    Covers repository names, descriptions and topics. Restricted to public
+    repositories: this token can see private ones, but a visitor cannot, and
+    a link counted on a private match would open an empty page. Returns 0
+    rather than raising, so a search hiccup falls back to the project home
+    page instead of failing the build.
+    """
+    if not TOKEN:
+        return 0
+    query = urllib.parse.quote(f"user:{LOGIN} is:public {term}")
+    try:
+        raw = fetch(f"https://api.github.com/search/repositories?q={query}&per_page=1",
+                    timeout=20, headers={"Authorization": f"bearer {TOKEN}",
+                                         "Accept": "application/vnd.github+json"})
+        return json.loads(raw).get("total_count", 0)
+    except Exception as exc:
+        print(f"::warning::repo search for {term} failed ({exc})")
+        return 0
+
+
+def link_for(label, hits=0):
+    """Send people to his work with the tool when there is any to show.
+
+    A language GitHub can filter on is the best case. Failing that, a search
+    of his own repositories, but only when it actually returns something: an
+    empty result page is worse than the project's home page.
+    """
     if label in LANGUAGES:
-        return ("https://github.com/O-2wice?tab=repositories&language="
+        return ("https://github.com/" + LOGIN + "?tab=repositories&language="
                 + LANGUAGES[label].lower().replace(" ", "+"))
-    return HOMES.get(label, "https://github.com/O-2wice")
+    if hits:
+        return ("https://github.com/search?q="
+                + urllib.parse.quote(f"user:{LOGIN} is:public {label}")
+                + "&type=repositories")
+    return HOMES.get(label, "https://github.com/" + LOGIN)
 
 
 def luminance(hex_colour):
@@ -146,13 +186,13 @@ def build_tile(label, slug, colour, paths):
     return "\n".join(out)
 
 
-def markdown(per_row=COLS):
+def markdown(links, per_row=COLS):
     """The anchor rows to paste into the README, printed for reference.
 
     Broken into explicit rows: left to wrap on its own the run reflows to a
     ragged 13 and 11 against GitHub's column.
     """
-    tags = [f'<a href="{link_for(label)}" title="{label}">'
+    tags = [f'<a href="{links[label]}" title="{label}">'
             f'<img src="metrics/tools/{slugify(label)}.svg" width="46" alt="{label}"/></a>'
             for label, _, _ in TOOLS]
     rows = [" ".join(tags[i:i + per_row]) for i in range(0, len(tags), per_row)]
@@ -173,8 +213,26 @@ def main():
         return 0
     for label, slug, colour in TOOLS:
         write(f"{OUT_DIR}/{slugify(label)}.svg", build_tile(label, slug, colour, paths))
-    if os.environ.get("PRINT_MARKDOWN"):
-        print(markdown())
+
+    links = {}
+    for label, _, _ in TOOLS:
+        hits = 0 if label in LANGUAGES else repo_hits(label)
+        links[label] = link_for(label, hits)
+        if label not in LANGUAGES:
+            time.sleep(2.5)  # search API allows 30/min
+    own = sum(1 for label, url in links.items()
+              if url.startswith(f"https://github.com/{LOGIN}?") or "/search?" in url)
+    print(f"{own}/{len(TOOLS)} tools link to his own repositories")
+
+    block = pathlib.Path(README)
+    if block.exists():
+        text = block.read_text()
+        rendered = f"<!--START_SECTION:{MARKER}-->\n{markdown(links)}\n<!--END_SECTION:{MARKER}-->"
+        updated = re.sub(rf"<!--START_SECTION:{MARKER}-->.*?<!--END_SECTION:{MARKER}-->",
+                         lambda _m: rendered, text, flags=re.S)
+        if updated != text:
+            block.write_text(updated)
+            print(f"updated the {MARKER} block in {README}")
     return 0
 
 
