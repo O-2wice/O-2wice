@@ -29,7 +29,9 @@ TYPING_LINES = [
     "Natural Language to SQL for ERP Systems",
 ]
 
-# Rotated by day so the panel still changes without calling a quote service.
+# Cycled inside the SVG rather than picked per build: the panel is a static
+# file, so a daily rebuild is the most it could otherwise change, and the
+# service this replaced rotated on every page load.
 QUOTES = [
     ("All models are wrong, but some are useful.", "George Box"),
     ("In God we trust. All others must bring data.", "W. Edwards Deming"),
@@ -174,22 +176,36 @@ def typing(lines, width=620, height=52, hold=2.2, per_char=0.055):
     return "\n".join(out)
 
 
-def quote_card(text, author, width=760):
-    size, inner = 15, width - 116
-    words, line, lines = text.split(), "", []
-    for word in words:
-        trial = f"{line} {word}".strip()
-        if text_width(trial, size) > inner:
-            lines.append(line)
-            line = word
-        else:
-            line = trial
-    if line:
-        lines.append(line)
+def quote_card(quotes, width=760, seconds_each=7.0, fade=0.5):
+    """All the quotes in one file, cross-fading forever.
 
-    height = 74 + len(lines) * 24
+    Each quote holds at zero through the whole lead-in and tail, with equal
+    values either side of its slot, so nothing bleeds into a neighbour the
+    way the typing carets did.
+    """
+    size, inner = 15, width - 116
+
+    def wrap(text):
+        words, line, lines = text.split(), "", []
+        for word in words:
+            trial = f"{line} {word}".strip()
+            if text_width(trial, size) > inner:
+                lines.append(line)
+                line = word
+            else:
+                line = trial
+        if line:
+            lines.append(line)
+        return lines
+
+    wrapped = [(wrap(t), a) for t, a in quotes]
+    tallest = max(len(l) for l, _ in wrapped)
+    height = 74 + tallest * 24
+    total = seconds_each * len(wrapped)
+
     out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
-           f'viewBox="0 0 {width} {height}" role="img" aria-label="Quote">',
+           f'viewBox="0 0 {width} {height}" role="img" '
+           f'aria-label="{esc(wrapped[0][0][0])}">',
            "<defs>",
            '<linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">'
            f'<stop offset="0" stop-color="{ACCENT}"/>'
@@ -197,25 +213,35 @@ def quote_card(text, author, width=760):
            "</defs>",
            f'<rect width="{width}" height="{height}" rx="12" fill="{BG}"/>',
            f'<rect width="{width}" height="3" rx="1.5" fill="url(#accent)" opacity="0.85"/>',
-           f'<text x="30" y="{44 + (len(lines) - 1) * 12}" fill="{ACCENT}" '
-           f'font-family="Georgia,serif" font-size="52" opacity="0.5">“</text>',
+           f'<text x="30" y="{44 + (tallest - 1) * 12}" fill="{ACCENT}" '
+           f'font-family="Georgia,serif" font-size="52" opacity="0.5">\u201c</text>',
            f'<g font-family="{FONT}">']
-    for i, text_line in enumerate(lines):
-        out.append(f'<text x="66" y="{48 + i * 24}" fill="{TITLE}" font-size="{size}">'
-                   f'{esc(text_line)}</text>')
-    out.append(f'<text x="66" y="{60 + len(lines) * 24}" fill="{MUTED}" font-size="12.5">'
-               f'— {esc(author)}</text>')
+
+    for i, (lines, author) in enumerate(wrapped):
+        s0, e0 = i * seconds_each / total, (i + 1) * seconds_each / total
+        f0 = fade / total
+        keys = (f"0;{s0:.5f};{min(s0 + f0, e0):.5f};"
+                f"{max(e0 - f0, s0):.5f};{e0:.5f};1")
+        top = 48 + (tallest - len(lines)) * 12
+        out.append(f'<g opacity="0"><animate attributeName="opacity" '
+                   f'values="0;0;1;1;0;0" keyTimes="{keys}" dur="{total:.2f}s" '
+                   f'repeatCount="indefinite"/>')
+        for j, line in enumerate(lines):
+            out.append(f'<text x="66" y="{top + j * 24}" fill="{TITLE}" '
+                       f'font-size="{size}">{esc(line)}</text>')
+        out.append(f'<text x="66" y="{top + len(lines) * 24 + 12}" fill="{MUTED}" '
+                   f'font-size="12.5">\u2014 {esc(author)}</text>')
+        out.append("</g>")
+
     out.append("</g></svg>")
     return "\n".join(out)
 
 
 def main():
-    today = dt.date.today()
-    text, author = QUOTES[today.toordinal() % len(QUOTES)]
     write(f"{OUTDIR}/header.svg", banner(860, 180, NAME, TAGLINE))
     write(f"{OUTDIR}/footer.svg", banner(860, 100, flip=True))
     write(f"{OUTDIR}/typing.svg", typing(TYPING_LINES))
-    write(f"{OUTDIR}/quote.svg", quote_card(text, author))
+    write(f"{OUTDIR}/quote.svg", quote_card(QUOTES))
     return 0
 
 
