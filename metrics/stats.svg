@@ -17,8 +17,8 @@
 <text x="450" y="40" fill="#7f88a8" font-size="14">Most used languages</text>
 <clipPath id="bar"><rect x="450" y="52" width="390" height="10" rx="5"/></clipPath>
 <g clip-path="url(#bar)">
-<rect x="450.00" y="52" width="231.58" height="10" fill="#3572A5"/>
-<rect x="681.08" y="52" width="67.45" height="10" fill="#3D6117"/>
+<rect x="450.00" y="52" width="231.59" height="10" fill="#3572A5"/>
+<rect x="681.09" y="52" width="67.45" height="10" fill="#3D6117"/>
 <rect x="748.04" y="52" width="67.15" height="10" fill="#e34c26"/>
 <rect x="814.69" y="52" width="9.53" height="10" fill="#dad8d8"/>
 <rect x="823.71" y="52" width="7.83" height="10" fill="#663399"/>
