@@ -50,9 +50,6 @@ MSc Data Science at ELTE Budapest, after a BSc in Actuarial Science.
 
 </div>
 
-| Project | Description | Tech Stack |
-|---------|-------------|------------|
-| [Financial Risk Forecasting](https://github.com/O-2wice/DS_Lab_Project) | ML system for predicting financial distress using SAP S/4HANA data | XGBoost, SMOTE, SHAP, SAP |
 
 ---
 
