@@ -45,7 +45,7 @@ jobs:
 
       - name: Render tech stack panel
         env:
-          OUT_PATH: metrics/tools.svg
+          OUT_DIR: metrics/tools
         run: python3 scripts/build_tools_panel.py
 
       - name: Commit

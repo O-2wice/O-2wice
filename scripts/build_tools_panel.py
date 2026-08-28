@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
-"""Render the tech stack as one grid of icon tiles.
+"""Render the tech stack as one small icon tile per tool.
 
 Replaces four rows of labelled img.shields.io badges, which were the last
 part of the README fetched from someone else's server at page-load time.
-Icon paths come from simple-icons at build time and are inlined, so the
-finished panel is a single self-contained file.
+Icon paths come from simple-icons at build time and are inlined, so each
+tile is self-contained.
+
+One file per tool rather than a single grid, because a link inside an SVG
+does nothing when the SVG is loaded through an <img>, and GitHub strips
+inline SVG from markdown. Separate tiles let each one sit in its own
+anchor, so the stack is clickable.
 
 Exits 0 without touching the output when the icons cannot be fetched, so a
 CDN hiccup leaves the previous panel in place.
@@ -17,7 +22,7 @@ import urllib.error
 
 from svg_common import BG, DIM, FONT, MONO, MUTED, ROW, TITLE, card_close, card_open, esc, fetch, write
 
-OUT = os.environ.get("OUT_PATH", "metrics/tools.svg")
+OUT_DIR = os.environ.get("OUT_DIR", "metrics/tools")
 CDN = "https://cdn.jsdelivr.net/npm/simple-icons@13/icons/{}.svg"
 
 W, PAD = 860, 20
@@ -57,6 +62,37 @@ TOOLS = [
 
 MONOGRAM = {"Power BI": "BI", "XGBoost": "XGB"}
 
+# Languages GitHub can filter his repositories by are worth far more than a
+# vendor home page: the click shows what he actually built with the thing.
+LANGUAGES = {"Python": "Python", "R": "R", "Jupyter": "Jupyter Notebook"}
+
+HOMES = {
+    "PostgreSQL": "https://www.postgresql.org/", "DuckDB": "https://duckdb.org/",
+    "Oracle": "https://www.oracle.com/database/", "MongoDB": "https://www.mongodb.com/",
+    "Elasticsearch": "https://www.elastic.co/elasticsearch",
+    "pandas": "https://pandas.pydata.org/", "NumPy": "https://numpy.org/",
+    "scikit-learn": "https://scikit-learn.org/", "PyTorch": "https://pytorch.org/",
+    "TensorFlow": "https://www.tensorflow.org/",
+    "Apache Kafka": "https://kafka.apache.org/", "Apache Flink": "https://flink.apache.org/",
+    "Apache Spark": "https://spark.apache.org/",
+    "SAP S/4HANA": "https://www.sap.com/products/erp/s4hana.html",
+    "Power BI": "https://www.microsoft.com/power-platform/products/power-bi",
+    "Tableau": "https://www.tableau.com/", "XGBoost": "https://xgboost.readthedocs.io/",
+    "LangChain": "https://www.langchain.com/", "Docker": "https://www.docker.com/",
+    "Git": "https://git-scm.com/", "Linux": "https://www.kernel.org/",
+}
+
+
+def slugify(label):
+    return re.sub(r"[^a-z0-9]+", "-", label.lower()).strip("-")
+
+
+def link_for(label):
+    if label in LANGUAGES:
+        return ("https://github.com/O-2wice?tab=repositories&language="
+                + LANGUAGES[label].lower().replace(" ", "+"))
+    return HOMES.get(label, "https://github.com/O-2wice")
+
 
 def luminance(hex_colour):
     r, g, b = (int(hex_colour[i:i + 2], 16) / 255 for i in (1, 3, 5))
@@ -89,34 +125,33 @@ def icon_path(slug):
     return match.group(1)
 
 
-def build(paths):
-    rows = -(-len(TOOLS) // COLS)
-    height = PAD + rows * TILE + (rows - 1) * 14 + PAD + 8
-    span = COLS * TILE + (COLS - 1) * GAP
-    left = (W - span) / 2
-
-    out = card_open(W, height, "Tech stack: " + ", ".join(t[0] for t in TOOLS))
-    for i, (label, slug, colour) in enumerate(TOOLS):
-        col, row = i % COLS, i // COLS
-        x = left + col * (TILE + GAP)
-        y = PAD + row * (TILE + 14)
-        out.append(f'<rect x="{x:.1f}" y="{y:.1f}" width="{TILE}" height="{TILE}" rx="12" '
-                   f'fill="{ROW}" fill-opacity="0.05" stroke="{ROW}" stroke-opacity="0.07"/>')
-        out.append(f"<title>{esc(label)}</title>")
-        tint = readable(colour)
-        path = paths.get(slug)
-        if path:
-            scale = ICON / 24
-            ox = x + (TILE - ICON) / 2
-            oy = y + (TILE - ICON) / 2
-            out.append(f'<g transform="translate({ox:.1f},{oy:.1f}) scale({scale:.4f})" '
-                       f'fill="{tint}"><path d="{path}"/></g>')
-        else:
-            out.append(f'<text x="{x + TILE / 2:.1f}" y="{y + TILE / 2 + 5:.1f}" fill="{tint}" '
-                       f'font-size="14" font-weight="700" text-anchor="middle" '
-                       f'font-family="{MONO}">{esc(MONOGRAM.get(label, label[:3]))}</text>')
-    out += card_close()
+def build_tile(label, slug, colour, paths):
+    tint = readable(colour)
+    out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{TILE}" height="{TILE}" '
+           f'viewBox="0 0 {TILE} {TILE}" role="img" aria-label="{esc(label)}">',
+           f'<title>{esc(label)}</title>',
+           f'<rect width="{TILE}" height="{TILE}" rx="12" fill="{BG}"/>',
+           f'<rect width="{TILE}" height="{TILE}" rx="12" fill="{ROW}" fill-opacity="0.05" '
+           f'stroke="{ROW}" stroke-opacity="0.07"/>']
+    path = paths.get(slug)
+    if path:
+        offset = (TILE - ICON) / 2
+        out.append(f'<g transform="translate({offset:.1f},{offset:.1f}) '
+                   f'scale({ICON / 24:.4f})" fill="{tint}"><path d="{path}"/></g>')
+    else:
+        out.append(f'<text x="{TILE / 2}" y="{TILE / 2 + 5}" fill="{tint}" font-size="14" '
+                   f'font-weight="700" text-anchor="middle" font-family="{MONO}">'
+                   f'{esc(MONOGRAM.get(label, label[:3]))}</text>')
+    out.append("</svg>")
     return "\n".join(out)
+
+
+def markdown():
+    """The anchor row to paste into the README, printed for reference."""
+    return " ".join(
+        f'<a href="{link_for(label)}" title="{label}">'
+        f'<img src="metrics/tools/{slugify(label)}.svg" width="46" alt="{label}"/></a>'
+        for label, _, _ in TOOLS)
 
 
 def main():
@@ -129,9 +164,12 @@ def main():
         except (urllib.error.URLError, urllib.error.HTTPError, RuntimeError) as exc:
             print(f"::warning::icon {slug} unavailable ({exc})")
     if not paths:
-        print("::warning::no icons could be fetched; keeping existing panel")
+        print("::warning::no icons could be fetched; keeping existing tiles")
         return 0
-    write(OUT, build(paths))
+    for label, slug, colour in TOOLS:
+        write(f"{OUT_DIR}/{slugify(label)}.svg", build_tile(label, slug, colour, paths))
+    if os.environ.get("PRINT_MARKDOWN"):
+        print(markdown())
     return 0
 
 

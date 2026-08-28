@@ -18,20 +18,15 @@ import re
 import sys
 import urllib.request
 
+from svg_common import (ACCENT, ACCENT_ALT, BG, DIM, FONT, MONO, MUTED, ROW,
+                        TITLE, text_width, truncate)
+
 PLAYLIST = os.environ.get("PLAYLIST_URL", "https://music.youtube.com/playlist?list=PLWJzcQJwrVbM")
 OUT = os.environ.get("OUT_PATH", "metrics/music.svg")
 LIMIT = int(os.environ.get("TRACK_LIMIT", "8"))
 
 UA = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36")
-
-# tokyonight, to match the other README panels
-BG = "#1a1b27"
-ACCENT = "#70a5fd"
-TITLE = "#c0caf5"
-MUTED = "#7f88a8"
-DIM = "#565f89"
-ROW = "#ffffff"
 
 # Sized to fill GitHub's README column instead of leaving a gap beside a
 # narrow card. Tracks run down one column then the next, so they are
@@ -41,41 +36,12 @@ PAD = 20
 GUTTER = 24
 ART = 40
 ROW_H = 54
-HEAD_H = 66
-FONT = "'Segoe UI',Ubuntu,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif"
-
-# Rough per-character advance ratios for proportional sans at 1px, used to
-# truncate text (SVG has no ellipsis).
-NARROW = set("ijltfrI.,:;'!|()[]{}-/\\ ")
-WIDE = set("mwMW@")
+HEAD_H = 52
 
 
 def fetch(url, timeout=30):
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "en-US,en;q=0.9"})
     return urllib.request.urlopen(req, timeout=timeout).read()
-
-
-def text_width(s, size):
-    total = 0.0
-    for ch in s:
-        if ch in NARROW:
-            total += 0.30
-        elif ch in WIDE:
-            total += 0.88
-        elif ch.isupper() or ch.isdigit():
-            total += 0.62
-        else:
-            total += 0.53
-    return total * size
-
-
-def truncate(s, size, max_px):
-    if text_width(s, size) <= max_px:
-        return s
-    ell = "…"
-    while s and text_width(s + ell, size) > max_px:
-        s = s[:-1]
-    return s.rstrip() + ell
 
 
 def walk(obj, key):
@@ -190,12 +156,9 @@ def build(name, tracks):
         f'<rect width="{W}" height="3" rx="1.5" fill="url(#accent)" opacity="0.85"/>',
         f'<g font-family="{FONT}">',
         # header
-        f'<circle cx="{PAD + 8}" cy="30" r="8.5" fill="none" stroke="{ACCENT}" stroke-width="1.6"/>',
-        f'<path d="M{PAD + 5.5} 25.5 L{PAD + 12.5} 30 L{PAD + 5.5} 34.5 Z" fill="{ACCENT}"/>',
-        f'<text x="{PAD + 25}" y="35" fill="{ACCENT}" font-size="15.5" font-weight="600">Debug Soundtrack</text>',
-        f'<text x="{W - PAD}" y="35" fill="{DIM}" font-size="11" text-anchor="end">YouTube Music</text>',
-        f'<text x="{PAD}" y="53" fill="{MUTED}" font-size="11">'
-        f'{html.escape(truncate(name, 11, W - PAD * 2 - 140))} · {len(tracks)} tracks · refreshed daily</text>',
+        f'<text x="{PAD}" y="34" fill="{MUTED}" font-size="11.5">'
+        f'{html.escape(truncate(name, 11.5, W - PAD * 2 - 140))} · {len(tracks)} tracks · refreshed daily</text>',
+        f'<text x="{W - PAD}" y="34" fill="{DIM}" font-size="11" text-anchor="end">YouTube Music</text>',
     ]
 
     for i, t in enumerate(tracks):
