@@ -35,8 +35,11 @@ TYPING_LINES = [
 QUOTES = [
     ("All models are wrong, but some are useful.", "George Box"),
     ("In God we trust. All others must bring data.", "W. Edwards Deming"),
+    ("Without data you're just another person with an opinion.", "W. Edwards Deming"),
     ("The goal is to turn data into information, and information into insight.",
      "Carly Fiorina"),
+    ("The purpose of computing is insight, not numbers.", "Richard Hamming"),
+    ("Statistics are the grammar of science.", "Karl Pearson"),
     ("Simplicity is prerequisite for reliability.", "Edsger W. Dijkstra"),
     ("It is a capital mistake to theorise before one has data.",
      "Arthur Conan Doyle"),
@@ -44,10 +47,40 @@ QUOTES = [
     ("Premature optimization is the root of all evil.", "Donald Knuth"),
     ("An approximate answer to the right problem is worth a good deal more "
      "than an exact answer to an approximate problem.", "John Tukey"),
+    ("The greatest value of a picture is that it forces us to notice what we "
+     "never expected to see.", "John Tukey"),
     ("Programs must be written for people to read.", "Harold Abelson"),
     ("Data is a precious thing and will last longer than the systems themselves.",
      "Tim Berners-Lee"),
+    ("Prediction is very difficult, especially about the future.", "Niels Bohr"),
+    ("Debugging is twice as hard as writing the code in the first place.",
+     "Brian Kernighan"),
+    ("Talk is cheap. Show me the code.", "Linus Torvalds"),
+    ("Make it work, make it right, make it fast.", "Kent Beck"),
+    ("Measure what is measurable, and make measurable what is not so.",
+     "Galileo Galilei"),
+    ("Errors using inadequate data are much less than those using no data at all.",
+     "Charles Babbage"),
+    ("Simple things should be simple, complex things should be possible.",
+     "Alan Kay"),
+    ("Not everything that can be counted counts, and not everything that counts "
+     "can be counted.", "William Bruce Cameron"),
+    ("It is easy to lie with statistics. It is hard to tell the truth without them.",
+     "Andrejs Dunkels"),
+    ("A distributed system is one in which the failure of a computer you did not "
+     "know existed can render your own computer unusable.", "Leslie Lamport"),
 ]
+
+# How many of the pool appear in any one build. The panel cycles these
+# in-page; the window advances each day so the set differs day to day.
+QUOTES_SHOWN = int(os.environ.get("QUOTES_SHOWN", "8"))
+
+
+def todays_quotes(pool, count, today=None):
+    """A window into the pool, advanced by one each day and wrapping round."""
+    today = today or dt.date.today()
+    start = today.toordinal() % len(pool)
+    return [pool[(start + i) % len(pool)] for i in range(min(count, len(pool)))]
 
 # tokyonight, the gradient the rest of the profile uses
 WAVE_STOPS = ("#1a1b27", "#414868", "#7aa2f7")
@@ -241,7 +274,7 @@ def main():
     write(f"{OUTDIR}/header.svg", banner(860, 180, NAME, TAGLINE))
     write(f"{OUTDIR}/footer.svg", banner(860, 100, flip=True))
     write(f"{OUTDIR}/typing.svg", typing(TYPING_LINES))
-    write(f"{OUTDIR}/quote.svg", quote_card(QUOTES))
+    write(f"{OUTDIR}/quote.svg", quote_card(todays_quotes(QUOTES, QUOTES_SHOWN)))
     return 0
 
 
