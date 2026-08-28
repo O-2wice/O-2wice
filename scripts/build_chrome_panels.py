@@ -23,7 +23,7 @@ TAGLINE = os.environ.get("PROFILE_TAGLINE",
                          "Data Scientist  |  ML Engineer  |  Risk & ERP Analytics")
 
 TYPING_LINES = [
-    "Actuarial Science to Machine Learning",
+    "Actuarial Science to Data Science",
     "Turning Data into Decisions",
     "Building ML Systems that Scale",
     "Natural Language to SQL for ERP Systems",

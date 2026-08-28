@@ -4,7 +4,7 @@
 <img src="metrics/header.svg" width="860" alt="O_2wice — Data Scientist, ML Engineer, Risk & ERP Analytics"/>
 
 <!-- Typing Animation -->
-<img src="metrics/typing.svg" width="620" alt="Actuarial Science to Machine Learning"/>
+<img src="metrics/typing.svg" width="620" alt="Actuarial Science to Data Science"/>
 
 <br/>
 
@@ -20,11 +20,9 @@
 
 ## About Me
 
-I build machine learning systems on enterprise data.
+I work on machine learning for enterprise data, mostly ERP and financial systems.
 
-Right now: natural language to SQL over object-centric event logs. The model proposes a typed plan, deterministic code verifies that plan against the schema, and only what passes compiles. It holds relation-path violations at zero and gains 23 points of denotation accuracy over three published prompting baselines. [Read the write-up](https://o-2wice.github.io/correctness-aware-nl-query-translation-ocel/).
-
-MSc Data Science, ELTE Budapest.
+MSc Data Science at ELTE Budapest, after a BSc in Actuarial Science.
 
 ---
 
@@ -42,11 +40,11 @@ MSc Data Science, ELTE Budapest.
 
 <div align="center">
 
-<a href="https://o-2wice.github.io/correctness-aware-nl-query-translation-ocel/"><img src="metrics/pin-correctness-aware-nl-query-translation-ocel.svg" width="380"/></a>
-<a href="https://o-2wice.github.io/cifar10-image-colorization/"><img src="metrics/pin-cifar10-image-colorization.svg" width="380"/></a>
+<a href="https://o-2wice.github.io/correctness-aware-nl-query-translation-ocel/"><img src="metrics/pin-correctness-aware-nl-query-translation-ocel.svg" width="415"/></a>
+<a href="https://o-2wice.github.io/cifar10-image-colorization/"><img src="metrics/pin-cifar10-image-colorization.svg" width="415"/></a>
 <br/>
-<a href="https://github.com/O-2wice/Federated-Learning-Anomaly-Detection"><img src="metrics/pin-Federated-Learning-Anomaly-Detection.svg" width="380"/></a>
-<a href="https://github.com/O-2wice/ev-charging-network-oracle-project"><img src="metrics/pin-ev-charging-network-oracle-project.svg" width="380"/></a>
+<a href="https://github.com/O-2wice/Federated-Learning-Anomaly-Detection"><img src="metrics/pin-Federated-Learning-Anomaly-Detection.svg" width="415"/></a>
+<a href="https://github.com/O-2wice/ev-charging-network-oracle-project"><img src="metrics/pin-ev-charging-network-oracle-project.svg" width="415"/></a>
 
 </div>
 

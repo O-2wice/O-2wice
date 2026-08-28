@@ -185,14 +185,16 @@ def fmt_range(start, end):
     return f"{d1.strftime('%b %-d')} – {d2.strftime('%b %-d, %Y')}"
 
 
-# GitHub's README column is about 780px on the profile page, so two 424px
-# cards wrap to separate lines. The stats and language halves need no links,
+# Measured on a 2560px window: GitHub caps the README column at about 862px
+# on the profile page and 854px on the repo page, so it never goes truly
+# full width. Two 424px cards plus the inline gap land on that limit and
+# wrap to separate lines. The stats and language halves need no links,
 # so they are drawn into one full-width panel that cannot wrap at all; the
 # repo cards stay separate because each links to its own repo, and are sized
 # to fit two per row.
 FULL_W = 860
 HALF_W = FULL_W // 2
-PIN_W = 380
+PIN_W = 415
 PAD = 20
 
 
