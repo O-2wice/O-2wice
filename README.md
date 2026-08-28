@@ -9,7 +9,7 @@
 <br/>
 
 <!--START_SECTION:social-->
-<a href="https://www.linkedin.com/in/ouko-robert/" title="LinkedIn"><img src="metrics/social/linkedin.svg" width="46" alt="LinkedIn"/></a> <a href="mailto:oukoor@gmail.com" title="Email"><img src="metrics/social/email.svg" width="46" alt="Email"/></a> <a href="https://music.youtube.com/@O_2wice" title="YouTube Music"><img src="metrics/social/youtube-music.svg" width="46" alt="YouTube Music"/></a> <a href="https://github.com/O-2wice" title="GitHub"><img src="metrics/social/github.svg" width="46" alt="GitHub"/></a>
+<a href="https://www.linkedin.com/in/ouko-robert/" title="LinkedIn"><img src="metrics/social/linkedin.svg" width="46" alt="LinkedIn"/></a> <a href="mailto:oukoor@gmail.com" title="Email"><img src="metrics/social/email.svg" width="46" alt="Email"/></a> <a href="https://music.youtube.com/@O_2wice" title="YouTube Music"><img src="metrics/social/youtube-music.svg" width="46" alt="YouTube Music"/></a> <a href="https://github.com/O-2wice?tab=repositories" title="Repositories"><img src="metrics/social/repositories.svg" width="46" alt="Repositories"/></a>
 <!--END_SECTION:social-->
 
 </div>

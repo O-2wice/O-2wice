@@ -78,7 +78,10 @@ SOCIALS = [
     ("LinkedIn", "linkedin", "#0A66C2", "https://www.linkedin.com/in/ouko-robert/"),
     ("Email", "gmail", "#EA4335", "mailto:oukoor@gmail.com"),
     ("YouTube Music", "youtubemusic", "#FF0000", "https://music.youtube.com/@O_2wice"),
-    ("GitHub", "github", "#FFFFFF", "https://github.com/O-2wice"),
+    # Pointed at the repositories tab, not the profile: on the profile page
+    # itself the old link sent people to the page they were already on.
+    ("Repositories", "github", "#FFFFFF",
+     "https://github.com/O-2wice?tab=repositories"),
 ]
 
 # Languages GitHub can filter his repositories by are worth far more than a
