@@ -66,51 +66,27 @@ MSc Data Science, ELTE Budapest.
 <br/>
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-308%20hrs%2030%20mins-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-312%20hrs%202%20mins-blue?style=flat)
 
-**🐱 My GitHub Data** 
-
-> 📦 ? Used in GitHub's Storage 
- > 
-> 🏆 169 Contributions in the Year 2026
- > 
-> 💼 Opted to Hire
- > 
-> 📜 31 Public Repositories 
- > 
-> 🔑 0 Private Repositories 
- > 
 📊 **This Week I Spent My Time On** 
 
 ```text
 💬 Programming Languages: 
-Other                    10 hrs 40 mins      ███████████████░░░░░░░░░░   59.19 % 
-Markdown                 4 hrs 9 mins        ██████░░░░░░░░░░░░░░░░░░░   23.06 % 
-TeX                      1 hr 2 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   05.79 % 
-YAML                     56 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   05.23 % 
-Python                   52 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   04.83 % 
+Other                    8 hrs 59 mins       ██████████████░░░░░░░░░░░   54.17 % 
+Markdown                 5 hrs 58 mins       █████████░░░░░░░░░░░░░░░░   36.05 % 
+Python                   45 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   04.54 % 
+TeX                      25 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   02.53 % 
+Git Config               23 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   02.36 % 
 
 🔥 Editors: 
-Codex Vscode             8 hrs 53 mins       ████████████░░░░░░░░░░░░░   49.31 % 
-Claude Code              7 hrs 29 mins       ██████████░░░░░░░░░░░░░░░   41.48 % 
-Codex CLI                1 hr 23 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   07.76 % 
-Antigravity IDE          15 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.45 % 
-```
-
-**I Mostly Code in Python** 
-
-```text
-Python                   6 repos             █████████░░░░░░░░░░░░░░░░   35.29 % 
-Jupyter Notebook         4 repos             ██████░░░░░░░░░░░░░░░░░░░   23.53 % 
-HTML                     3 repos             ████░░░░░░░░░░░░░░░░░░░░░   17.65 % 
-TeX                      2 repos             ███░░░░░░░░░░░░░░░░░░░░░░   11.76 % 
-JavaScript               1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   05.88 % 
+Codex Vscode             8 hrs 43 mins       █████████████░░░░░░░░░░░░   52.57 % 
+Claude Code              4 hrs 43 mins       ███████░░░░░░░░░░░░░░░░░░   28.50 % 
+Codex CLI                2 hrs 52 mins       ████░░░░░░░░░░░░░░░░░░░░░   17.36 % 
+Antigravity IDE          15 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.58 % 
 ```
 
 
-
-
- Last Updated on 27/08/2026 01:55:07 UTC
+ Last Updated on 28/08/2026 06:38:49 UTC
 <!--END_SECTION:waka-->
 
 <br/>
@@ -150,12 +126,12 @@ Forks I actually run, most recently touched first. Regenerated daily.
 <!--START_SECTION:drivers-->
 | Tool | What it does |
 |------|--------------|
+| [langgraph](https://github.com/O-2wice/langgraph) | Build resilient agents. |
 | [bootdev](https://github.com/O-2wice/bootdev) | CLI used to complete coding challenges and lessons on Boot.dev |
 | [pear-desktop](https://github.com/O-2wice/pear-desktop) | Pear 🍐 is extension for music player |
 | [scrcpy](https://github.com/O-2wice/scrcpy) | Display and control your Android device |
 | [MicaForEveryone](https://github.com/O-2wice/MicaForEveryone) | Mica For Everyone is a tool to enable backdrop effects on the title bars of Win32 apps on Windows 11. |
 | [Sefirah](https://github.com/O-2wice/Sefirah) | Phone Link / KDE Connect alternative |
-| [Fabric](https://github.com/O-2wice/Fabric) | Fabric is an open-source framework for augmenting humans using AI. It provides a modular system for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere. |
 <!--END_SECTION:drivers-->
 
 ---
