@@ -20,7 +20,7 @@
 
 Actuarial Science graduate, now an MSc Data Science candidate at ELTE Budapest. Numbers first, then the systems around them.
 
-Away from the screen I tutor maths and run Arduino workshops for kids in Budapest.
+The Debug Soundtrack panel below is live, playing through two Bluetooth speakers I had to script into reconnecting on their own.
 
 ---
 
