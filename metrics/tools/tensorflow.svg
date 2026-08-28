@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" role="img" aria-label="TensorFlow">
+<title>TensorFlow</title>
+<rect width="52" height="52" rx="12" fill="#1a1b27"/>
+<rect width="52" height="52" rx="12" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.07"/>
+<g transform="translate(14.0,14.0) scale(1.0000)" fill="#FF6F00"><path d="M1.292 5.856L11.54 0v24l-4.095-2.378V7.603l-6.168 3.564.015-5.31zm21.43 5.311l-.014-5.31L12.46 0v24l4.095-2.378V14.87l3.092 1.788-.018-4.618-3.074-1.756V7.603l6.168 3.564z"/></g>
+</svg>
