@@ -42,11 +42,9 @@ MSc Data Science at ELTE Budapest, after a BSc in Actuarial Science.
 
 <div align="center">
 
-<a href="https://o-2wice.github.io/correctness-aware-nl-query-translation-ocel/"><img src="metrics/pin-correctness-aware-nl-query-translation-ocel.svg" width="415"/></a>
-<a href="https://o-2wice.github.io/cifar10-image-colorization/"><img src="metrics/pin-cifar10-image-colorization.svg" width="415"/></a>
-<br/>
-<a href="https://github.com/O-2wice/Federated-Learning-Anomaly-Detection"><img src="metrics/pin-Federated-Learning-Anomaly-Detection.svg" width="415"/></a>
-<a href="https://github.com/O-2wice/ev-charging-network-oracle-project"><img src="metrics/pin-ev-charging-network-oracle-project.svg" width="415"/></a>
+<!--START_SECTION:featured-->
+<a href="https://o-2wice.github.io/correctness-aware-nl-query-translation-ocel/"><img src="metrics/pin-correctness-aware-nl-query-translation-ocel.svg" width="415"/></a> <a href="https://o-2wice.github.io/cifar10-image-colorization/"><img src="metrics/pin-cifar10-image-colorization.svg" width="415"/></a>
+<!--END_SECTION:featured-->
 
 </div>
 

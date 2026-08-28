@@ -18,6 +18,8 @@ import collections
 import datetime as dt
 import json
 import os
+import pathlib
+import re
 import sys
 import urllib.error
 import urllib.request
@@ -30,6 +32,7 @@ LOGIN = os.environ.get("GH_LOGIN", "O-2wice")
 TOKEN = os.environ.get("GH_TOKEN", "")
 OUTDIR = os.environ.get("OUT_DIR", "metrics")
 PINS = [r.strip() for r in os.environ.get("PIN_REPOS", "").split(",") if r.strip()]
+README = os.environ.get("README_PATH", "README.md")
 # Notebook files carry their rendered outputs inline, so byte counts make
 # Jupyter dwarf everything else and say nothing about what he actually writes.
 EXCLUDE_LANGS = {s.strip().lower() for s in
@@ -107,6 +110,17 @@ query($login: String!, $from: DateTime!, $to: DateTime!) {
         totalContributions
         weeks { contributionDays { date contributionCount } }
       }
+    }
+  }
+}
+"""
+
+PUBLIC_Q = """
+query($login: String!) {
+  user(login: $login) {
+    repositories(first: 100, ownerAffiliations: OWNER, isFork: false,
+                 privacy: PUBLIC, orderBy: {field: PUSHED_AT, direction: DESC}) {
+      nodes { name }
     }
   }
 }
@@ -282,10 +296,19 @@ def main():
         created = dt.datetime.fromisoformat(user["createdAt"].replace("Z", "+00:00"))
         days = calendar_days(created)
         commits = rest(f"search/commits?q=author:{LOGIN}&per_page=1")["total_count"]
+        # Featured Projects is every public repo carrying a published
+        # write-up, newest push first. Detected rather than listed, so a
+        # write-up added later shows up without editing the workflow, and a
+        # repo made private drops out instead of 404ing for visitors.
+        names = PINS or [r["name"] for r in
+                         graphql(PUBLIC_Q, login=LOGIN)["user"]["repositories"]["nodes"]]
         pins = []
-        for name in PINS:
+        for name in names:
+            page = pages_url(name)
+            if not page:
+                continue
             repo = graphql(REPO_Q, owner=LOGIN, name=name)["repository"]
-            repo["pages"] = pages_url(name)
+            repo["pages"] = page
             pins.append(repo)
     except (urllib.error.URLError, urllib.error.HTTPError, RuntimeError, KeyError) as exc:
         print(f"::warning::GitHub API call failed ({exc}); keeping existing panels")
@@ -312,6 +335,21 @@ def main():
           build_overview(user, all_commits, year_total, stars, agg, colours))
     for repo in pins:
         write(f"{OUTDIR}/pin-{repo['name']}.svg", build_pin(repo))
+    print(f"{len(pins)} project(s) with a write-up")
+
+    cards = "\n<br/>\n".join(
+        " ".join(f'<a href="{r["pages"]}"><img src="{OUTDIR}/pin-{r["name"]}.svg" '
+                 f'width="415"/></a>' for r in pins[i:i + 2])
+        for i in range(0, len(pins), 2))
+    readme = pathlib.Path(README)
+    if readme.exists():
+        text = readme.read_text()
+        block = f"<!--START_SECTION:featured-->\n{cards}\n<!--END_SECTION:featured-->"
+        updated = re.sub(r"<!--START_SECTION:featured-->.*?<!--END_SECTION:featured-->",
+                         lambda _m: block, text, flags=re.S)
+        if updated != text:
+            readme.write_text(updated)
+            print("updated the featured block in README.md")
     return 0
 
 

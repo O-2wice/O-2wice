@@ -34,8 +34,6 @@ jobs:
           GH_TOKEN: ${{ secrets.O_2WICE_PAT_KEY }}
           GH_LOGIN: O-2wice
           OUT_DIR: metrics
-          PIN_REPOS: >-
-            correctness-aware-nl-query-translation-ocel,cifar10-image-colorization,Federated-Learning-Anomaly-Detection,ev-charging-network-oracle-project
         run: python3 scripts/build_stats_panels.py
 
       - name: Render chrome panels
