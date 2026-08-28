@@ -18,8 +18,7 @@ import re
 import sys
 import urllib.request
 
-from svg_common import (ACCENT, ACCENT_ALT, BG, DIM, FONT, MONO, MUTED, ROW,
-                        TITLE, text_width, truncate)
+from svg_common import (ACCENT, BG, DIM, FONT, MUTED, ROW, TITLE, truncate)
 
 PLAYLIST = os.environ.get("PLAYLIST_URL", "https://music.youtube.com/playlist?list=PLWJzcQJwrVbM")
 OUT = os.environ.get("OUT_PATH", "metrics/music.svg")

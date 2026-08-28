@@ -24,7 +24,7 @@ import time
 import urllib.parse
 import urllib.error
 
-from svg_common import BG, DIM, FONT, MONO, MUTED, ROW, TITLE, card_close, card_open, esc, fetch, write
+from svg_common import BG, MONO, ROW, esc, fetch, write
 
 OUT_DIR = os.environ.get("OUT_DIR", "metrics/tools")
 README = os.environ.get("README_PATH", "README.md")

@@ -6,7 +6,7 @@
 <rect width="860" height="3" rx="1.5" fill="url(#accent)" opacity="0.85"/>
 <g font-family="'Segoe UI',Ubuntu,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif">
 <text x="20.0" y="54" fill="#7f88a8" font-size="14">Total commits</text>
-<text x="20.0" y="90" fill="#c0caf5" font-size="32" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">246</text>
+<text x="20.0" y="90" fill="#c0caf5" font-size="32" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">251</text>
 <text x="215.0" y="54" fill="#7f88a8" font-size="14">Contributions in 2026</text>
 <text x="215.0" y="90" fill="#c0caf5" font-size="32" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">170</text>
 <text x="20.0" y="122" fill="#7f88a8" font-size="14">Public repositories</text>
@@ -17,17 +17,17 @@
 <text x="450" y="40" fill="#7f88a8" font-size="14">Most used languages</text>
 <clipPath id="bar"><rect x="450" y="52" width="390" height="10" rx="5"/></clipPath>
 <g clip-path="url(#bar)">
-<rect x="450.00" y="52" width="231.14" height="10" fill="#3572A5"/>
-<rect x="680.64" y="52" width="67.64" height="10" fill="#3D6117"/>
-<rect x="747.78" y="52" width="67.33" height="10" fill="#e34c26"/>
-<rect x="814.62" y="52" width="9.55" height="10" fill="#dad8d8"/>
-<rect x="823.67" y="52" width="7.85" height="10" fill="#663399"/>
-<rect x="831.02" y="52" width="6.42" height="10" fill="#f1e05a"/>
-<rect x="836.94" y="52" width="3.06" height="10" fill="#ffffff" fill-opacity="0.08"/>
+<rect x="450.00" y="52" width="231.60" height="10" fill="#3572A5"/>
+<rect x="681.10" y="52" width="67.45" height="10" fill="#3D6117"/>
+<rect x="748.05" y="52" width="67.14" height="10" fill="#e34c26"/>
+<rect x="814.69" y="52" width="9.53" height="10" fill="#dad8d8"/>
+<rect x="823.72" y="52" width="7.83" height="10" fill="#663399"/>
+<rect x="831.04" y="52" width="6.41" height="10" fill="#f1e05a"/>
+<rect x="836.95" y="52" width="3.05" height="10" fill="#ffffff" fill-opacity="0.08"/>
 </g>
 <circle cx="455.0" cy="92" r="5" fill="#3572A5"/>
 <text x="467.0" y="96" fill="#c0caf5" font-size="14">Python</text>
-<text x="625.0" y="96" fill="#7f88a8" font-size="13.5" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">59.1%</text>
+<text x="625.0" y="96" fill="#7f88a8" font-size="13.5" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">59.3%</text>
 <circle cx="455.0" cy="122" r="5" fill="#3D6117"/>
 <text x="467.0" y="126" fill="#c0caf5" font-size="14">TeX</text>
 <text x="625.0" y="126" fill="#7f88a8" font-size="13.5" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">17.2%</text>

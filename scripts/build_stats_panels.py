@@ -24,9 +24,8 @@ import sys
 import urllib.error
 import urllib.request
 
-from svg_common import (ACCENT, ACCENT_ALT, BG, DIM, FONT, MONO, MUTED, ROW,
-                        TITLE, card_close, card_open, esc, heading, human,
-                        truncate, write)
+from svg_common import (ACCENT, ACCENT_ALT, MONO, MUTED, ROW, TITLE, card_close,
+                        card_open, esc, human, truncate, write)
 
 LOGIN = os.environ.get("GH_LOGIN", "O-2wice")
 TOKEN = os.environ.get("GH_TOKEN", "")

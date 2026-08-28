@@ -16,8 +16,8 @@ import pathlib
 import re
 import sys
 
-from svg_common import (ACCENT, ACCENT_ALT, BG, DIM, FONT, MONO, MUTED, ROW,
-                        TITLE, esc, fetch, mono_width, text_width, write)
+from svg_common import (ACCENT, ACCENT_ALT, BG, FONT, MONO, MUTED, TITLE, esc, fetch,
+                        mono_width, text_width, write)
 
 OUTDIR = os.environ.get("OUT_DIR", "metrics")
 README = os.environ.get("README_PATH", "README.md")
