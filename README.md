@@ -20,7 +20,7 @@
 
 Actuarial Science graduate, now an MSc Data Science candidate at ELTE Budapest. Numbers first, then the systems around them.
 
-My browser history is half research papers, half truck listings. I farm too, which explains none of it.
+There is a farm, a serious weakness for pickup trucks, and a Linux audio stack I have rewritten more times than I will admit.
 
 ---
 
