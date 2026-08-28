@@ -46,6 +46,7 @@ jobs:
       - name: Render tech stack panel
         env:
           OUT_DIR: metrics/tools
+          SOCIAL_DIR: metrics/social
           GH_LOGIN: O-2wice
           GH_TOKEN: ${{ secrets.O_2WICE_PAT_KEY }}
         run: python3 scripts/build_tools_panel.py

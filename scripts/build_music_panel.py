@@ -35,7 +35,7 @@ W = 860
 PAD = 20
 GUTTER = 24
 ART = 40
-ROW_H = 54
+ROW_H = 58
 HEAD_H = 52
 
 
@@ -156,9 +156,9 @@ def build(name, tracks):
         f'<rect width="{W}" height="3" rx="1.5" fill="url(#accent)" opacity="0.85"/>',
         f'<g font-family="{FONT}">',
         # header
-        f'<text x="{PAD}" y="34" fill="{MUTED}" font-size="11.5">'
-        f'{html.escape(truncate(name, 11.5, W - PAD * 2 - 140))} · {len(tracks)} tracks · refreshed daily</text>',
-        f'<text x="{W - PAD}" y="34" fill="{DIM}" font-size="11" text-anchor="end">YouTube Music</text>',
+        f'<text x="{PAD}" y="34" fill="{MUTED}" font-size="13">'
+        f'{html.escape(truncate(name, 13, W - PAD * 2 - 140))} · {len(tracks)} tracks · refreshed daily</text>',
+        f'<text x="{W - PAD}" y="34" fill="{DIM}" font-size="12.5" text-anchor="end">YouTube Music</text>',
     ]
 
     for i, t in enumerate(tracks):
@@ -184,11 +184,11 @@ def build(name, tracks):
                        f'fill="{ROW}" fill-opacity="0.06"/>')
 
         tx = x0 + text_x
-        out.append(f'<text x="{tx}" y="{y + 22}" fill="{TITLE}" font-size="13" font-weight="500">'
-                   f'{html.escape(truncate(t["title"], 13, title_max))}</text>')
+        out.append(f'<text x="{tx}" y="{y + 22}" fill="{TITLE}" font-size="14.5" font-weight="500">'
+                   f'{html.escape(truncate(t["title"], 14.5, title_max))}</text>')
         if t["artist"]:
-            out.append(f'<text x="{tx}" y="{y + 37}" fill="{MUTED}" font-size="11">'
-                       f'{html.escape(truncate(t["artist"], 11, title_max))}</text>')
+            out.append(f'<text x="{tx}" y="{y + 38}" fill="{MUTED}" font-size="12.5">'
+                       f'{html.escape(truncate(t["artist"], 12.5, title_max))}</text>')
         if t["duration"]:
             out.append(f'<text x="{x0 + col_w}" y="{y + 29}" fill="{DIM}" font-size="11" '
                        f'text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">'

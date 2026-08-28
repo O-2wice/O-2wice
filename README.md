@@ -8,11 +8,9 @@
 
 <br/>
 
-<!-- Social Badges -->
-<a href="https://www.linkedin.com/in/ouko-robert/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-<a href="mailto:oukoor@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-<a href="https://music.youtube.com/@O_2wice"><img src="https://img.shields.io/badge/YouTube%20Music-FF0000?style=for-the-badge&logo=youtube-music&logoColor=white"/></a>
-<a href="https://github.com/O-2wice"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=github&logoColor=white"/></a>
+<!--START_SECTION:social-->
+<a href="https://www.linkedin.com/in/ouko-robert/" title="LinkedIn"><img src="metrics/social/linkedin.svg" width="46" alt="LinkedIn"/></a> <a href="mailto:oukoor@gmail.com" title="Email"><img src="metrics/social/email.svg" width="46" alt="Email"/></a> <a href="https://music.youtube.com/@O_2wice" title="YouTube Music"><img src="metrics/social/youtube-music.svg" width="46" alt="YouTube Music"/></a> <a href="https://github.com/O-2wice" title="GitHub"><img src="metrics/social/github.svg" width="46" alt="GitHub"/></a>
+<!--END_SECTION:social-->
 
 </div>
 
@@ -54,7 +52,6 @@ MSc Data Science at ELTE Budapest, after a BSc in Actuarial Science.
 
 | Project | Description | Tech Stack |
 |---------|-------------|------------|
-| [NL-to-SQL for ERP Systems](https://o-2wice.github.io/correctness-aware-nl-query-translation-ocel/) | Natural language query translation over enterprise event log data | LLM, DuckDB, Python |
 | [Financial Risk Forecasting](https://github.com/O-2wice/DS_Lab_Project) | ML system for predicting financial distress using SAP S/4HANA data | XGBoost, SMOTE, SHAP, SAP |
 
 ---
@@ -90,10 +87,6 @@ Antigravity IDE          15 mins             ░░░░░░░░░░░�
 
  Last Updated on 28/08/2026 06:38:49 UTC
 <!--END_SECTION:waka-->
-
-<br/>
-
-<img src="metrics/streak.svg" width="860" alt="Contribution streak"/>
 
 <br/>
 

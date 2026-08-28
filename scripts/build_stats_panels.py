@@ -141,57 +141,10 @@ def calendar_days(created):
     return dict(sorted(days.items()))
 
 
-def streaks(days):
-    """Current and longest run of consecutive contributing days.
-
-    Today is excluded from a broken streak: a day with no commits yet is not
-    the same as a day that ended with none, and the panel would otherwise
-    reset to zero every midnight UTC.
-    """
-    today = dt.datetime.now(dt.timezone.utc).date().isoformat()
-    longest = longest_start = longest_end = None
-    run = run_start = None
-    best = 0
-    for date, count in days.items():
-        if count > 0:
-            run = 1 if run is None else run + 1
-            run_start = date if run == 1 else run_start
-            if run > best:
-                best, longest, longest_start, longest_end = run, run, run_start, date
-        elif date != today:
-            run = None
-
-    current = 0
-    current_start = current_end = None
-    for date, count in reversed(list(days.items())):
-        if count > 0:
-            current += 1
-            current_end = current_end or date
-            current_start = date
-        elif date != today:
-            break
-    return (current, current_start, current_end), (best, longest_start, longest_end)
-
-
-def fmt_range(start, end):
-    if not start or not end:
-        return "—"
-    d1 = dt.date.fromisoformat(start)
-    d2 = dt.date.fromisoformat(end)
-    if d1 == d2:
-        return d1.strftime("%b %-d")
-    if d1.year != d2.year:
-        return f"{d1.strftime('%b %-d, %Y')} – {d2.strftime('%b %-d, %Y')}"
-    return f"{d1.strftime('%b %-d')} – {d2.strftime('%b %-d, %Y')}"
-
-
 # Measured on a 2560px window: GitHub caps the README column at about 862px
 # on the profile page and 854px on the repo page, so it never goes truly
 # full width. Two 424px cards plus the inline gap land on that limit and
-# wrap to separate lines. The stats and language halves need no links,
-# so they are drawn into one full-width panel that cannot wrap at all; the
-# repo cards stay separate because each links to its own repo, and are sized
-# to fit two per row.
+# wrap to separate lines, so the paired cards sit under that.
 FULL_W = 860
 HALF_W = FULL_W // 2
 PIN_W = 415
@@ -219,13 +172,10 @@ def stats_half(user, all_commits, total_contribs, stars, x=0):
         col, row = i % 2, i // 2
         cx = x + PAD + col * col_w
         ly = 54 + row * 68
-        out.append(f'<text x="{cx}" y="{ly}" fill="{MUTED}" font-size="11.5">{esc(label)}</text>')
-        out.append(f'<text x="{cx}" y="{ly + 33}" fill="{TITLE}" font-size="28" '
+        out.append(f'<text x="{cx}" y="{ly}" fill="{MUTED}" font-size="14">{esc(label)}</text>')
+        out.append(f'<text x="{cx}" y="{ly + 36}" fill="{TITLE}" font-size="32" '
                    f'font-weight="600" font-family="{MONO}">{esc(value)}</text>')
 
-    since = dt.date.fromisoformat(user["createdAt"][:10]).strftime("%B %Y")
-    out.append(f'<text x="{x + PAD}" y="196" fill="{DIM}" font-size="10">'
-               f'since {esc(since)}</text>')
     return out
 
 
@@ -234,7 +184,7 @@ def langs_half(agg, colours, x=0):
     top = agg.most_common(6)
 
     bar_w = HALF_W - PAD * 2
-    out = [f'<text x="{x + PAD}" y="40" fill="{MUTED}" font-size="11.5">Most used languages</text>',
+    out = [f'<text x="{x + PAD}" y="40" fill="{MUTED}" font-size="14">Most used languages</text>',
            f'<clipPath id="bar"><rect x="{x + PAD}" y="52" width="{bar_w}" '
            f'height="10" rx="5"/></clipPath>',
            '<g clip-path="url(#bar)">']
@@ -253,18 +203,14 @@ def langs_half(agg, colours, x=0):
     for i, (name, size) in enumerate(top):
         col, row = divmod(i, 3)
         cx = x + PAD + col * col_w
-        cy = 92 + row * 26
+        cy = 96 + row * 30
         out.append(f'<circle cx="{cx + 5}" cy="{cy - 4}" r="5" '
                    f'fill="{colours.get(name) or ACCENT}"/>')
-        out.append(f'<text x="{cx + 17}" y="{cy}" fill="{TITLE}" font-size="12">'
+        out.append(f'<text x="{cx + 17}" y="{cy}" fill="{TITLE}" font-size="14">'
                    f'{esc(truncate(name, 12, col_w - 74))}</text>')
-        out.append(f'<text x="{cx + col_w - 20}" y="{cy}" fill="{MUTED}" font-size="11.5" '
+        out.append(f'<text x="{cx + col_w - 20}" y="{cy}" fill="{MUTED}" font-size="13.5" '
                    f'text-anchor="end" font-family="{MONO}">{100 * size / total:.1f}%</text>')
 
-    if EXCLUDE_LANGS:
-        pretty = ", ".join(sorted(w.title() for w in EXCLUDE_LANGS))
-        out.append(f'<text x="{x + PAD}" y="196" fill="{DIM}" font-size="10">'
-                   f'by bytes of source, excluding {esc(pretty)}</text>')
     return out
 
 
@@ -276,37 +222,6 @@ def build_overview(user, all_commits, total_contribs, stars, agg, colours):
     out.append(f'<line x1="{HALF_W}" y1="26" x2="{HALF_W}" y2="{h - 26}" '
                f'stroke="{ROW}" stroke-opacity="0.08"/>')
     out += langs_half(agg, colours, HALF_W)
-    out += card_close()
-    return "\n".join(out)
-
-
-def build_streak(days, current, longest):
-    w, h = 860, 150
-    total = sum(days.values())
-    cur_n, cur_s, cur_e = current
-    long_n, long_s, long_e = longest
-    first = next(iter(days)) if days else None
-
-    cells = [
-        ("Total contributions", human(total), fmt_range(first, max(days)) if days else "—"),
-        ("Current streak", f"{cur_n} {'day' if cur_n == 1 else 'days'}", fmt_range(cur_s, cur_e)),
-        ("Longest streak", f"{long_n} {'day' if long_n == 1 else 'days'}", fmt_range(long_s, long_e)),
-    ]
-
-    out = card_open(w, h, "Contribution streak")
-    third = w / 3
-    for i, (label, value, sub) in enumerate(cells):
-        cx = third * i + third / 2
-        if i:
-            out.append(f'<line x1="{third * i}" y1="34" x2="{third * i}" y2="{h - 26}" '
-                       f'stroke="{ROW}" stroke-opacity="0.08"/>')
-        colour = ACCENT if i == 1 else TITLE
-        out.append(f'<text x="{cx}" y="52" fill="{MUTED}" font-size="12" '
-                   f'text-anchor="middle">{esc(label)}</text>')
-        out.append(f'<text x="{cx}" y="96" fill="{colour}" font-size="34" font-weight="600" '
-                   f'text-anchor="middle" font-family="{MONO}">{esc(value)}</text>')
-        out.append(f'<text x="{cx}" y="120" fill="{DIM}" font-size="11" '
-                   f'text-anchor="middle">{esc(sub)}</text>')
     out += card_close()
     return "\n".join(out)
 
@@ -334,14 +249,14 @@ def build_activity(days, window=30):
                f'<stop offset="0" stop-color="{ACCENT}" stop-opacity="0.45"/>'
                f'<stop offset="1" stop-color="{ACCENT}" stop-opacity="0.02"/></linearGradient>')
     out.append(heading(PAD, 34, "Contribution Activity"))
-    out.append(f'<text x="{w - PAD}" y="34" fill="{DIM}" font-size="11" text-anchor="end">'
+    out.append(f'<text x="{w - PAD}" y="34" fill="{DIM}" font-size="13" text-anchor="end">'
                f'last {len(recent)} days · {sum(counts)} contributions</text>')
 
     for frac in (0, 0.5, 1):
         gy = bottom - frac * plot_h
         out.append(f'<line x1="{left}" y1="{gy:.1f}" x2="{right}" y2="{gy:.1f}" '
                    f'stroke="{ROW}" stroke-opacity="0.07"/>')
-        out.append(f'<text x="{left - 10}" y="{gy + 4:.1f}" fill="{DIM}" font-size="10.5" '
+        out.append(f'<text x="{left - 10}" y="{gy + 4:.1f}" fill="{DIM}" font-size="13" '
                    f'text-anchor="end" font-family="{MONO}">{round(frac * scale_top)}</text>')
 
     pts = " ".join(f"{px(i):.1f},{py(c):.1f}" for i, c in enumerate(counts))
@@ -355,8 +270,8 @@ def build_activity(days, window=30):
                        f'stroke="{BG}" stroke-width="1.5"/>')
     # A label every fifth day keeps the axis readable at 860px.
     for i, (date, _) in enumerate(recent):
-        if i % 5 == 0 or i == len(recent) - 1:
-            out.append(f'<text x="{px(i):.1f}" y="{bottom + 18}" fill="{DIM}" font-size="10" '
+        if i % 7 == 0 or i == len(recent) - 1:
+            out.append(f'<text x="{px(i):.1f}" y="{bottom + 20}" fill="{DIM}" font-size="12.5" '
                        f'text-anchor="middle">'
                        f'{dt.date.fromisoformat(date).strftime("%-d %b")}</text>')
     out += card_close()
@@ -445,11 +360,8 @@ def main():
             agg[name] += edge["size"]
             colours[name] = edge["node"]["color"]
 
-    current, longest = streaks(days)
-
     write(f"{OUTDIR}/stats.svg",
           build_overview(user, all_commits, year_total, stars, agg, colours))
-    write(f"{OUTDIR}/streak.svg", build_streak(days, current, longest))
     write(f"{OUTDIR}/activity.svg", build_activity(days))
     for repo in pins:
         write(f"{OUTDIR}/pin-{repo['name']}.svg", build_pin(repo))

@@ -31,6 +31,7 @@ README = os.environ.get("README_PATH", "README.md")
 LOGIN = os.environ.get("GH_LOGIN", "O-2wice")
 TOKEN = os.environ.get("GH_TOKEN", "")
 MARKER = "tools"
+SOCIAL_DIR = os.environ.get("SOCIAL_DIR", "metrics/social")
 CDN = "https://cdn.jsdelivr.net/npm/simple-icons@13/icons/{}.svg"
 
 W, PAD = 860, 20
@@ -69,6 +70,16 @@ TOOLS = [
 ]
 
 MONOGRAM = {"Power BI": "BI", "XGBoost": "XGB"}
+
+# The four contact links, drawn as the same tile as the stack rather than
+# shields' for-the-badge blocks, which were the loudest thing on the page
+# and the last images fetched from another server.
+SOCIALS = [
+    ("LinkedIn", "linkedin", "#0A66C2", "https://www.linkedin.com/in/ouko-robert/"),
+    ("Email", "gmail", "#EA4335", "mailto:oukoor@gmail.com"),
+    ("YouTube Music", "youtubemusic", "#FF0000", "https://music.youtube.com/@O_2wice"),
+    ("GitHub", "github", "#FFFFFF", "https://github.com/O-2wice"),
+]
 
 # Languages GitHub can filter his repositories by are worth far more than a
 # vendor home page: the click shows what he actually built with the thing.
@@ -186,6 +197,13 @@ def build_tile(label, slug, colour, paths):
     return "\n".join(out)
 
 
+def socials_markdown():
+    return " ".join(
+        f'<a href="{url}" title="{label}">'
+        f'<img src="metrics/social/{slugify(label)}.svg" width="46" alt="{label}"/></a>'
+        for label, _, _, url in SOCIALS)
+
+
 def markdown(links, per_row=COLS):
     """The anchor rows to paste into the README, printed for reference.
 
@@ -214,6 +232,16 @@ def main():
     for label, slug, colour in TOOLS:
         write(f"{OUT_DIR}/{slugify(label)}.svg", build_tile(label, slug, colour, paths))
 
+    social_paths = {}
+    for label, slug, _, _ in SOCIALS:
+        try:
+            social_paths[slug] = icon_path(slug)
+        except (urllib.error.URLError, urllib.error.HTTPError, RuntimeError) as exc:
+            print(f"::warning::icon {slug} unavailable ({exc})")
+    for label, slug, colour, _ in SOCIALS:
+        write(f"{SOCIAL_DIR}/{slugify(label)}.svg",
+              build_tile(label, slug, colour, social_paths))
+
     links = {}
     for label, _, _ in TOOLS:
         hits = 0 if label in LANGUAGES else repo_hits(label)
@@ -230,6 +258,9 @@ def main():
         rendered = f"<!--START_SECTION:{MARKER}-->\n{markdown(links)}\n<!--END_SECTION:{MARKER}-->"
         updated = re.sub(rf"<!--START_SECTION:{MARKER}-->.*?<!--END_SECTION:{MARKER}-->",
                          lambda _m: rendered, text, flags=re.S)
+        social = f"<!--START_SECTION:social-->\n{socials_markdown()}\n<!--END_SECTION:social-->"
+        updated = re.sub(r"<!--START_SECTION:social-->.*?<!--END_SECTION:social-->",
+                         lambda _m: social, updated, flags=re.S)
         if updated != text:
             block.write_text(updated)
             print(f"updated the {MARKER} block in {README}")
