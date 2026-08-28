@@ -76,16 +76,10 @@ Markdown                 5 hrs 58 mins       █████████░░�
 Python                   45 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   04.54 % 
 TeX                      25 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   02.53 % 
 Git Config               23 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   02.36 % 
-
-🔥 Editors: 
-Codex Vscode             8 hrs 43 mins       █████████████░░░░░░░░░░░░   52.57 % 
-Claude Code              4 hrs 43 mins       ███████░░░░░░░░░░░░░░░░░░   28.50 % 
-Codex CLI                2 hrs 52 mins       ████░░░░░░░░░░░░░░░░░░░░░   17.36 % 
-Antigravity IDE          15 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.58 % 
 ```
 
 
- Last Updated on 28/08/2026 06:38:49 UTC
+ Last Updated on 28/08/2026 07:04:17 UTC
 <!--END_SECTION:waka-->
 
 <br/>
