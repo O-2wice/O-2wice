@@ -20,7 +20,7 @@
 
 Actuarial Science graduate, now an MSc Data Science candidate at ELTE Budapest. Numbers first, then the systems around them.
 
-The Debug Soundtrack panel below is live, playing through two Bluetooth speakers I had to script into reconnecting on their own.
+I farm on the flip side, which is the official reason my search history is half research papers and half Hilux specs. My supervisor only knows about one of them.
 
 ---
 
