@@ -116,51 +116,27 @@ What stays on while coding, debugging, and writing. Refreshed daily — click th
 <br/>
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-308%20hrs%2040%20mins-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-312%20hrs%202%20mins-blue?style=flat)
 
-**🐱 My GitHub Data** 
-
-> 📦 ? Used in GitHub's Storage 
- > 
-> 🏆 170 Contributions in the Year 2026
- > 
-> 💼 Opted to Hire
- > 
-> 📜 32 Public Repositories 
- > 
-> 🔑 0 Private Repositories 
- > 
 📊 **This Week I Spent My Time On** 
 
 ```text
 💬 Programming Languages: 
-Other                    10 hrs 55 mins      ████████████████░░░░░░░░░   64.93 % 
-Markdown                 4 hrs 18 mins       ██████░░░░░░░░░░░░░░░░░░░   25.57 % 
-YAML                     56 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   05.60 % 
-Python                   27 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   02.77 % 
-TeX                      8 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.81 % 
+Other                    8 hrs 59 mins       ██████████████░░░░░░░░░░░   54.17 % 
+Markdown                 5 hrs 58 mins       █████████░░░░░░░░░░░░░░░░   36.05 % 
+Python                   45 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   04.54 % 
+TeX                      25 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   02.53 % 
+Git Config               23 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   02.36 % 
 
 🔥 Editors: 
-Codex Vscode             8 hrs 7 mins        ████████████░░░░░░░░░░░░░   48.32 % 
-Claude Code              6 hrs 38 mins       ██████████░░░░░░░░░░░░░░░   39.42 % 
-Codex CLI                1 hr 48 mins        ███░░░░░░░░░░░░░░░░░░░░░░   10.70 % 
-Antigravity IDE          15 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.56 % 
-```
-
-**I Mostly Code in Python** 
-
-```text
-Python                   6 repos             █████████░░░░░░░░░░░░░░░░   35.29 % 
-Jupyter Notebook         4 repos             ██████░░░░░░░░░░░░░░░░░░░   23.53 % 
-HTML                     3 repos             ████░░░░░░░░░░░░░░░░░░░░░   17.65 % 
-TeX                      2 repos             ███░░░░░░░░░░░░░░░░░░░░░░   11.76 % 
-JavaScript               1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   05.88 % 
+Codex Vscode             8 hrs 43 mins       █████████████░░░░░░░░░░░░   52.57 % 
+Claude Code              4 hrs 43 mins       ███████░░░░░░░░░░░░░░░░░░   28.50 % 
+Codex CLI                2 hrs 52 mins       ████░░░░░░░░░░░░░░░░░░░░░   17.36 % 
+Antigravity IDE          15 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.58 % 
 ```
 
 
-
-
- Last Updated on 28/08/2026 03:19:09 UTC
+ Last Updated on 28/08/2026 06:38:49 UTC
 <!--END_SECTION:waka-->
 
 <br/>
