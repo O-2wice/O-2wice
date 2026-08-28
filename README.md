@@ -20,7 +20,7 @@
 
 Actuarial Science graduate, now an MSc Data Science candidate at ELTE Budapest. Numbers first, then the systems around them.
 
-Outside all that I farm, follow pickup trucks more closely than is reasonable, and keep rebuilding my audio setup.
+My browser history is half research papers, half truck listings. I farm too, which explains none of it.
 
 ---
 
