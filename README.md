@@ -20,7 +20,7 @@
 
 Actuarial Science graduate, now an MSc Data Science candidate at ELTE Budapest. Numbers first, then the systems around them.
 
-On the flip side I farm, which justifies wanting a Hilux. It does not justify wanting a TRX, and I want one anyway.
+Outside all that I farm, follow pickup trucks more closely than is reasonable, and keep rebuilding my audio setup.
 
 ---
 

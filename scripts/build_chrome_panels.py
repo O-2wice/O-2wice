@@ -38,7 +38,6 @@ TYPING_LINES = [
     "Nairobi to Budapest",
     "Eight years in industry, now back in class",
     "Still reads the balance sheet first",
-    "Two speakers, one EQ chain, far too much debugging",
 ]
 
 # Cycled inside the SVG rather than picked per build: the panel is a static
