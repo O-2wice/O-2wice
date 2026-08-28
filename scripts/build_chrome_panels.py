@@ -31,13 +31,13 @@ QUOTE_SERVICE = ("https://quotes-github-readme.vercel.app/api"
                  "?type=horizontal&theme=tokyonight")
 NAME = os.environ.get("PROFILE_NAME", "O_2wice")
 TAGLINE = os.environ.get("PROFILE_TAGLINE",
-                         "Data Scientist  |  ML Engineer  |  Risk & ERP Analytics")
+                         "Data Scientist")
 
 TYPING_LINES = [
     "Actuarial Science to Data Science",
-    "Turning Data into Decisions",
-    "Building ML Systems that Scale",
-    "Natural Language to SQL for ERP Systems",
+    "Nairobi to Budapest",
+    "Eight years in industry, now back in class",
+    "Still reads the balance sheet first",
 ]
 
 # Cycled inside the SVG rather than picked per build: the panel is a static

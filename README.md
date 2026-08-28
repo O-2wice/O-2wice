@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Animated Header -->
-<img src="metrics/header.svg" width="860" alt="O_2wice — Data Scientist, ML Engineer, Risk & ERP Analytics"/>
+<img src="metrics/header.svg" width="860" alt="O_2wice, Data Scientist"/>
 
 <!-- Typing Animation -->
 <img src="metrics/typing.svg" width="620" alt="Actuarial Science to Data Science"/>
@@ -18,9 +18,9 @@
 
 ## About Me
 
-I work on machine learning for enterprise data, mostly ERP and financial systems.
+Actuarial Science graduate, now an MSc Data Science candidate at ELTE Budapest. Numbers first, then the systems around them.
 
-MSc Data Science at ELTE Budapest, after a BSc in Actuarial Science.
+Away from the screen I tutor maths and run Arduino workshops for kids in Budapest.
 
 ---
 
