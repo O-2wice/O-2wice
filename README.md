@@ -20,7 +20,7 @@
 
 Actuarial Science graduate, now an MSc Data Science candidate at ELTE Budapest. Numbers first, then the systems around them.
 
-I farm on the flip side, which is the official reason my search history is half research papers and half Hilux specs. My supervisor only knows about one of them.
+On the flip side I farm, which justifies wanting a Hilux. It does not justify wanting a TRX, and I want one anyway.
 
 ---
 
