@@ -84,10 +84,6 @@ Git Config               23 mins             █░░░░░░░░░░�
 
 <br/>
 
-<img src="metrics/activity.svg" width="860" alt="Contribution activity, last 30 days"/>
-
-<br/>
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/O-2wice/O-2wice/output/github-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/O-2wice/O-2wice/output/github-snake.svg" />

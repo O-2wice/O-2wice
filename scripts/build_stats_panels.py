@@ -226,58 +226,6 @@ def build_overview(user, all_commits, total_contribs, stars, agg, colours):
     return "\n".join(out)
 
 
-def build_activity(days, window=30):
-    w, h = 860, 240
-    recent = list(days.items())[-window:]
-    counts = [c for _, c in recent]
-    peak = max(counts) if counts else 0
-    scale_top = max(peak, 4)
-
-    left, right, top, bottom = 52, w - PAD, 74, h - 36
-    span = right - left
-    plot_h = bottom - top
-    step = span / max(len(recent) - 1, 1)
-
-    def px(i):
-        return left + i * step
-
-    def py(v):
-        return bottom - (v / scale_top) * plot_h
-
-    out = card_open(w, h, "Contribution activity")
-    out.append(f'<linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">'
-               f'<stop offset="0" stop-color="{ACCENT}" stop-opacity="0.45"/>'
-               f'<stop offset="1" stop-color="{ACCENT}" stop-opacity="0.02"/></linearGradient>')
-    out.append(heading(PAD, 34, "Contribution Activity"))
-    out.append(f'<text x="{w - PAD}" y="34" fill="{DIM}" font-size="13" text-anchor="end">'
-               f'last {len(recent)} days · {sum(counts)} contributions</text>')
-
-    for frac in (0, 0.5, 1):
-        gy = bottom - frac * plot_h
-        out.append(f'<line x1="{left}" y1="{gy:.1f}" x2="{right}" y2="{gy:.1f}" '
-                   f'stroke="{ROW}" stroke-opacity="0.07"/>')
-        out.append(f'<text x="{left - 10}" y="{gy + 4:.1f}" fill="{DIM}" font-size="13" '
-                   f'text-anchor="end" font-family="{MONO}">{round(frac * scale_top)}</text>')
-
-    pts = " ".join(f"{px(i):.1f},{py(c):.1f}" for i, c in enumerate(counts))
-    out.append(f'<polygon points="{left},{bottom} {pts} {right},{bottom}" fill="url(#fill)"/>')
-    out.append(f'<polyline points="{pts}" fill="none" stroke="{ACCENT}" stroke-width="2" '
-               f'stroke-linejoin="round" stroke-linecap="round"/>')
-
-    for i, (date, count) in enumerate(recent):
-        if count == peak and peak:
-            out.append(f'<circle cx="{px(i):.1f}" cy="{py(count):.1f}" r="3.5" fill="{ACCENT_ALT}" '
-                       f'stroke="{BG}" stroke-width="1.5"/>')
-    # A label every fifth day keeps the axis readable at 860px.
-    for i, (date, _) in enumerate(recent):
-        if i % 7 == 0 or i == len(recent) - 1:
-            out.append(f'<text x="{px(i):.1f}" y="{bottom + 20}" fill="{DIM}" font-size="12.5" '
-                       f'text-anchor="middle">'
-                       f'{dt.date.fromisoformat(date).strftime("%-d %b")}</text>')
-    out += card_close()
-    return "\n".join(out)
-
-
 def build_pin(repo):
     w, h = PIN_W, 140
     out = card_open(w, h, f"{repo['name']} repository")
@@ -362,7 +310,6 @@ def main():
 
     write(f"{OUTDIR}/stats.svg",
           build_overview(user, all_commits, year_total, stars, agg, colours))
-    write(f"{OUTDIR}/activity.svg", build_activity(days))
     for repo in pins:
         write(f"{OUTDIR}/pin-{repo['name']}.svg", build_pin(repo))
     return 0
