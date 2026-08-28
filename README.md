@@ -63,10 +63,7 @@ MSc Data Science at ELTE Budapest, after a BSc in Actuarial Science.
 
 <div align="center">
 
-<picture>
-  <source media="(max-width: 500px)" srcset="metrics/streak.svg"/>
-  <img src="metrics/stats.svg" width="860"/>
-</picture>
+<img src="metrics/stats.svg" width="860"/>
 
 <br/>
 
