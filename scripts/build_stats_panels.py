@@ -87,6 +87,10 @@ query($login: String!) {
       totalCommitContributions
       restrictedContributionsCount
     }
+    publicRepos: repositories(first: 1, ownerAffiliations: OWNER,
+                              isFork: false, privacy: PUBLIC) {
+      totalCount
+    }
     repositories(first: 100, ownerAffiliations: OWNER, isFork: false,
                  orderBy: {field: STARGAZERS, direction: DESC}) {
       totalCount
@@ -173,7 +177,7 @@ def stats_half(user, all_commits, total_contribs, stars, x=0):
     year = dt.datetime.now(dt.timezone.utc).year
     cells = [("Total commits", human(all_commits)),
              (f"Contributions in {year}", human(total_contribs)),
-             ("Public repositories", human(user["repositories"]["totalCount"])),
+             ("Public repositories", human(user["publicRepos"]["totalCount"])),
              ("Followers", human(user["followers"]["totalCount"]))]
     # A row of zeros reads worse than no row at all.
     if stars:
