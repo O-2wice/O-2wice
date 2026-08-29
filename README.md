@@ -20,7 +20,7 @@
 
 Actuarial Science graduate, now an MSc Data Science candidate at ELTE Budapest. Numbers first, then the systems around them.
 
-Away from that: a farm, a serious weakness for pickup trucks, and a Linux audio stack I have rewritten more times than I will admit.
+Away from that: a farm, a serious weakness for pickup trucks, a Linux audio stack I have rewritten more times than I will admit, and a list that keeps growing.
 
 ---
 
