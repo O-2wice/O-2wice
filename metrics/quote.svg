@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="122" viewBox="0 0 760 122" role="img" aria-label="Premature optimization is the root of all evil.">
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="122" viewBox="0 0 760 122" role="img" aria-label="An approximate answer to the right problem is worth a good deal more than an exact answer to">
 <defs>
 <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#70a5fd"/><stop offset="1" stop-color="#bb9af7"/></linearGradient>
 </defs>
@@ -7,36 +7,36 @@
 <text x="30" y="56" fill="#70a5fd" font-family="Georgia,serif" font-size="52" opacity="0.5">“</text>
 <g font-family="'Segoe UI',Ubuntu,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif">
 <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.00000;0.00893;0.11607;0.12500;1" dur="56.00s" repeatCount="indefinite"/>
-<text x="66" y="60" fill="#c0caf5" font-size="15">Premature optimization is the root of all evil.</text>
-<text x="66" y="96" fill="#7f88a8" font-size="12.5">— Donald Knuth</text>
-</g>
-<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.12500;0.13393;0.24107;0.25000;1" dur="56.00s" repeatCount="indefinite"/>
 <text x="66" y="48" fill="#c0caf5" font-size="15">An approximate answer to the right problem is worth a good deal more than an exact answer to</text>
 <text x="66" y="72" fill="#c0caf5" font-size="15">an approximate problem.</text>
 <text x="66" y="108" fill="#7f88a8" font-size="12.5">— John Tukey</text>
 </g>
-<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.25000;0.25893;0.36607;0.37500;1" dur="56.00s" repeatCount="indefinite"/>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.12500;0.13393;0.24107;0.25000;1" dur="56.00s" repeatCount="indefinite"/>
 <text x="66" y="60" fill="#c0caf5" font-size="15">The greatest value of a picture is that it forces us to notice what we never expected to see.</text>
 <text x="66" y="96" fill="#7f88a8" font-size="12.5">— John Tukey</text>
 </g>
-<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.37500;0.38393;0.49107;0.50000;1" dur="56.00s" repeatCount="indefinite"/>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.25000;0.25893;0.36607;0.37500;1" dur="56.00s" repeatCount="indefinite"/>
 <text x="66" y="60" fill="#c0caf5" font-size="15">Programs must be written for people to read.</text>
 <text x="66" y="96" fill="#7f88a8" font-size="12.5">— Harold Abelson</text>
 </g>
-<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.50000;0.50893;0.61607;0.62500;1" dur="56.00s" repeatCount="indefinite"/>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.37500;0.38393;0.49107;0.50000;1" dur="56.00s" repeatCount="indefinite"/>
 <text x="66" y="60" fill="#c0caf5" font-size="15">Data is a precious thing and will last longer than the systems themselves.</text>
 <text x="66" y="96" fill="#7f88a8" font-size="12.5">— Tim Berners-Lee</text>
 </g>
-<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.62500;0.63393;0.74107;0.75000;1" dur="56.00s" repeatCount="indefinite"/>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.50000;0.50893;0.61607;0.62500;1" dur="56.00s" repeatCount="indefinite"/>
 <text x="66" y="60" fill="#c0caf5" font-size="15">Prediction is very difficult, especially about the future.</text>
 <text x="66" y="96" fill="#7f88a8" font-size="12.5">— Niels Bohr</text>
 </g>
-<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.75000;0.75893;0.86607;0.87500;1" dur="56.00s" repeatCount="indefinite"/>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.62500;0.63393;0.74107;0.75000;1" dur="56.00s" repeatCount="indefinite"/>
 <text x="66" y="60" fill="#c0caf5" font-size="15">Debugging is twice as hard as writing the code in the first place.</text>
 <text x="66" y="96" fill="#7f88a8" font-size="12.5">— Brian Kernighan</text>
 </g>
-<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.87500;0.88393;0.99107;1.00000;1" dur="56.00s" repeatCount="indefinite"/>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.75000;0.75893;0.86607;0.87500;1" dur="56.00s" repeatCount="indefinite"/>
 <text x="66" y="60" fill="#c0caf5" font-size="15">Talk is cheap. Show me the code.</text>
 <text x="66" y="96" fill="#7f88a8" font-size="12.5">— Linus Torvalds</text>
+</g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.87500;0.88393;0.99107;1.00000;1" dur="56.00s" repeatCount="indefinite"/>
+<text x="66" y="60" fill="#c0caf5" font-size="15">Make it work, make it right, make it fast.</text>
+<text x="66" y="96" fill="#7f88a8" font-size="12.5">— Kent Beck</text>
 </g>
 </g></svg>
