@@ -1,41 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="98" viewBox="0 0 760 98" role="img" aria-label="Debugging is twice as hard as writing the code in the first place.">
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="122" viewBox="0 0 760 122" role="img" aria-label="Talk is cheap. Show me the code.">
 <defs>
 <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#70a5fd"/><stop offset="1" stop-color="#bb9af7"/></linearGradient>
 </defs>
-<rect width="760" height="98" rx="12" fill="#1a1b27"/>
+<rect width="760" height="122" rx="12" fill="#1a1b27"/>
 <rect width="760" height="3" rx="1.5" fill="url(#accent)" opacity="0.85"/>
-<text x="30" y="44" fill="#70a5fd" font-family="Georgia,serif" font-size="52" opacity="0.5">“</text>
+<text x="30" y="56" fill="#70a5fd" font-family="Georgia,serif" font-size="52" opacity="0.5">“</text>
 <g font-family="'Segoe UI',Ubuntu,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif">
 <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.00000;0.00893;0.11607;0.12500;1" dur="56.00s" repeatCount="indefinite"/>
-<text x="66" y="48" fill="#c0caf5" font-size="15">Debugging is twice as hard as writing the code in the first place.</text>
-<text x="66" y="84" fill="#7f88a8" font-size="12.5">— Brian Kernighan</text>
+<text x="66" y="60" fill="#c0caf5" font-size="15">Talk is cheap. Show me the code.</text>
+<text x="66" y="96" fill="#7f88a8" font-size="12.5">— Linus Torvalds</text>
 </g>
 <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.12500;0.13393;0.24107;0.25000;1" dur="56.00s" repeatCount="indefinite"/>
-<text x="66" y="48" fill="#c0caf5" font-size="15">Talk is cheap. Show me the code.</text>
-<text x="66" y="84" fill="#7f88a8" font-size="12.5">— Linus Torvalds</text>
+<text x="66" y="60" fill="#c0caf5" font-size="15">Make it work, make it right, make it fast.</text>
+<text x="66" y="96" fill="#7f88a8" font-size="12.5">— Kent Beck</text>
 </g>
 <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.25000;0.25893;0.36607;0.37500;1" dur="56.00s" repeatCount="indefinite"/>
-<text x="66" y="48" fill="#c0caf5" font-size="15">Make it work, make it right, make it fast.</text>
-<text x="66" y="84" fill="#7f88a8" font-size="12.5">— Kent Beck</text>
+<text x="66" y="60" fill="#c0caf5" font-size="15">Measure what is measurable, and make measurable what is not so.</text>
+<text x="66" y="96" fill="#7f88a8" font-size="12.5">— Galileo Galilei</text>
 </g>
 <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.37500;0.38393;0.49107;0.50000;1" dur="56.00s" repeatCount="indefinite"/>
-<text x="66" y="48" fill="#c0caf5" font-size="15">Measure what is measurable, and make measurable what is not so.</text>
-<text x="66" y="84" fill="#7f88a8" font-size="12.5">— Galileo Galilei</text>
+<text x="66" y="60" fill="#c0caf5" font-size="15">Errors using inadequate data are much less than those using no data at all.</text>
+<text x="66" y="96" fill="#7f88a8" font-size="12.5">— Charles Babbage</text>
 </g>
 <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.50000;0.50893;0.61607;0.62500;1" dur="56.00s" repeatCount="indefinite"/>
-<text x="66" y="48" fill="#c0caf5" font-size="15">Errors using inadequate data are much less than those using no data at all.</text>
-<text x="66" y="84" fill="#7f88a8" font-size="12.5">— Charles Babbage</text>
+<text x="66" y="60" fill="#c0caf5" font-size="15">Simple things should be simple, complex things should be possible.</text>
+<text x="66" y="96" fill="#7f88a8" font-size="12.5">— Alan Kay</text>
 </g>
 <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.62500;0.63393;0.74107;0.75000;1" dur="56.00s" repeatCount="indefinite"/>
-<text x="66" y="48" fill="#c0caf5" font-size="15">Simple things should be simple, complex things should be possible.</text>
-<text x="66" y="84" fill="#7f88a8" font-size="12.5">— Alan Kay</text>
+<text x="66" y="60" fill="#c0caf5" font-size="15">Not everything that can be counted counts, and not everything that counts can be counted.</text>
+<text x="66" y="96" fill="#7f88a8" font-size="12.5">— William Bruce Cameron</text>
 </g>
 <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.75000;0.75893;0.86607;0.87500;1" dur="56.00s" repeatCount="indefinite"/>
-<text x="66" y="48" fill="#c0caf5" font-size="15">Not everything that can be counted counts, and not everything that counts can be counted.</text>
-<text x="66" y="84" fill="#7f88a8" font-size="12.5">— William Bruce Cameron</text>
+<text x="66" y="60" fill="#c0caf5" font-size="15">It is easy to lie with statistics. It is hard to tell the truth without them.</text>
+<text x="66" y="96" fill="#7f88a8" font-size="12.5">— Andrejs Dunkels</text>
 </g>
 <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.87500;0.88393;0.99107;1.00000;1" dur="56.00s" repeatCount="indefinite"/>
-<text x="66" y="48" fill="#c0caf5" font-size="15">It is easy to lie with statistics. It is hard to tell the truth without them.</text>
-<text x="66" y="84" fill="#7f88a8" font-size="12.5">— Andrejs Dunkels</text>
+<text x="66" y="48" fill="#c0caf5" font-size="15">A distributed system is one in which the failure of a computer you did not know existed can</text>
+<text x="66" y="72" fill="#c0caf5" font-size="15">render your own computer unusable.</text>
+<text x="66" y="108" fill="#7f88a8" font-size="12.5">— Leslie Lamport</text>
 </g>
 </g></svg>
