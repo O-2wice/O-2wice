@@ -62,21 +62,21 @@ Away from that: a farm, a serious weakness for pickup trucks, the Hilux and the 
 <br/>
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-320%20hrs%2032%20mins-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-325%20hrs%2037%20mins-blue?style=flat)
 
 📊 **This Week I Spent My Time On** 
 
 ```text
 💬 Programming Languages: 
-Markdown                 2 hrs 59 mins       ███████░░░░░░░░░░░░░░░░░░   28.57 % 
-HTML                     2 hrs 8 mins        █████░░░░░░░░░░░░░░░░░░░░   20.50 % 
-Other                    1 hr 20 mins        ███░░░░░░░░░░░░░░░░░░░░░░   12.92 % 
-Python                   1 hr 14 mins        ███░░░░░░░░░░░░░░░░░░░░░░   11.91 % 
-TeX                      58 mins             ██░░░░░░░░░░░░░░░░░░░░░░░   09.26 % 
+Markdown                 3 hrs 1 min         █████░░░░░░░░░░░░░░░░░░░░   20.32 % 
+Python                   2 hrs 39 mins       ████░░░░░░░░░░░░░░░░░░░░░   17.90 % 
+Other                    2 hrs 27 mins       ████░░░░░░░░░░░░░░░░░░░░░   16.53 % 
+HTML                     2 hrs 3 mins        ███░░░░░░░░░░░░░░░░░░░░░░   13.88 % 
+RMarkdown                1 hr 20 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   08.98 % 
 ```
 
 
- Last Updated on 05/09/2026 00:49:56 UTC
+ Last Updated on 06/09/2026 00:57:53 UTC
 <!--END_SECTION:waka-->
 
 <br/>
