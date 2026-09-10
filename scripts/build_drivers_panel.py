@@ -142,7 +142,12 @@ def driver_row(name, description, index):
 
 
 def markup(rows):
-    lines = [f'<img src="{OUT_DIR}/_head.svg" width="100%" alt="Tool, what it does"/>']
+    # The header gets an anchor of its own because GitHub wraps a bare image
+    # in a link to the file itself, and a click there would land on a raw
+    # SVG sitting directly above rows that link to repositories.
+    forks = f"https://github.com/{LOGIN}?tab=repositories&type=fork"
+    lines = [f'<a href="{forks}" title="All forks">'
+             f'<img src="{OUT_DIR}/_head.svg" width="100%" alt="Tool, what it does"/></a>']
     lines += [f'<a href="{url}" title="{esc(name)}">'
               f'<img src="{OUT_DIR}/{name}.svg" width="100%" '
               f'alt="{esc(name)}: {esc(desc)}"/></a>'
