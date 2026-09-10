@@ -166,7 +166,7 @@ PAD = 20
 NARROW_PAD = 14
 
 
-def figure_cells(user, all_commits, total_contribs, stars):
+def figure_cells(user, all_commits, total_contribs, active_days, stars):
     """The figures that say something about the work.
 
     No card title and no @handle: the README section heading already says
@@ -176,11 +176,13 @@ def figure_cells(user, all_commits, total_contribs, stars):
     year = dt.datetime.now(dt.timezone.utc).year
     cells = [("Total commits", human(all_commits)),
              (f"Contributions in {year}", human(total_contribs)),
+             (f"Active days in {year}", human(active_days)),
              ("Public repositories", human(user["publicRepos"]["totalCount"]))]
-    # A row of zeros reads worse than no row at all, so this only appears
-    # once there is something to show.
+    # Stars displace the repository count rather than adding a fifth
+    # figure: GitHub already prints the repository count on the profile
+    # itself, and a row of zeros reads worse than no row at all.
     if stars:
-        cells.append(("Stars earned", human(stars)))
+        cells[3] = ("Stars earned", human(stars))
     return cells
 
 
@@ -249,7 +251,7 @@ def legend(top, total, colours, pad, rows_y, cols, size=13.5):
     return out
 
 
-def build_overview(user, all_commits, total_contribs, stars, agg, colours):
+def build_overview(user, all_commits, total_contribs, active_days, stars, agg, colours):
     """Figures and languages side by side on a wide column, stacked below it.
 
     Both layouts live in the same file and the same box; the height is the
@@ -257,7 +259,7 @@ def build_overview(user, all_commits, total_contribs, stars, agg, colours):
     breathe rather than crowding the top.
     """
     h = 254
-    cells = figure_cells(user, all_commits, total_contribs, stars)
+    cells = figure_cells(user, all_commits, total_contribs, active_days, stars)
     total = sum(agg.values()) or 1
     top = agg.most_common(6)
 
@@ -368,6 +370,9 @@ def main():
 
     year = dt.datetime.now(dt.timezone.utc).year
     year_total = sum(c for d, c in days.items() if d.startswith(str(year)))
+    # Days actually worked, not the calendar's length: the count of days
+    # this year that carry at least one contribution.
+    active_days = sum(1 for d, c in days.items() if d.startswith(str(year)) and c)
     stars = sum(r["stargazerCount"] for r in user["repositories"]["nodes"])
     # include_all_commits counts every commit the search index knows about,
     # which is larger than this calendar year's contributions.
@@ -384,7 +389,8 @@ def main():
             colours[name] = edge["node"]["color"]
 
     write(f"{OUTDIR}/stats.svg",
-          build_overview(user, all_commits, year_total, stars, agg, colours))
+          build_overview(user, all_commits, year_total, active_days, stars, agg,
+                         colours))
     for repo in pins:
         write(f"{OUTDIR}/pin-{repo['name']}.svg", build_pin(repo))
     print(f"{len(pins)} project(s) with a write-up")
