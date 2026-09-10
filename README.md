@@ -104,14 +104,12 @@ What stays on while I code. Refreshed daily. Click through to open the playlist.
 Forks I actually run, most recently touched first. Regenerated daily.
 
 <!--START_SECTION:drivers-->
-| Tool | What it does |
-|------|--------------|
-| [syncthing-android](https://github.com/O-2wice/syncthing-android) | Syncthing-Fork - A Syncthing Wrapper for Android. |
-| [claude-cookbooks](https://github.com/O-2wice/claude-cookbooks) | A collection of notebooks/recipes showcasing some fun and effective ways of using Claude. |
-| [langgraph](https://github.com/O-2wice/langgraph) | Build resilient agents. |
-| [bootdev](https://github.com/O-2wice/bootdev) | CLI used to complete coding challenges and lessons on Boot.dev |
-| [pear-desktop](https://github.com/O-2wice/pear-desktop) | Pear 🍐 is extension for music player |
-| [scrcpy](https://github.com/O-2wice/scrcpy) | Display and control your Android device |
+- **[syncthing-android](https://github.com/O-2wice/syncthing-android)** · Syncthing-Fork - A Syncthing Wrapper for Android.
+- **[claude-cookbooks](https://github.com/O-2wice/claude-cookbooks)** · A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.
+- **[langgraph](https://github.com/O-2wice/langgraph)** · Build resilient agents.
+- **[bootdev](https://github.com/O-2wice/bootdev)** · CLI used to complete coding challenges and lessons on Boot.dev
+- **[pear-desktop](https://github.com/O-2wice/pear-desktop)** · Pear 🍐 is extension for music player
+- **[scrcpy](https://github.com/O-2wice/scrcpy)** · Display and control your Android device
 <!--END_SECTION:drivers-->
 
 ---

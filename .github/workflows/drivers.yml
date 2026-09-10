@@ -22,14 +22,14 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          # A list, not a table. GitHub's own CSS reflows a markdown table on
+          # the web, but the mobile app renders markdown itself and squeezes
+          # a two-column table into a ribbon on a narrow screen. A list has
+          # no columns to squeeze, so it survives every renderer.
           gh api "users/O-2wice/repos?type=owner&sort=pushed&per_page=100" \
             --jq '[.[] | select(.fork == true and .archived == false)][:6][]
-                  | "| [\(.name)](\(.html_url)) | \(.description // "—") |"' > rows.txt
-          {
-            echo "| Tool | What it does |"
-            echo "|------|--------------|"
-            cat rows.txt
-          } > table.md
+                  | "- **[\(.name)](\(.html_url))** \u00b7 \(.description // "no description")"' \
+            > table.md
           python3 - <<'PY'
           import re, pathlib
           readme = pathlib.Path("README.md")
