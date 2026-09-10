@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="46" role="img" aria-label="scrcpy: Display and control your Android device">
+<style>.n,.w,.x,.xl{display:none}@media (max-width:560px){.n{display:inline}}@media (min-width:561px) and (max-width:699px){.w{display:inline}}@media (min-width:700px) and (max-width:839px){.x{display:inline}}@media (min-width:840px){.xl{display:inline}}</style>
+<g font-family="'Segoe UI',Ubuntu,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif">
+<g class="w">
+<text x="20" y="27.5" fill="#70a5fd" font-size="13.5" font-weight="600">scrcpy</text>
+<text x="200" y="27.5" fill="#7f88a8" font-size="12.5">Display and control your Android device</text>
+</g>
+<g class="x">
+<text x="20" y="27.5" fill="#70a5fd" font-size="13.5" font-weight="600">scrcpy</text>
+<text x="200" y="27.5" fill="#7f88a8" font-size="12.5">Display and control your Android device</text>
+</g>
+<g class="xl">
+<text x="20" y="27.5" fill="#70a5fd" font-size="13.5" font-weight="600">scrcpy</text>
+<text x="200" y="27.5" fill="#7f88a8" font-size="12.5">Display and control your Android device</text>
+</g>
+<g class="n">
+<text x="14" y="19" fill="#70a5fd" font-size="13" font-weight="600">scrcpy</text>
+<text x="14" y="36" fill="#7f88a8" font-size="11.5">Display and control your Android device</text>
+</g>
+</g></svg>

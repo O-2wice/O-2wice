@@ -104,12 +104,13 @@ What stays on while I code. Refreshed daily. Click through to open the playlist.
 Forks I actually run, most recently touched first. Regenerated daily.
 
 <!--START_SECTION:drivers-->
-- **[syncthing-android](https://github.com/O-2wice/syncthing-android)** · Syncthing-Fork - A Syncthing Wrapper for Android.
-- **[claude-cookbooks](https://github.com/O-2wice/claude-cookbooks)** · A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.
-- **[langgraph](https://github.com/O-2wice/langgraph)** · Build resilient agents.
-- **[bootdev](https://github.com/O-2wice/bootdev)** · CLI used to complete coding challenges and lessons on Boot.dev
-- **[pear-desktop](https://github.com/O-2wice/pear-desktop)** · Pear 🍐 is extension for music player
-- **[scrcpy](https://github.com/O-2wice/scrcpy)** · Display and control your Android device
+<img src="metrics/drivers/_head.svg" width="100%" alt="Tool, what it does"/>
+<a href="https://github.com/O-2wice/syncthing-android" title="syncthing-android"><img src="metrics/drivers/syncthing-android.svg" width="100%" alt="syncthing-android: Syncthing-Fork - A Syncthing Wrapper for Android."/></a>
+<a href="https://github.com/O-2wice/claude-cookbooks" title="claude-cookbooks"><img src="metrics/drivers/claude-cookbooks.svg" width="100%" alt="claude-cookbooks: A collection of notebooks/recipes showcasing some fun and effective ways of using Claude."/></a>
+<a href="https://github.com/O-2wice/langgraph" title="langgraph"><img src="metrics/drivers/langgraph.svg" width="100%" alt="langgraph: Build resilient agents."/></a>
+<a href="https://github.com/O-2wice/bootdev" title="bootdev"><img src="metrics/drivers/bootdev.svg" width="100%" alt="bootdev: CLI used to complete coding challenges and lessons on Boot.dev"/></a>
+<a href="https://github.com/O-2wice/pear-desktop" title="pear-desktop"><img src="metrics/drivers/pear-desktop.svg" width="100%" alt="pear-desktop: Pear 🍐 is extension for music player"/></a>
+<a href="https://github.com/O-2wice/scrcpy" title="scrcpy"><img src="metrics/drivers/scrcpy.svg" width="100%" alt="scrcpy: Display and control your Android device"/></a>
 <!--END_SECTION:drivers-->
 
 ---

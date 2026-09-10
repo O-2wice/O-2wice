@@ -6,7 +6,10 @@ on:
   workflow_dispatch:
   push:
     branches: [preview]
-    paths: ['.github/workflows/drivers.yml']
+    paths:
+      - '.github/workflows/drivers.yml'
+      - 'scripts/build_drivers_panel.py'
+      - 'scripts/svg_common.py'
 
 permissions:
   contents: write
@@ -18,41 +21,26 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build table from forks
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Render driver rows
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          # A list, not a table. GitHub's own CSS reflows a markdown table on
-          # the web, but the mobile app renders markdown itself and squeezes
-          # a two-column table into a ribbon on a narrow screen. A list has
-          # no columns to squeeze, so it survives every renderer.
-          gh api "users/O-2wice/repos?type=owner&sort=pushed&per_page=100" \
-            --jq '[.[] | select(.fork == true and .archived == false)][:6][]
-                  | "- **[\(.name)](\(.html_url))** \u00b7 \(.description // "no description")"' \
-            > table.md
-          python3 - <<'PY'
-          import re, pathlib
-          readme = pathlib.Path("README.md")
-          s = readme.read_text()
-          table = pathlib.Path("table.md").read_text().strip()
-          s = re.sub(
-              r"(<!--START_SECTION:drivers-->).*?(<!--END_SECTION:drivers-->)",
-              lambda m: f"{m.group(1)}\n{table}\n{m.group(2)}",
-              s, flags=re.S)
-          readme.write_text(s)
-          PY
-          rm -f rows.txt table.md
+          GH_LOGIN: O-2wice
+        run: python3 scripts/build_drivers_panel.py
 
       - name: Commit
         run: |
           git config user.name "profile-bot"
           git config user.email "profile-bot@o-2wice.noreply.invalid"
-          git add README.md
+          git add README.md metrics/drivers
           if git diff --staged --quiet; then
-            echo "Drivers table unchanged; nothing to commit."
+            echo "Driver rows unchanged; nothing to commit."
             exit 0
           fi
-          git commit -m "Refresh daily drivers table"
+          git commit -m "Refresh daily drivers"
           for attempt in 1 2 3; do
             if git pull --rebase --autostash && git push; then
               exit 0

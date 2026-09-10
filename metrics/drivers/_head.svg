@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="26" role="img" aria-label="Tool, what it does">
+<style>.n,.w,.x,.xl{display:none}@media (max-width:560px){.n{display:inline}}@media (min-width:561px) and (max-width:699px){.w{display:inline}}@media (min-width:700px) and (max-width:839px){.x{display:inline}}@media (min-width:840px){.xl{display:inline}}</style>
+<g font-family="'Segoe UI',Ubuntu,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif" font-size="11.5" fill="#7f88a8" letter-spacing="0.4">
+<g class="w"><text x="20" y="14">TOOL</text><text x="200" y="14">WHAT IT DOES</text></g>
+<g class="x"><text x="20" y="14">TOOL</text><text x="200" y="14">WHAT IT DOES</text></g>
+<g class="xl"><text x="20" y="14">TOOL</text><text x="200" y="14">WHAT IT DOES</text></g>
+</g>
+<rect x="0" y="25" width="100%" height="1" fill="#ffffff" fill-opacity="0.10"/>
+</svg>
