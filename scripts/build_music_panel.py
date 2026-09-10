@@ -18,7 +18,8 @@ import re
 import sys
 import urllib.request
 
-from svg_common import (ACCENT, BG, DIM, FONT, MUTED, ROW, TITLE, truncate)
+from svg_common import (DIM, MONO, MUTED, NARROW_MAX, NARROW_REF, ROW, TITLE,
+                        WIDE_REF, card_close, esc, fluid_open, right, truncate)
 
 PLAYLIST = os.environ.get("PLAYLIST_URL", "https://music.youtube.com/playlist?list=PLWJzcQJwrVbM")
 OUT = os.environ.get("OUT_PATH", "metrics/music.svg")
@@ -27,15 +28,17 @@ LIMIT = int(os.environ.get("TRACK_LIMIT", "8"))
 UA = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36")
 
-# Sized to fill GitHub's README column instead of leaving a gap beside a
-# narrow card. Tracks run down one column then the next, so they are
-# numbered to keep the reading order unambiguous.
-W = 860
+# The panel is full width whatever the column is, so the two layouts are
+# defined by how many tracks fit rather than by pixels: two columns of four
+# on anything above the breakpoint, one column of five below it. Tracks run
+# down one column then the next, so they are numbered to keep the reading
+# order unambiguous.
 PAD = 20
-GUTTER = 24
-ART = 40
-ROW_H = 58
-HEAD_H = 52
+NARROW_PAD = 14
+HEAD_H = 46
+WIDE_ROWS, WIDE_ROW_H, WIDE_ART = 4, 65, 44
+NARROW_ROWS, NARROW_ROW_H, NARROW_ART = 5, 52, 36
+HEIGHT = HEAD_H + max(WIDE_ROWS * WIDE_ROW_H, NARROW_ROWS * NARROW_ROW_H) + 4
 
 
 def fetch(url, timeout=30):
@@ -131,69 +134,82 @@ def artwork(url, px=68):
     return "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode()
 
 
-def build(name, tracks):
-    cols = 2 if len(tracks) > 4 else 1
-    per_col = -(-len(tracks) // cols)
-    col_w = (W - PAD * 2 - GUTTER * (cols - 1)) / cols
-    height = HEAD_H + per_col * ROW_H + 16
-
-    num_w = 20
-    dur_w = 42
-    text_x = num_w + ART + 14
-    title_max = col_w - text_x - dur_w - 10
-
-    out = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{height}" '
-        f'viewBox="0 0 {W} {height}" role="img" aria-label="Debug Soundtrack">',
-        "<defs>",
-        f'<clipPath id="art"><rect width="{ART}" height="{ART}" rx="6"/></clipPath>',
-        f'<linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">'
-        f'<stop offset="0" stop-color="{ACCENT}"/><stop offset="1" stop-color="#bb9af7"/>'
-        f"</linearGradient>",
-        "</defs>",
-        f'<rect width="{W}" height="{height}" rx="12" fill="{BG}"/>',
-        f'<rect width="{W}" height="3" rx="1.5" fill="url(#accent)" opacity="0.85"/>',
-        f'<g font-family="{FONT}">',
-        # header
-        f'<text x="{PAD}" y="34" fill="{MUTED}" font-size="13">'
-        f'{html.escape(truncate(name, 13, W - PAD * 2 - 140))} · {len(tracks)} tracks · refreshed daily</text>',
-        f'<text x="{W - PAD}" y="34" fill="{DIM}" font-size="12.5" text-anchor="end">YouTube Music</text>',
-    ]
+def rows(tracks, cols, per_col, row_h, art, pad, budget, clip):
+    """One layout's worth of track rows, laid out inside `cols` columns."""
+    out = []
+    col_w = 100 / cols
+    num_w, dur_w = 18, 40
+    text_x = pad + num_w + art + 12
+    title_max = budget / cols - text_x - dur_w - 8
 
     for i, t in enumerate(tracks):
         col, row = divmod(i, per_col)
-        x0 = PAD + col * (col_w + GUTTER)
-        y = HEAD_H + row * ROW_H
-
+        y = HEAD_H + row * row_h
+        out.append(f'<svg x="{col * col_w}%" y="0" width="{col_w}%" height="100%">')
         if row % 2 == 0:
-            out.append(f'<rect x="{x0 - 8}" y="{y}" width="{col_w + 16}" height="{ROW_H - 6}" '
-                       f'rx="7" fill="{ROW}" fill-opacity="0.03"/>')
+            out.append(f'<rect x="{pad - 8}" y="{y}" height="{row_h - 6}" rx="7" '
+                       f'fill="{ROW}" fill-opacity="0.03" '
+                       f'style="width:calc(100% - {(pad - 8) * 2}px)"/>')
+        out.append(f'<text x="{pad + 6}" y="{y + row_h / 2 - 1}" fill="{DIM}" font-size="11" '
+                   f'text-anchor="middle" font-family="{MONO}">{i + 1}</text>')
 
-        out.append(f'<text x="{x0 + 6}" y="{y + 28}" fill="{DIM}" font-size="11" text-anchor="middle" '
-                   f'font-family="ui-monospace,SFMono-Regular,Consolas,monospace">{i + 1}</text>')
-
-        art_x, art_y = x0 + num_w, y + (ROW_H - 6 - ART) / 2
+        art_x, art_y = pad + num_w, y + (row_h - 6 - art) / 2
         if t.get("data"):
             out.append(f'<g transform="translate({art_x},{art_y})">'
-                       f'<image href="{t["data"]}" width="{ART}" height="{ART}" clip-path="url(#art)"/>'
-                       f'<rect width="{ART}" height="{ART}" rx="6" fill="none" '
+                       f'<image href="{t["data"]}" width="{art}" height="{art}" '
+                       f'clip-path="url(#{clip})"/>'
+                       f'<rect width="{art}" height="{art}" rx="6" fill="none" '
                        f'stroke="{ROW}" stroke-opacity="0.1"/></g>')
         else:
-            out.append(f'<rect x="{art_x}" y="{art_y}" width="{ART}" height="{ART}" rx="6" '
+            out.append(f'<rect x="{art_x}" y="{art_y}" width="{art}" height="{art}" rx="6" '
                        f'fill="{ROW}" fill-opacity="0.06"/>')
 
-        tx = x0 + text_x
-        out.append(f'<text x="{tx}" y="{y + 22}" fill="{TITLE}" font-size="14.5" font-weight="500">'
-                   f'{html.escape(truncate(t["title"], 14.5, title_max))}</text>')
+        mid = y + row_h / 2
+        out.append(f'<text x="{text_x}" y="{mid - 3}" fill="{TITLE}" font-size="14.5" '
+                   f'font-weight="500">{esc(truncate(t["title"], 14.5, title_max))}</text>')
         if t["artist"]:
-            out.append(f'<text x="{tx}" y="{y + 38}" fill="{MUTED}" font-size="12.5">'
-                       f'{html.escape(truncate(t["artist"], 12.5, title_max))}</text>')
+            out.append(f'<text x="{text_x}" y="{mid + 13}" fill="{MUTED}" font-size="12.5">'
+                       f'{esc(truncate(t["artist"], 12.5, title_max))}</text>')
         if t["duration"]:
-            out.append(f'<text x="{x0 + col_w}" y="{y + 29}" fill="{DIM}" font-size="11" '
-                       f'text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">'
-                       f'{html.escape(t["duration"])}</text>')
+            out.append(right(pad, f'<text x="100%" y="{mid + 4}" fill="{DIM}" font-size="11" '
+                                  f'text-anchor="end" font-family="{MONO}">'
+                                  f'{esc(t["duration"])}</text>'))
+        out.append("</svg>")
+    return out
 
-    out.append("</g></svg>")
+
+def build(name, tracks):
+    """The soundtrack panel, carrying both layouts in one fixed-height box.
+
+    A phone column cannot hold two columns of tracks, and the box cannot get
+    taller on a phone to make up for it (an SVG's height is fixed by its
+    attribute, whatever a media query says), so the narrow layout shows five
+    tracks in one column where the wide one shows eight in two.
+    """
+    wide = tracks[:WIDE_ROWS * 2]
+    narrow = tracks[:NARROW_ROWS]
+
+    out = fluid_open(HEIGHT, "Debug Soundtrack")
+    out.insert(4, f'<clipPath id="artw"><rect width="{WIDE_ART}" height="{WIDE_ART}" rx="6"/></clipPath>'
+                  f'<clipPath id="artn"><rect width="{NARROW_ART}" height="{NARROW_ART}" rx="6"/></clipPath>')
+
+    for cls, label, pad in (("w", f"{len(wide)} tracks", PAD),
+                            ("n", f"{len(narrow)} of {len(tracks)}", NARROW_PAD)):
+        head = f"{truncate(name, 13, 200)} \u00b7 {label} \u00b7 refreshed daily"
+        out.append(f'<g class="{cls}">')
+        out.append(f'<text x="{pad}" y="30" fill="{MUTED}" font-size="13">{esc(head)}</text>')
+        out.append(right(pad, f'<text x="100%" y="30" fill="{DIM}" font-size="12.5" '
+                              f'text-anchor="end">YouTube Music</text>'))
+        out.append("</g>")
+
+    out.append('<g class="w">')
+    out += rows(wide, 2, WIDE_ROWS, WIDE_ROW_H, WIDE_ART, PAD, WIDE_REF * 2, "artw")
+    out.append("</g>")
+    out.append('<g class="n">')
+    out += rows(narrow, 1, NARROW_ROWS, NARROW_ROW_H, NARROW_ART, NARROW_PAD, NARROW_REF, "artn")
+    out.append("</g>")
+
+    out += card_close()
     return "\n".join(out)
 
 

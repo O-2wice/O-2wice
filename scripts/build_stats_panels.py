@@ -24,8 +24,9 @@ import sys
 import urllib.error
 import urllib.request
 
-from svg_common import (ACCENT, ACCENT_ALT, MONO, MUTED, ROW, TITLE, card_close,
-                        card_open, esc, human, truncate, write)
+from svg_common import (ACCENT, ACCENT_ALT, DIM, MONO, MUTED, NARROW_REF, ROW, TITLE,
+                        WIDE_REF, card_close, column, esc, fluid_open, human, right,
+                        truncate, wrap, write)
 
 LOGIN = os.environ.get("GH_LOGIN", "O-2wice")
 TOKEN = os.environ.get("GH_TOKEN", "")
@@ -158,18 +159,15 @@ def calendar_days(created):
     return dict(sorted(days.items()))
 
 
-# Measured on a 2560px window: GitHub caps the README column at about 862px
-# on the profile page and 854px on the repo page, so it never goes truly
-# full width. Two 424px cards plus the inline gap land on that limit and
-# wrap to separate lines, so the paired cards sit under that.
-FULL_W = 860
-HALF_W = FULL_W // 2
-PIN_W = 415
+# Panels are fluid now: full width, fixed height, laid out by media queries
+# inside the file (see svg_common). Nothing is measured against GitHub's
+# column any more, because the column is no longer assumed.
 PAD = 20
+NARROW_PAD = 14
 
 
-def stats_half(user, all_commits, total_contribs, stars, x=0):
-    """Four figures as the hero, two per row.
+def figure_cells(user, all_commits, total_contribs, stars):
+    """Four figures as the hero.
 
     No card title and no @handle: the README section heading already says
     "GitHub Stats", and the handle is on every other part of the page.
@@ -182,110 +180,153 @@ def stats_half(user, all_commits, total_contribs, stars, x=0):
     # A row of zeros reads worse than no row at all.
     if stars:
         cells[3] = ("Stars earned", human(stars))
+    return cells
 
-    out = []
-    col_w = (HALF_W - PAD * 2) / 2
+
+def figures(cells, pad, label_size, value_size, rows):
+    """Four figures in a 2x2 grid filling whatever viewport encloses them."""
+    out = [f'<g transform="translate({pad},0)">']
     for i, (label, value) in enumerate(cells):
         col, row = i % 2, i // 2
-        cx = x + PAD + col * col_w
-        ly = 54 + row * 68
-        out.append(f'<text x="{cx}" y="{ly}" fill="{MUTED}" font-size="14">{esc(label)}</text>')
-        out.append(f'<text x="{cx}" y="{ly + 36}" fill="{TITLE}" font-size="32" '
-                   f'font-weight="600" font-family="{MONO}">{esc(value)}</text>')
-
+        label_y, value_y = rows[row]
+        out.append(f'<text x="{col * 50}%" y="{label_y}" fill="{MUTED}" '
+                   f'font-size="{label_size}">{esc(label)}</text>')
+        out.append(f'<text x="{col * 50}%" y="{value_y}" fill="{TITLE}" '
+                   f'font-size="{value_size}" font-weight="600" '
+                   f'font-family="{MONO}">{esc(value)}</text>')
+    out.append("</g>")
     return out
 
 
-def langs_half(agg, colours, x=0):
-    total = sum(agg.values()) or 1
-    top = agg.most_common(6)
+def language_bar(top, total, colours, pad, label_y, bar_y, uid):
+    """The stacked share bar.
 
-    bar_w = HALF_W - PAD * 2
-    out = [f'<text x="{x + PAD}" y="40" fill="{MUTED}" font-size="14">Most used languages</text>',
-           f'<clipPath id="bar"><rect x="{x + PAD}" y="52" width="{bar_w}" '
-           f'height="10" rx="5"/></clipPath>',
-           '<g clip-path="url(#bar)">']
-    bx = x + PAD
+    Drawn inside a nested viewport inset by the padding, so each segment can
+    be placed as a plain percentage of the bar. `width` is the one geometry
+    property that has to come through CSS: SVG has no calc() in attributes.
+    """
+    out = [f'<text x="{pad}" y="{label_y}" fill="{MUTED}" font-size="13.5">'
+           f'Most used languages</text>',
+           f'<svg x="{pad}" y="{bar_y}" height="10" '
+           f'style="width:calc(100% - {pad * 2}px)">',
+           f'<clipPath id="{uid}"><rect x="0" y="0" width="100%" height="10" rx="5"/></clipPath>',
+           f'<g clip-path="url(#{uid})">',
+           f'<rect x="0" y="0" width="100%" height="10" fill="{ROW}" fill-opacity="0.08"/>']
+    at = 0.0
     for name, size in top:
-        seg = bar_w * size / total
-        out.append(f'<rect x="{bx:.2f}" y="52" width="{seg + 0.5:.2f}" height="10" '
-                   f'fill="{colours.get(name) or ACCENT}"/>')
-        bx += seg
-    if bx < x + PAD + bar_w:
-        out.append(f'<rect x="{bx:.2f}" y="52" width="{x + PAD + bar_w - bx:.2f}" '
-                   f'height="10" fill="{ROW}" fill-opacity="0.08"/>')
-    out.append("</g>")
+        share = size / total
+        out.append(f'<rect x="{at * 100:.3f}%" y="0" width="{share * 100 + 0.3:.3f}%" '
+                   f'height="10" fill="{colours.get(name) or ACCENT}"/>')
+        at += share
+    out.append("</g></svg>")
+    return out
 
-    col_w = bar_w / 2
-    for i, (name, size) in enumerate(top):
-        col, row = divmod(i, 3)
-        cx = x + PAD + col * col_w
-        cy = 96 + row * 30
-        out.append(f'<circle cx="{cx + 5}" cy="{cy - 4}" r="5" '
-                   f'fill="{colours.get(name) or ACCENT}"/>')
-        out.append(f'<text x="{cx + 17}" y="{cy}" fill="{TITLE}" font-size="14">'
-                   f'{esc(truncate(name, 12, col_w - 74))}</text>')
-        out.append(f'<text x="{cx + col_w - 20}" y="{cy}" fill="{MUTED}" font-size="13.5" '
-                   f'text-anchor="end" font-family="{MONO}">{100 * size / total:.1f}%</text>')
 
+def legend(top, total, colours, pad, rows_y, cols, size=13.5):
+    """Language names down `cols` columns, each with its share right-aligned."""
+    out = []
+    per_col = -(-len(top) // cols)
+    col_w = 100 / cols
+    for i, (name, count) in enumerate(top):
+        col, row = divmod(i, per_col)
+        if row >= len(rows_y):
+            continue
+        y = rows_y[row]
+        out.append(f'<svg x="{col * col_w}%" y="0" width="{col_w}%" height="100%">')
+        out.append(f'<circle cx="{pad + 5}" cy="{y - 4}" r="5" '
+                   f'fill="{colours.get(name) or ACCENT}"/>')
+        out.append(f'<text x="{pad + 17}" y="{y}" fill="{TITLE}" font-size="{size}">'
+                   f'{esc(truncate(name, size, 110))}</text>')
+        out.append(right(pad, f'<text x="100%" y="{y}" fill="{MUTED}" font-size="{size - 0.5}" '
+                              f'text-anchor="end" font-family="{MONO}">'
+                              f'{100 * count / total:.1f}%</text>'))
+        out.append("</svg>")
     return out
 
 
 def build_overview(user, all_commits, total_contribs, stars, agg, colours):
-    """Stats and languages as two halves of one panel, so neither can wrap."""
-    h = 212
-    out = card_open(FULL_W, h, "GitHub statistics and most used languages")
-    out += stats_half(user, all_commits, total_contribs, stars, 0)
-    out.append(f'<line x1="{HALF_W}" y1="26" x2="{HALF_W}" y2="{h - 26}" '
+    """Figures and languages side by side on a wide column, stacked below it.
+
+    Both layouts live in the same file and the same box; the height is the
+    one the stacked variant needs, which leaves the side-by-side one room to
+    breathe rather than crowding the top.
+    """
+    h = 254
+    cells = figure_cells(user, all_commits, total_contribs, stars)
+    total = sum(agg.values()) or 1
+    top = agg.most_common(6)
+
+    out = fluid_open(h, "GitHub statistics and most used languages")
+
+    # Wide: two halves, divided down the middle.
+    out.append('<g class="w">')
+    out += column(0, 50, h, figures(cells, PAD, 14, 32, [(76, 112), (162, 198)]))
+    out.append(f'<line x1="50%" y1="30" x2="50%" y2="{h - 30}" '
                f'stroke="{ROW}" stroke-opacity="0.08"/>')
-    out += langs_half(agg, colours, HALF_W)
+    out += column(50, 50, h,
+                  language_bar(top, total, colours, PAD, 68, 80, "barw")
+                  + legend(top, total, colours, PAD, [124, 154, 184], 2))
+    out.append("</g>")
+
+    # Narrow: the same four figures across the full width, languages under them.
+    out.append('<g class="n">')
+    out += figures(cells, NARROW_PAD, 12.5, 26, [(40, 70), (104, 134)])
+    out += language_bar(top[:4], total, colours, NARROW_PAD, 168, 180, "barn")
+    out += legend(top[:4], total, colours, NARROW_PAD, [214, 240], 2, 12.5)
+    out.append("</g>")
+
     out += card_close()
     return "\n".join(out)
 
 
 def build_pin(repo):
-    w, h = PIN_W, 140
-    out = card_open(w, h, f"{repo['name']} repository")
-    out.append(f'<path d="M{PAD} 26 h11 a2 2 0 0 1 2 2 v12 a2 2 0 0 1 -2 2 h-11 z" fill="none" '
-               f'stroke="{ACCENT}" stroke-width="1.4"/>')
-    chip_w = 74
-    name_max = w - PAD * 2 - 26 - (chip_w + 10 if repo.get("pages") else 0)
-    out.append(f'<text x="{PAD + 22}" y="40" fill="{ACCENT}" font-size="14.5" font-weight="600">'
-               f'{esc(truncate(repo["name"], 14.5, name_max))}</text>')
-    if repo.get("pages"):
-        out.append(f'<rect x="{w - PAD - chip_w}" y="24" width="{chip_w}" height="19" rx="9.5" '
-                   f'fill="{ACCENT_ALT}" fill-opacity="0.16"/>')
-        out.append(f'<text x="{w - PAD - chip_w / 2}" y="37.5" fill="{ACCENT_ALT}" '
-                   f'font-size="10.5" text-anchor="middle">Write-up →</text>')
-
-    desc = repo.get("description") or ""
-    words, line, lines = desc.split(), "", []
-    clipped = False
-    for word in words:
-        trial = f"{line} {word}".strip()
-        if truncate(trial, 12, w - PAD * 2) != trial:
-            lines.append(line)
-            line = word
-            if len(lines) == 3:
-                clipped = True
-                break
-        else:
-            line = trial
-    if line and len(lines) < 3:
-        lines.append(line)
-    for i, text in enumerate(lines):
-        # Mark the cut so a clipped description does not read as a full one.
-        if clipped and i == len(lines) - 1:
-            text = truncate(text + " …", 12, w - PAD * 2)
-        out.append(f'<text x="{PAD}" y="{64 + i * 17}" fill="{MUTED}" font-size="12">'
-                   f'{esc(text)}</text>')
-
+    """One project card, full width, two wrappings of the same description."""
+    h = 124
+    chip_w = 78
+    out = fluid_open(h, f"{repo['name']} repository")
     lang = repo.get("primaryLanguage") or {}
-    y = h - 20
-    if lang.get("name"):
-        out.append(f'<circle cx="{PAD + 5}" cy="{y - 4}" r="5" fill="{lang.get("color") or ACCENT}"/>')
-        out.append(f'<text x="{PAD + 17}" y="{y}" fill="{TITLE}" font-size="12">'
-                   f'{esc(lang["name"])}</text>')
+    has_chip = bool(repo.get("pages"))
+
+    for cls, pad, title_size, desc_size, rows, lang_y, budget in (
+            ("w", PAD, 15, 12.5, [64, 82], 108, WIDE_REF),
+            ("n", NARROW_PAD, 14, 12, [56, 73, 90], 112, NARROW_REF)):
+        title_y = rows[0] - 28
+        out.append(f'<g class="{cls}">')
+        out.append(f'<path d="M{pad} {title_y - 14} h11 a2 2 0 0 1 2 2 v12 a2 2 0 0 1 -2 2 '
+                   f'h-11 z" fill="none" stroke="{ACCENT}" stroke-width="1.4"/>')
+        name_max = budget - pad * 2 - 26 - (chip_w + 10 if has_chip else 0)
+        out.append(f'<text x="{pad + 22}" y="{title_y}" fill="{ACCENT}" '
+                   f'font-size="{title_size}" font-weight="600">'
+                   f'{esc(truncate(repo["name"], title_size, name_max))}</text>')
+        if has_chip:
+            out.append(right(pad + chip_w,
+                             f'<rect x="100%" y="{title_y - 16}" width="{chip_w}" '
+                             f'height="19" rx="9.5" fill="{ACCENT_ALT}" fill-opacity="0.16"/>'))
+            out.append(right(pad + chip_w / 2,
+                             f'<text x="100%" y="{title_y - 2.5}" fill="{ACCENT_ALT}" '
+                             f'font-size="10.5" text-anchor="middle">Write-up \u2192</text>'))
+
+        for i, line in enumerate(wrap(repo.get("description") or "", desc_size,
+                                      budget - pad * 2, len(rows))):
+            out.append(f'<text x="{pad}" y="{rows[i]}" fill="{MUTED}" '
+                       f'font-size="{desc_size}">{esc(line)}</text>')
+
+        if lang.get("name"):
+            out.append(f'<circle cx="{pad + 5}" cy="{lang_y - 4}" r="5" '
+                       f'fill="{lang.get("color") or ACCENT}"/>')
+            out.append(f'<text x="{pad + 17}" y="{lang_y}" fill="{TITLE}" font-size="12">'
+                       f'{esc(lang["name"])}</text>')
+        stats = []
+        if repo.get("stargazerCount"):
+            stats.append(f"\u2605 {human(repo['stargazerCount'])}")
+        if repo.get("forkCount"):
+            stats.append(f"\u2387 {human(repo['forkCount'])}")
+        if stats:
+            out.append(right(pad, f'<text x="100%" y="{lang_y}" fill="{DIM}" font-size="12" '
+                                  f'text-anchor="end" font-family="{MONO}">'
+                                  f'{esc("  ".join(stats))}</text>'))
+        out.append("</g>")
+
     out += card_close()
     return "\n".join(out)
 
@@ -340,10 +381,13 @@ def main():
         write(f"{OUTDIR}/pin-{repo['name']}.svg", build_pin(repo))
     print(f"{len(pins)} project(s) with a write-up")
 
-    cards = "\n<br/>\n".join(
-        " ".join(f'<a href="{r["pages"]}"><img src="{OUTDIR}/pin-{r["name"]}.svg" '
-                 f'width="415"/></a>' for r in pins[i:i + 2])
-        for i in range(0, len(pins), 2))
+    # One card per line, each the full width of the column. Two 415px cards
+    # side by side only ever lined up at desktop width: on a tablet column
+    # they wrapped to one per line anyway, stranded in the middle with a
+    # third of the column empty either side.
+    cards = "\n".join(
+        f'<a href="{r["pages"]}"><img src="{OUTDIR}/pin-{r["name"]}.svg" '
+        f'width="100%" alt="{esc(r["name"])}"/></a>' for r in pins)
     readme = pathlib.Path(README)
     if readme.exists():
         text = readme.read_text()

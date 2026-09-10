@@ -1,42 +1,91 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="122" viewBox="0 0 760 122" role="img" aria-label="Not everything that can be counted counts, and not everything that counts can be counted.">
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="170" role="img" aria-label="Not everything that can be counted counts, and not everything that counts can be counted.">
+<style>.n{display:none}@media(max-width:560px){.w{display:none}.n{display:inline}}</style>
 <defs>
 <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#70a5fd"/><stop offset="1" stop-color="#bb9af7"/></linearGradient>
 </defs>
-<rect width="760" height="122" rx="12" fill="#1a1b27"/>
-<rect width="760" height="3" rx="1.5" fill="url(#accent)" opacity="0.85"/>
-<text x="30" y="56" fill="#70a5fd" font-family="Georgia,serif" font-size="52" opacity="0.5">“</text>
+<rect width="100%" height="170" rx="12" fill="#1a1b27"/>
+<rect width="100%" height="3" rx="1.5" fill="url(#accent)" opacity="0.85"/>
+<text class="w" x="30" y="80" fill="#70a5fd" font-family="Georgia,serif" font-size="52" opacity="0.5">“</text>
 <g font-family="'Segoe UI',Ubuntu,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif">
+<g class="w">
 <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.00000;0.00893;0.11607;0.12500;1" dur="56.00s" repeatCount="indefinite"/>
-<text x="66" y="60" fill="#c0caf5" font-size="15">Not everything that can be counted counts, and not everything that counts can be counted.</text>
-<text x="66" y="96" fill="#7f88a8" font-size="12.5">— William Bruce Cameron</text>
+<text x="66" y="72" fill="#c0caf5" font-size="15">Not everything that can be counted counts, and not everything that</text>
+<text x="66" y="96" fill="#c0caf5" font-size="15">counts can be counted.</text>
+<text x="66" y="132" fill="#7f88a8" font-size="12.5">— William Bruce Cameron</text>
 </g>
 <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.12500;0.13393;0.24107;0.25000;1" dur="56.00s" repeatCount="indefinite"/>
-<text x="66" y="60" fill="#c0caf5" font-size="15">It is easy to lie with statistics. It is hard to tell the truth without them.</text>
-<text x="66" y="96" fill="#7f88a8" font-size="12.5">— Andrejs Dunkels</text>
+<text x="66" y="84" fill="#c0caf5" font-size="15">It is easy to lie with statistics. It is hard to tell the truth without them.</text>
+<text x="66" y="120" fill="#7f88a8" font-size="12.5">— Andrejs Dunkels</text>
 </g>
 <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.25000;0.25893;0.36607;0.37500;1" dur="56.00s" repeatCount="indefinite"/>
-<text x="66" y="48" fill="#c0caf5" font-size="15">A distributed system is one in which the failure of a computer you did not know existed can</text>
-<text x="66" y="72" fill="#c0caf5" font-size="15">render your own computer unusable.</text>
-<text x="66" y="108" fill="#7f88a8" font-size="12.5">— Leslie Lamport</text>
+<text x="66" y="72" fill="#c0caf5" font-size="15">A distributed system is one in which the failure of a computer you did</text>
+<text x="66" y="96" fill="#c0caf5" font-size="15">not know existed can render your own computer unusable.</text>
+<text x="66" y="132" fill="#7f88a8" font-size="12.5">— Leslie Lamport</text>
 </g>
 <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.37500;0.38393;0.49107;0.50000;1" dur="56.00s" repeatCount="indefinite"/>
-<text x="66" y="60" fill="#c0caf5" font-size="15">All models are wrong, but some are useful.</text>
-<text x="66" y="96" fill="#7f88a8" font-size="12.5">— George Box</text>
+<text x="66" y="84" fill="#c0caf5" font-size="15">All models are wrong, but some are useful.</text>
+<text x="66" y="120" fill="#7f88a8" font-size="12.5">— George Box</text>
 </g>
 <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.50000;0.50893;0.61607;0.62500;1" dur="56.00s" repeatCount="indefinite"/>
-<text x="66" y="60" fill="#c0caf5" font-size="15">In God we trust. All others must bring data.</text>
-<text x="66" y="96" fill="#7f88a8" font-size="12.5">— W. Edwards Deming</text>
+<text x="66" y="84" fill="#c0caf5" font-size="15">In God we trust. All others must bring data.</text>
+<text x="66" y="120" fill="#7f88a8" font-size="12.5">— W. Edwards Deming</text>
 </g>
 <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.62500;0.63393;0.74107;0.75000;1" dur="56.00s" repeatCount="indefinite"/>
-<text x="66" y="60" fill="#c0caf5" font-size="15">Without data you&#x27;re just another person with an opinion.</text>
-<text x="66" y="96" fill="#7f88a8" font-size="12.5">— W. Edwards Deming</text>
+<text x="66" y="84" fill="#c0caf5" font-size="15">Without data you&#x27;re just another person with an opinion.</text>
+<text x="66" y="120" fill="#7f88a8" font-size="12.5">— W. Edwards Deming</text>
 </g>
 <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.75000;0.75893;0.86607;0.87500;1" dur="56.00s" repeatCount="indefinite"/>
-<text x="66" y="60" fill="#c0caf5" font-size="15">The goal is to turn data into information, and information into insight.</text>
-<text x="66" y="96" fill="#7f88a8" font-size="12.5">— Carly Fiorina</text>
+<text x="66" y="84" fill="#c0caf5" font-size="15">The goal is to turn data into information, and information into insight.</text>
+<text x="66" y="120" fill="#7f88a8" font-size="12.5">— Carly Fiorina</text>
 </g>
 <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.87500;0.88393;0.99107;1.00000;1" dur="56.00s" repeatCount="indefinite"/>
-<text x="66" y="60" fill="#c0caf5" font-size="15">The purpose of computing is insight, not numbers.</text>
-<text x="66" y="96" fill="#7f88a8" font-size="12.5">— Richard Hamming</text>
+<text x="66" y="84" fill="#c0caf5" font-size="15">The purpose of computing is insight, not numbers.</text>
+<text x="66" y="120" fill="#7f88a8" font-size="12.5">— Richard Hamming</text>
+</g>
+</g>
+<g class="n">
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.00000;0.00893;0.11607;0.12500;1" dur="56.00s" repeatCount="indefinite"/>
+<text x="18" y="60" fill="#c0caf5" font-size="15">Not everything that can be counted counts,</text>
+<text x="18" y="84" fill="#c0caf5" font-size="15">and not everything that counts can be</text>
+<text x="18" y="108" fill="#c0caf5" font-size="15">counted.</text>
+<text x="18" y="144" fill="#7f88a8" font-size="12.5">— William Bruce Cameron</text>
+</g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.12500;0.13393;0.24107;0.25000;1" dur="56.00s" repeatCount="indefinite"/>
+<text x="18" y="72" fill="#c0caf5" font-size="15">It is easy to lie with statistics. It is hard</text>
+<text x="18" y="96" fill="#c0caf5" font-size="15">to tell the truth without them.</text>
+<text x="18" y="132" fill="#7f88a8" font-size="12.5">— Andrejs Dunkels</text>
+</g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.25000;0.25893;0.36607;0.37500;1" dur="56.00s" repeatCount="indefinite"/>
+<text x="18" y="48" fill="#c0caf5" font-size="15">A distributed system is one in which the</text>
+<text x="18" y="72" fill="#c0caf5" font-size="15">failure of a computer you did not know</text>
+<text x="18" y="96" fill="#c0caf5" font-size="15">existed can render your own computer</text>
+<text x="18" y="120" fill="#c0caf5" font-size="15">unusable.</text>
+<text x="18" y="156" fill="#7f88a8" font-size="12.5">— Leslie Lamport</text>
+</g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.37500;0.38393;0.49107;0.50000;1" dur="56.00s" repeatCount="indefinite"/>
+<text x="18" y="72" fill="#c0caf5" font-size="15">All models are wrong, but some are</text>
+<text x="18" y="96" fill="#c0caf5" font-size="15">useful.</text>
+<text x="18" y="132" fill="#7f88a8" font-size="12.5">— George Box</text>
+</g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.50000;0.50893;0.61607;0.62500;1" dur="56.00s" repeatCount="indefinite"/>
+<text x="18" y="72" fill="#c0caf5" font-size="15">In God we trust. All others must bring</text>
+<text x="18" y="96" fill="#c0caf5" font-size="15">data.</text>
+<text x="18" y="132" fill="#7f88a8" font-size="12.5">— W. Edwards Deming</text>
+</g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.62500;0.63393;0.74107;0.75000;1" dur="56.00s" repeatCount="indefinite"/>
+<text x="18" y="72" fill="#c0caf5" font-size="15">Without data you&#x27;re just another person</text>
+<text x="18" y="96" fill="#c0caf5" font-size="15">with an opinion.</text>
+<text x="18" y="132" fill="#7f88a8" font-size="12.5">— W. Edwards Deming</text>
+</g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.75000;0.75893;0.86607;0.87500;1" dur="56.00s" repeatCount="indefinite"/>
+<text x="18" y="72" fill="#c0caf5" font-size="15">The goal is to turn data into information,</text>
+<text x="18" y="96" fill="#c0caf5" font-size="15">and information into insight.</text>
+<text x="18" y="132" fill="#7f88a8" font-size="12.5">— Carly Fiorina</text>
+</g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.87500;0.88393;0.99107;1.00000;1" dur="56.00s" repeatCount="indefinite"/>
+<text x="18" y="72" fill="#c0caf5" font-size="15">The purpose of computing is insight, not</text>
+<text x="18" y="96" fill="#c0caf5" font-size="15">numbers.</text>
+<text x="18" y="132" fill="#7f88a8" font-size="12.5">— Richard Hamming</text>
+</g>
 </g>
 </g></svg>

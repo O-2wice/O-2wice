@@ -1,46 +1,110 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="860" height="212" viewBox="0 0 860 212" role="img" aria-label="GitHub statistics and most used languages">
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="254" role="img" aria-label="GitHub statistics and most used languages">
+<style>.n{display:none}@media(max-width:560px){.w{display:none}.n{display:inline}}</style>
 <defs>
 <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#70a5fd"/><stop offset="1" stop-color="#bb9af7"/></linearGradient>
 </defs>
-<rect width="860" height="212" rx="12" fill="#1a1b27"/>
-<rect width="860" height="3" rx="1.5" fill="url(#accent)" opacity="0.85"/>
+<rect width="100%" height="254" rx="12" fill="#1a1b27"/>
+<rect width="100%" height="3" rx="1.5" fill="url(#accent)" opacity="0.85"/>
 <g font-family="'Segoe UI',Ubuntu,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif">
-<text x="20.0" y="54" fill="#7f88a8" font-size="14">Total commits</text>
-<text x="20.0" y="90" fill="#c0caf5" font-size="32" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">265</text>
-<text x="215.0" y="54" fill="#7f88a8" font-size="14">Contributions in 2026</text>
-<text x="215.0" y="90" fill="#c0caf5" font-size="32" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">226</text>
-<text x="20.0" y="122" fill="#7f88a8" font-size="14">Public repositories</text>
-<text x="20.0" y="158" fill="#c0caf5" font-size="32" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">9</text>
-<text x="215.0" y="122" fill="#7f88a8" font-size="14">Followers</text>
-<text x="215.0" y="158" fill="#c0caf5" font-size="32" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">8</text>
-<line x1="430" y1="26" x2="430" y2="186" stroke="#ffffff" stroke-opacity="0.08"/>
-<text x="450" y="40" fill="#7f88a8" font-size="14">Most used languages</text>
-<clipPath id="bar"><rect x="450" y="52" width="390" height="10" rx="5"/></clipPath>
-<g clip-path="url(#bar)">
-<rect x="450.00" y="52" width="242.27" height="10" fill="#3572A5"/>
-<rect x="691.77" y="52" width="62.68" height="10" fill="#3D6117"/>
-<rect x="753.95" y="52" width="62.40" height="10" fill="#e34c26"/>
-<rect x="815.85" y="52" width="8.89" height="10" fill="#dad8d8"/>
-<rect x="824.24" y="52" width="7.94" height="10" fill="#663399"/>
-<rect x="831.68" y="52" width="5.99" height="10" fill="#f1e05a"/>
-<rect x="837.17" y="52" width="2.83" height="10" fill="#ffffff" fill-opacity="0.08"/>
+<g class="w">
+<svg x="0%" y="0" width="50%" height="254">
+<g transform="translate(20,0)">
+<text x="0%" y="76" fill="#7f88a8" font-size="14">Total commits</text>
+<text x="0%" y="112" fill="#c0caf5" font-size="32" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">266</text>
+<text x="50%" y="76" fill="#7f88a8" font-size="14">Contributions in 2026</text>
+<text x="50%" y="112" fill="#c0caf5" font-size="32" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">226</text>
+<text x="0%" y="162" fill="#7f88a8" font-size="14">Public repositories</text>
+<text x="0%" y="198" fill="#c0caf5" font-size="32" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">9</text>
+<text x="50%" y="162" fill="#7f88a8" font-size="14">Followers</text>
+<text x="50%" y="198" fill="#c0caf5" font-size="32" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">8</text>
 </g>
-<circle cx="455.0" cy="92" r="5" fill="#3572A5"/>
-<text x="467.0" y="96" fill="#c0caf5" font-size="14">Python</text>
-<text x="625.0" y="96" fill="#7f88a8" font-size="13.5" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">62.0%</text>
-<circle cx="455.0" cy="122" r="5" fill="#3D6117"/>
-<text x="467.0" y="126" fill="#c0caf5" font-size="14">TeX</text>
-<text x="625.0" y="126" fill="#7f88a8" font-size="13.5" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">15.9%</text>
-<circle cx="455.0" cy="152" r="5" fill="#e34c26"/>
-<text x="467.0" y="156" fill="#c0caf5" font-size="14">HTML</text>
-<text x="625.0" y="156" fill="#7f88a8" font-size="13.5" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">15.9%</text>
-<circle cx="650.0" cy="92" r="5" fill="#dad8d8"/>
-<text x="662.0" y="96" fill="#c0caf5" font-size="14">PLSQL</text>
-<text x="820.0" y="96" fill="#7f88a8" font-size="13.5" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">2.2%</text>
-<circle cx="650.0" cy="122" r="5" fill="#663399"/>
-<text x="662.0" y="126" fill="#c0caf5" font-size="14">CSS</text>
-<text x="820.0" y="126" fill="#7f88a8" font-size="13.5" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">1.9%</text>
-<circle cx="650.0" cy="152" r="5" fill="#f1e05a"/>
-<text x="662.0" y="156" fill="#c0caf5" font-size="14">JavaScript</text>
-<text x="820.0" y="156" fill="#7f88a8" font-size="13.5" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">1.4%</text>
+</svg>
+<line x1="50%" y1="30" x2="50%" y2="224" stroke="#ffffff" stroke-opacity="0.08"/>
+<svg x="50%" y="0" width="50%" height="254">
+<text x="20" y="68" fill="#7f88a8" font-size="13.5">Most used languages</text>
+<svg x="20" y="80" height="10" style="width:calc(100% - 40px)">
+<clipPath id="barw"><rect x="0" y="0" width="100%" height="10" rx="5"/></clipPath>
+<g clip-path="url(#barw)">
+<rect x="0" y="0" width="100%" height="10" fill="#ffffff" fill-opacity="0.08"/>
+<rect x="0.000%" y="0" width="60.637%" height="10" fill="#3572A5"/>
+<rect x="60.337%" y="0" width="20.205%" height="10" fill="#3D6117"/>
+<rect x="80.241%" y="0" width="14.638%" height="10" fill="#e34c26"/>
+<rect x="94.580%" y="0" width="2.052%" height="10" fill="#dad8d8"/>
+<rect x="96.332%" y="0" width="1.855%" height="10" fill="#663399"/>
+<rect x="97.887%" y="0" width="1.821%" height="10" fill="#f1e05a"/>
+</g></svg>
+<svg x="0.0%" y="0" width="50.0%" height="100%">
+<circle cx="25" cy="120" r="5" fill="#3572A5"/>
+<text x="37" y="124" fill="#c0caf5" font-size="13.5">Python</text>
+<g transform="translate(-20,0)"><text x="100%" y="124" fill="#7f88a8" font-size="13.0" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">60.3%</text></g>
+</svg>
+<svg x="0.0%" y="0" width="50.0%" height="100%">
+<circle cx="25" cy="150" r="5" fill="#3D6117"/>
+<text x="37" y="154" fill="#c0caf5" font-size="13.5">TeX</text>
+<g transform="translate(-20,0)"><text x="100%" y="154" fill="#7f88a8" font-size="13.0" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">19.9%</text></g>
+</svg>
+<svg x="0.0%" y="0" width="50.0%" height="100%">
+<circle cx="25" cy="180" r="5" fill="#e34c26"/>
+<text x="37" y="184" fill="#c0caf5" font-size="13.5">HTML</text>
+<g transform="translate(-20,0)"><text x="100%" y="184" fill="#7f88a8" font-size="13.0" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">14.3%</text></g>
+</svg>
+<svg x="50.0%" y="0" width="50.0%" height="100%">
+<circle cx="25" cy="120" r="5" fill="#dad8d8"/>
+<text x="37" y="124" fill="#c0caf5" font-size="13.5">PLSQL</text>
+<g transform="translate(-20,0)"><text x="100%" y="124" fill="#7f88a8" font-size="13.0" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">1.8%</text></g>
+</svg>
+<svg x="50.0%" y="0" width="50.0%" height="100%">
+<circle cx="25" cy="150" r="5" fill="#663399"/>
+<text x="37" y="154" fill="#c0caf5" font-size="13.5">CSS</text>
+<g transform="translate(-20,0)"><text x="100%" y="154" fill="#7f88a8" font-size="13.0" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">1.6%</text></g>
+</svg>
+<svg x="50.0%" y="0" width="50.0%" height="100%">
+<circle cx="25" cy="180" r="5" fill="#f1e05a"/>
+<text x="37" y="184" fill="#c0caf5" font-size="13.5">JavaScript</text>
+<g transform="translate(-20,0)"><text x="100%" y="184" fill="#7f88a8" font-size="13.0" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">1.5%</text></g>
+</svg>
+</svg>
+</g>
+<g class="n">
+<g transform="translate(14,0)">
+<text x="0%" y="40" fill="#7f88a8" font-size="12.5">Total commits</text>
+<text x="0%" y="70" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">266</text>
+<text x="50%" y="40" fill="#7f88a8" font-size="12.5">Contributions in 2026</text>
+<text x="50%" y="70" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">226</text>
+<text x="0%" y="104" fill="#7f88a8" font-size="12.5">Public repositories</text>
+<text x="0%" y="134" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">9</text>
+<text x="50%" y="104" fill="#7f88a8" font-size="12.5">Followers</text>
+<text x="50%" y="134" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">8</text>
+</g>
+<text x="14" y="168" fill="#7f88a8" font-size="13.5">Most used languages</text>
+<svg x="14" y="180" height="10" style="width:calc(100% - 28px)">
+<clipPath id="barn"><rect x="0" y="0" width="100%" height="10" rx="5"/></clipPath>
+<g clip-path="url(#barn)">
+<rect x="0" y="0" width="100%" height="10" fill="#ffffff" fill-opacity="0.08"/>
+<rect x="0.000%" y="0" width="60.637%" height="10" fill="#3572A5"/>
+<rect x="60.337%" y="0" width="20.205%" height="10" fill="#3D6117"/>
+<rect x="80.241%" y="0" width="14.638%" height="10" fill="#e34c26"/>
+<rect x="94.580%" y="0" width="2.052%" height="10" fill="#dad8d8"/>
+</g></svg>
+<svg x="0.0%" y="0" width="50.0%" height="100%">
+<circle cx="19" cy="210" r="5" fill="#3572A5"/>
+<text x="31" y="214" fill="#c0caf5" font-size="12.5">Python</text>
+<g transform="translate(-14,0)"><text x="100%" y="214" fill="#7f88a8" font-size="12.0" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">60.3%</text></g>
+</svg>
+<svg x="0.0%" y="0" width="50.0%" height="100%">
+<circle cx="19" cy="236" r="5" fill="#3D6117"/>
+<text x="31" y="240" fill="#c0caf5" font-size="12.5">TeX</text>
+<g transform="translate(-14,0)"><text x="100%" y="240" fill="#7f88a8" font-size="12.0" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">19.9%</text></g>
+</svg>
+<svg x="50.0%" y="0" width="50.0%" height="100%">
+<circle cx="19" cy="210" r="5" fill="#e34c26"/>
+<text x="31" y="214" fill="#c0caf5" font-size="12.5">HTML</text>
+<g transform="translate(-14,0)"><text x="100%" y="214" fill="#7f88a8" font-size="12.0" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">14.3%</text></g>
+</svg>
+<svg x="50.0%" y="0" width="50.0%" height="100%">
+<circle cx="19" cy="236" r="5" fill="#dad8d8"/>
+<text x="31" y="240" fill="#c0caf5" font-size="12.5">PLSQL</text>
+<g transform="translate(-14,0)"><text x="100%" y="240" fill="#7f88a8" font-size="12.0" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">1.8%</text></g>
+</svg>
+</g>
 </g></svg>

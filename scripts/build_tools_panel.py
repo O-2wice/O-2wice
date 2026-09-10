@@ -207,17 +207,19 @@ def socials_markdown():
         for label, _, _, url in SOCIALS)
 
 
-def markdown(links, per_row=COLS):
-    """The anchor rows to paste into the README, printed for reference.
+def markdown(links, per_row=None):
+    """The anchor row to paste into the README.
 
-    Broken into explicit rows: left to wrap on its own the run reflows to a
-    ragged 13 and 11 against GitHub's column.
+    One flowing run rather than fixed rows. Explicit rows of twelve lined up
+    at desktop width and broke everywhere else: on a phone each row of
+    twelve wrapped into 7 and 5, so the stack read as four ragged rows with
+    a gap through the middle. Left to flow, every row fills to whatever the
+    column holds and only the last one is short.
     """
-    tags = [f'<a href="{links[label]}" title="{label}">'
-            f'<img src="metrics/tools/{slugify(label)}.svg" width="46" alt="{label}"/></a>'
-            for label, _, _ in TOOLS]
-    rows = [" ".join(tags[i:i + per_row]) for i in range(0, len(tags), per_row)]
-    return "\n<br/>\n".join(rows)
+    return " ".join(
+        f'<a href="{links[label]}" title="{label}">'
+        f'<img src="metrics/tools/{slugify(label)}.svg" width="46" alt="{label}"/></a>'
+        for label, _, _ in TOOLS)
 
 
 def main():
