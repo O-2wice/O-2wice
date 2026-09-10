@@ -28,7 +28,7 @@ import urllib.error
 import urllib.request
 
 from svg_common import (ACCENT, FONT, MUTED, NARROW_MAX, NARROW_REF, ROW,
-                        esc, truncate, write)
+                        esc, light_css, truncate, write)
 
 LOGIN = os.environ.get("GH_LOGIN", "O-2wice")
 TOKEN = os.environ.get("GH_TOKEN", "")
@@ -90,7 +90,7 @@ def band_css():
 def open_svg(height, label):
     return [f'<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="{height}" '
             f'role="img" aria-label="{esc(label)}">',
-            f"<style>{band_css()}</style>"]
+            f"<style>{band_css()}{light_css()}</style>"]
 
 
 def header_row():

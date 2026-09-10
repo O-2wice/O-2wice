@@ -11,6 +11,7 @@ on:
       - 'scripts/build_stats_panels.py'
       - 'scripts/build_chrome_panels.py'
       - 'scripts/build_tools_panel.py'
+      - 'scripts/build_waka_panel.py'
       - 'scripts/svg_common.py'
 
 permissions:
@@ -40,6 +41,14 @@ jobs:
         env:
           OUT_DIR: metrics
         run: python3 scripts/build_chrome_panels.py
+
+      - name: Render the WakaTime week
+        env:
+          # Replaces anmol098/waka-readme-stats, whose code block was the
+          # last thing on the page that could not reflow.
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          OUT_DIR: metrics
+        run: python3 scripts/build_waka_panel.py
 
       - name: Render tech stack panel
         env:

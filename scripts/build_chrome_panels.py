@@ -16,7 +16,7 @@ import pathlib
 import re
 import sys
 
-from svg_common import (ACCENT, ACCENT_ALT, BG, FONT, MONO, MUTED, NARROW_MAX,
+from svg_common import (ACCENT, ACCENT_ALT, BG, FONT, MONO, MUTED, NARROW_MAX, light_css,
                         NARROW_REF, TITLE, WIDE_REF, esc, fetch, mono_width,
                         text_width, wrap, write)
 
@@ -251,6 +251,7 @@ def typing(lines, height=46):
            "<style>"
            ".n{display:none}"
            f"@media(max-width:{NARROW_MAX}px){{.w{{display:none}}.n{{display:inline}}}}"
+           "@media(prefers-color-scheme:light){[fill=\"#6AD3F7\"]{fill:#0b6f8a}}"
            "</style>"]
     wide_defs, wide_body = typing_lines(lines, 21, height, "w")
     narrow_defs, narrow_body = typing_lines(lines, 13, height, "n")
@@ -287,6 +288,7 @@ def quote_card(quotes, seconds_each=7.0, fade=0.5):
            "<style>"
            ".n{display:none}"
            f"@media(max-width:{NARROW_MAX}px){{.w{{display:none}}.n{{display:inline}}}}"
+           f"{light_css()}"
            "</style>",
            "<defs>",
            '<linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">'

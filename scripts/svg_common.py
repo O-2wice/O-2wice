@@ -99,6 +99,37 @@ def card_close():
 # padding on a phone.
 NARROW_MAX = 560
 
+# The light palette, keyed by the dark colour it replaces. GitHub's own
+# light canvas is white, so panels sit on #f6f8fa with the same hairlines
+# rather than disappearing into the page.
+#
+# Applied as attribute selectors rather than by changing how the panels are
+# drawn: a presentation attribute loses to any author rule, so one block of
+# CSS repaints a whole panel without touching a single drawing call. This
+# follows the viewer's browser or system colour scheme, which is not the
+# same thing as GitHub's own theme toggle - someone reading light GitHub on
+# a dark desktop still gets the dark panels.
+LIGHT = {
+    BG: "#f6f8fa",
+    TITLE: "#1f2328",
+    MUTED: "#59636e",
+    DIM: "#6e7781",
+    ACCENT: "#0969da",
+    ACCENT_ALT: "#8250df",
+    # Only ever drawn at a low opacity, as a tint or a hairline, so it
+    # inverts with the background.
+    ROW: "#1f2328",
+}
+
+
+def light_css():
+    rules = "".join(
+        f'[fill="{dark}"]{{fill:{light}}}'
+        f'[stroke="{dark}"]{{stroke:{light}}}'
+        f'[stop-color="{dark}"]{{stop-color:{light}}}'
+        for dark, light in LIGHT.items())
+    return f"@media(prefers-color-scheme:light){{{rules}}}"
+
 # Text is wrapped at build time, so a fluid panel has to be wrapped once per
 # layout variant. These are the narrowest column each variant has to survive:
 # a 360px phone and a panel just above the breakpoint.
@@ -118,6 +149,7 @@ def fluid_open(height, label, radius=12, css=""):
         "<style>"
         ".n{display:none}"
         f"@media(max-width:{NARROW_MAX}px){{.w{{display:none}}.n{{display:inline}}}}"
+        f"{light_css()}"
         f"{css}"
         "</style>",
         "<defs>",
