@@ -167,31 +167,36 @@ NARROW_PAD = 14
 
 
 def figure_cells(user, all_commits, total_contribs, stars):
-    """Four figures as the hero.
+    """The figures that say something about the work.
 
     No card title and no @handle: the README section heading already says
-    "GitHub Stats", and the handle is on every other part of the page.
+    "GitHub Stats", and the handle is on every other part of the page. No
+    follower count either: it measures the audience, not the work.
     """
     year = dt.datetime.now(dt.timezone.utc).year
     cells = [("Total commits", human(all_commits)),
              (f"Contributions in {year}", human(total_contribs)),
-             ("Public repositories", human(user["publicRepos"]["totalCount"])),
-             ("Followers", human(user["followers"]["totalCount"]))]
-    # A row of zeros reads worse than no row at all.
+             ("Public repositories", human(user["publicRepos"]["totalCount"]))]
+    # A row of zeros reads worse than no row at all, so this only appears
+    # once there is something to show.
     if stars:
-        cells[3] = ("Stars earned", human(stars))
+        cells.append(("Stars earned", human(stars)))
     return cells
 
 
-def figures(cells, pad, label_size, value_size, rows):
-    """Four figures in a 2x2 grid filling whatever viewport encloses them."""
+def figures(cells, pad, label_size, value_size, rows, cols=2):
+    """Figures on a grid filling whatever viewport encloses them.
+
+    Three of them stack down one column rather than leaving a hole in a
+    2x2; a fourth, when there are stars to show, pairs them up again.
+    """
     out = [f'<g transform="translate({pad},0)">']
     for i, (label, value) in enumerate(cells):
-        col, row = i % 2, i // 2
+        col, row = (i % cols, i // cols) if cols > 1 else (0, i)
         label_y, value_y = rows[row]
-        out.append(f'<text x="{col * 50}%" y="{label_y}" fill="{MUTED}" '
+        out.append(f'<text x="{col * (100 // cols)}%" y="{label_y}" fill="{MUTED}" '
                    f'font-size="{label_size}">{esc(label)}</text>')
-        out.append(f'<text x="{col * 50}%" y="{value_y}" fill="{TITLE}" '
+        out.append(f'<text x="{col * (100 // cols)}%" y="{value_y}" fill="{TITLE}" '
                    f'font-size="{value_size}" font-weight="600" '
                    f'font-family="{MONO}">{esc(value)}</text>')
     out.append("</g>")
@@ -260,7 +265,10 @@ def build_overview(user, all_commits, total_contribs, stars, agg, colours):
 
     # Wide: two halves, divided down the middle.
     out.append('<g class="w">')
-    out += column(0, 50, h, figures(cells, PAD, 14, 32, [(76, 112), (162, 198)]))
+    wide_rows = ([(58, 92), (120, 154), (182, 216)] if len(cells) == 3
+                 else [(76, 112), (162, 198)])
+    out += column(0, 50, h, figures(cells, PAD, 14, 30, wide_rows,
+                                    cols=1 if len(cells) == 3 else 2))
     out.append(f'<line x1="50%" y1="30" x2="50%" y2="{h - 30}" '
                f'stroke="{ROW}" stroke-opacity="0.08"/>')
     out += column(50, 50, h,
