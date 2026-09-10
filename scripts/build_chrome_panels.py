@@ -323,15 +323,24 @@ def quote_card(quotes, seconds_each=7.0, fade=0.5):
 
 
 def quote_markup():
-    """The committed panel, always.
+    """The service if it is answering, otherwise the committed panel.
 
-    The live service was pointed at while it answered, for a fresh quote per
-    page load. It returns a fixed 760px card, which is the one thing this
-    README can no longer use: it cannot reflow, so it is the only panel that
-    would still shrink to unreadable type on a phone. The committed panel
-    rotates a different window of the pool each day instead.
+    The service is the live one: a different quote per request, which a
+    committed file cannot do, since an SVG loaded through <img> runs no
+    script and can only cycle on a timer. Its card is a fixed 600px box in a
+    foreignObject, so unlike the panels here it scales with the column
+    instead of reflowing - that is the price of the freshness, and it is
+    paid deliberately. The committed panel is the fallback for an outage.
     """
-    return '<img src="metrics/quote.svg" width="100%" alt="Quote"/>'
+    try:
+        body = fetch(QUOTE_SERVICE, timeout=15).decode("utf-8", "replace")
+        if "<svg" not in body:
+            raise RuntimeError("response was not an SVG")
+        print("quote: live service is up, pointing at it")
+        return f'<img src="{QUOTE_SERVICE}" width="760" alt="Quote"/>'
+    except Exception as exc:
+        print(f"::warning::quote service unavailable ({exc}); using the committed panel")
+        return '<img src="metrics/quote.svg" width="100%" alt="Quote"/>'
 
 
 def main():
