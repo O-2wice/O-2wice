@@ -25,8 +25,8 @@ import urllib.error
 import urllib.request
 
 from svg_common import (ACCENT, ACCENT_ALT, DIM, MONO, MUTED, NARROW_REF, ROW, TITLE,
-                        WIDE_REF, card_close, column, esc, fluid_open, human, right,
-                        truncate, wrap, write)
+                        WIDE_REF, bytes_human, card_close, column, esc, fluid_open,
+                        human, right, truncate, wrap, write)
 
 LOGIN = os.environ.get("GH_LOGIN", "O-2wice")
 TOKEN = os.environ.get("GH_TOKEN", "")
@@ -166,17 +166,24 @@ PAD = 20
 NARROW_PAD = 14
 
 
-def figure_cells(user, all_commits, total_contribs, active_days, stars):
+def figure_cells(user, all_commits, total_contribs, code_bytes, stars):
     """The figures that say something about the work.
 
     No card title and no @handle: the README section heading already says
     "GitHub Stats", and the handle is on every other part of the page. No
     follower count either: it measures the audience, not the work.
+
+    Code written rather than active days. Active days came off the
+    contribution calendar, which omits private repositories unless the
+    profile opts in, so it read 37 against 45 days actually worked and
+    every private commit was invisible to it. The language totals below
+    are queried without a privacy filter and do see that work, so the
+    figure is drawn from the same bytes as the bar.
     """
     year = dt.datetime.now(dt.timezone.utc).year
     cells = [("Total commits", human(all_commits)),
              (f"Contributions in {year}", human(total_contribs)),
-             (f"Active days in {year}", human(active_days)),
+             ("Code written", bytes_human(code_bytes)),
              ("Public repositories", human(user["publicRepos"]["totalCount"]))]
     # Stars displace the repository count rather than adding a fifth
     # figure: GitHub already prints the repository count on the profile
@@ -251,7 +258,7 @@ def legend(top, total, colours, pad, rows_y, cols, size=13.5):
     return out
 
 
-def build_overview(user, all_commits, total_contribs, active_days, stars, agg, colours):
+def build_overview(user, all_commits, total_contribs, code_bytes, stars, agg, colours):
     """Figures and languages side by side on a wide column, stacked below it.
 
     Both layouts live in the same file and the same box; the height is the
@@ -259,7 +266,7 @@ def build_overview(user, all_commits, total_contribs, active_days, stars, agg, c
     breathe rather than crowding the top.
     """
     h = 254
-    cells = figure_cells(user, all_commits, total_contribs, active_days, stars)
+    cells = figure_cells(user, all_commits, total_contribs, code_bytes, stars)
     total = sum(agg.values()) or 1
     top = agg.most_common(6)
 
@@ -370,9 +377,6 @@ def main():
 
     year = dt.datetime.now(dt.timezone.utc).year
     year_total = sum(c for d, c in days.items() if d.startswith(str(year)))
-    # Days actually worked, not the calendar's length: the count of days
-    # this year that carry at least one contribution.
-    active_days = sum(1 for d, c in days.items() if d.startswith(str(year)) and c)
     stars = sum(r["stargazerCount"] for r in user["repositories"]["nodes"])
     # include_all_commits counts every commit the search index knows about,
     # which is larger than this calendar year's contributions.
@@ -389,8 +393,8 @@ def main():
             colours[name] = edge["node"]["color"]
 
     write(f"{OUTDIR}/stats.svg",
-          build_overview(user, all_commits, year_total, active_days, stars, agg,
-                         colours))
+          build_overview(user, all_commits, year_total, sum(agg.values()), stars,
+                         agg, colours))
     for repo in pins:
         write(f"{OUTDIR}/pin-{repo['name']}.svg", build_pin(repo))
     print(f"{len(pins)} project(s) with a write-up")
