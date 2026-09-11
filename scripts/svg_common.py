@@ -217,3 +217,18 @@ def human(n):
     if n < 1_000_000:
         return f"{n / 1000:.1f}".rstrip("0").rstrip(".") + "k"
     return f"{n / 1_000_000:.1f}".rstrip("0").rstrip(".") + "M"
+
+
+def bytes_human(n):
+    """3047025 -> 3.05 MB. Source bytes, as GitHub's language API counts them.
+
+    Decimal units rather than binary: the figure sits beside counts a reader
+    scans in passing, and 3.05 MB is the number they would expect from
+    3,047,025 bytes. KB is the smallest unit shown, because a profile with
+    less than a kilobyte of code has nothing to report.
+    """
+    n = int(n)
+    for unit, step in (("GB", 1_000_000_000), ("MB", 1_000_000), ("KB", 1000)):
+        if n >= step:
+            return f"{n / step:.2f}".rstrip("0").rstrip(".") + f" {unit}"
+    return f"{n} B"
