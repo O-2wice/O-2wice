@@ -10,55 +10,55 @@
 <svg x="0%" y="0" width="50%" height="254">
 <g transform="translate(20,0)">
 <text x="0%" y="76" fill="#7f88a8" font-size="14">This week</text>
-<text x="0%" y="112" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">13h 53m</text>
+<text x="0%" y="112" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">12h 19m</text>
 <text x="50%" y="76" fill="#7f88a8" font-size="14">Daily average</text>
-<text x="50%" y="112" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">1h 59m</text>
+<text x="50%" y="112" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">1h 45m</text>
 <text x="0%" y="162" fill="#7f88a8" font-size="14">Best day</text>
-<text x="0%" y="198" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">6h 20m</text>
+<text x="0%" y="198" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">4h 13m</text>
 <text x="50%" y="162" fill="#7f88a8" font-size="14">Tracked in total</text>
-<text x="50%" y="198" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">400h</text>
+<text x="50%" y="198" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">404h</text>
 </g>
 </svg>
 <line x1="50%" y1="30" x2="50%" y2="224" stroke="#ffffff" stroke-opacity="0.08"/>
 <svg x="50%" y="0" width="50%" height="254">
 <text x="20" y="68" fill="#7f88a8" font-size="13.5">Time by language</text>
 <text x="20" y="100" fill="#c0caf5" font-size="13">Python</text>
-<g transform="translate(-20,0)"><text x="100%" y="100" fill="#7f88a8" font-size="12" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">6h 12m</text></g>
+<g transform="translate(-20,0)"><text x="100%" y="100" fill="#7f88a8" font-size="12" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">6h 50m</text></g>
 <svg x="20" y="106" height="5" style="width:calc(100% - 40px)"><rect x="0" y="0" width="100%" height="5" rx="2.5" fill="#ffffff" fill-opacity="0.07"/><rect x="0" y="0" width="100.00%" height="5" rx="2.5" fill="#70a5fd" fill-opacity="0.85"/></svg>
 <text x="20" y="130" fill="#c0caf5" font-size="13">Other</text>
-<g transform="translate(-20,0)"><text x="100%" y="130" fill="#7f88a8" font-size="12" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">3h 41m</text></g>
-<svg x="20" y="136" height="5" style="width:calc(100% - 40px)"><rect x="0" y="0" width="100%" height="5" rx="2.5" fill="#ffffff" fill-opacity="0.07"/><rect x="0" y="0" width="59.50%" height="5" rx="2.5" fill="#70a5fd" fill-opacity="0.85"/></svg>
+<g transform="translate(-20,0)"><text x="100%" y="130" fill="#7f88a8" font-size="12" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">3h 9m</text></g>
+<svg x="20" y="136" height="5" style="width:calc(100% - 40px)"><rect x="0" y="0" width="100%" height="5" rx="2.5" fill="#ffffff" fill-opacity="0.07"/><rect x="0" y="0" width="46.21%" height="5" rx="2.5" fill="#70a5fd" fill-opacity="0.85"/></svg>
 <text x="20" y="160" fill="#c0caf5" font-size="13">Markdown</text>
-<g transform="translate(-20,0)"><text x="100%" y="160" fill="#7f88a8" font-size="12" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">3h 32m</text></g>
-<svg x="20" y="166" height="5" style="width:calc(100% - 40px)"><rect x="0" y="0" width="100%" height="5" rx="2.5" fill="#ffffff" fill-opacity="0.07"/><rect x="0" y="0" width="57.20%" height="5" rx="2.5" fill="#70a5fd" fill-opacity="0.85"/></svg>
+<g transform="translate(-20,0)"><text x="100%" y="160" fill="#7f88a8" font-size="12" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">2h 17m</text></g>
+<svg x="20" y="166" height="5" style="width:calc(100% - 40px)"><rect x="0" y="0" width="100%" height="5" rx="2.5" fill="#ffffff" fill-opacity="0.07"/><rect x="0" y="0" width="33.64%" height="5" rx="2.5" fill="#70a5fd" fill-opacity="0.85"/></svg>
 <text x="20" y="190" fill="#c0caf5" font-size="13">RMarkdown</text>
-<g transform="translate(-20,0)"><text x="100%" y="190" fill="#7f88a8" font-size="12" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">1h 32m</text></g>
-<svg x="20" y="196" height="5" style="width:calc(100% - 40px)"><rect x="0" y="0" width="100%" height="5" rx="2.5" fill="#ffffff" fill-opacity="0.07"/><rect x="0" y="0" width="24.79%" height="5" rx="2.5" fill="#70a5fd" fill-opacity="0.85"/></svg>
+<g transform="translate(-20,0)"><text x="100%" y="190" fill="#7f88a8" font-size="12" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">1h 46m</text></g>
+<svg x="20" y="196" height="5" style="width:calc(100% - 40px)"><rect x="0" y="0" width="100%" height="5" rx="2.5" fill="#ffffff" fill-opacity="0.07"/><rect x="0" y="0" width="25.89%" height="5" rx="2.5" fill="#70a5fd" fill-opacity="0.85"/></svg>
 <text x="20" y="220" fill="#c0caf5" font-size="13">TeX</text>
 <g transform="translate(-20,0)"><text x="100%" y="220" fill="#7f88a8" font-size="12" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">53m</text></g>
-<svg x="20" y="226" height="5" style="width:calc(100% - 40px)"><rect x="0" y="0" width="100%" height="5" rx="2.5" fill="#ffffff" fill-opacity="0.07"/><rect x="0" y="0" width="14.41%" height="5" rx="2.5" fill="#70a5fd" fill-opacity="0.85"/></svg>
+<svg x="20" y="226" height="5" style="width:calc(100% - 40px)"><rect x="0" y="0" width="100%" height="5" rx="2.5" fill="#ffffff" fill-opacity="0.07"/><rect x="0" y="0" width="13.07%" height="5" rx="2.5" fill="#70a5fd" fill-opacity="0.85"/></svg>
 </svg>
 </g>
 <g class="n">
 <g transform="translate(14,0)">
 <text x="0%" y="40" fill="#7f88a8" font-size="12.5">This week</text>
-<text x="0%" y="70" fill="#c0caf5" font-size="22" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">13h 53m</text>
+<text x="0%" y="70" fill="#c0caf5" font-size="22" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">12h 19m</text>
 <text x="50%" y="40" fill="#7f88a8" font-size="12.5">Daily average</text>
-<text x="50%" y="70" fill="#c0caf5" font-size="22" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">1h 59m</text>
+<text x="50%" y="70" fill="#c0caf5" font-size="22" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">1h 45m</text>
 <text x="0%" y="104" fill="#7f88a8" font-size="12.5">Best day</text>
-<text x="0%" y="134" fill="#c0caf5" font-size="22" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">6h 20m</text>
+<text x="0%" y="134" fill="#c0caf5" font-size="22" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">4h 13m</text>
 <text x="50%" y="104" fill="#7f88a8" font-size="12.5">Tracked in total</text>
-<text x="50%" y="134" fill="#c0caf5" font-size="22" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">400h</text>
+<text x="50%" y="134" fill="#c0caf5" font-size="22" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">404h</text>
 </g>
 <text x="14" y="166" fill="#7f88a8" font-size="13.5">Time by language</text>
 <text x="14" y="190" fill="#c0caf5" font-size="13">Python</text>
-<g transform="translate(-14,0)"><text x="100%" y="190" fill="#7f88a8" font-size="12" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">6h 12m</text></g>
+<g transform="translate(-14,0)"><text x="100%" y="190" fill="#7f88a8" font-size="12" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">6h 50m</text></g>
 <svg x="14" y="196" height="5" style="width:calc(100% - 28px)"><rect x="0" y="0" width="100%" height="5" rx="2.5" fill="#ffffff" fill-opacity="0.07"/><rect x="0" y="0" width="100.00%" height="5" rx="2.5" fill="#70a5fd" fill-opacity="0.85"/></svg>
 <text x="14" y="215" fill="#c0caf5" font-size="13">Other</text>
-<g transform="translate(-14,0)"><text x="100%" y="215" fill="#7f88a8" font-size="12" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">3h 41m</text></g>
-<svg x="14" y="221" height="5" style="width:calc(100% - 28px)"><rect x="0" y="0" width="100%" height="5" rx="2.5" fill="#ffffff" fill-opacity="0.07"/><rect x="0" y="0" width="59.50%" height="5" rx="2.5" fill="#70a5fd" fill-opacity="0.85"/></svg>
+<g transform="translate(-14,0)"><text x="100%" y="215" fill="#7f88a8" font-size="12" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">3h 9m</text></g>
+<svg x="14" y="221" height="5" style="width:calc(100% - 28px)"><rect x="0" y="0" width="100%" height="5" rx="2.5" fill="#ffffff" fill-opacity="0.07"/><rect x="0" y="0" width="46.21%" height="5" rx="2.5" fill="#70a5fd" fill-opacity="0.85"/></svg>
 <text x="14" y="240" fill="#c0caf5" font-size="13">Markdown</text>
-<g transform="translate(-14,0)"><text x="100%" y="240" fill="#7f88a8" font-size="12" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">3h 32m</text></g>
-<svg x="14" y="246" height="5" style="width:calc(100% - 28px)"><rect x="0" y="0" width="100%" height="5" rx="2.5" fill="#ffffff" fill-opacity="0.07"/><rect x="0" y="0" width="57.20%" height="5" rx="2.5" fill="#70a5fd" fill-opacity="0.85"/></svg>
+<g transform="translate(-14,0)"><text x="100%" y="240" fill="#7f88a8" font-size="12" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">2h 17m</text></g>
+<svg x="14" y="246" height="5" style="width:calc(100% - 28px)"><rect x="0" y="0" width="100%" height="5" rx="2.5" fill="#ffffff" fill-opacity="0.07"/><rect x="0" y="0" width="33.64%" height="5" rx="2.5" fill="#70a5fd" fill-opacity="0.85"/></svg>
 </g>
 </g></svg>
