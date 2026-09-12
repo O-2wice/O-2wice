@@ -141,7 +141,16 @@ query($owner: String!, $name: String!) {
 
 
 def calendar_days(created):
-    """Every contribution day since signup. The API caps a query at one year."""
+    """Every contribution day since signup, and the all-time commit count.
+
+    The API caps a query at one year, so this walks a year at a time.
+
+    The all-time figure is the sum of these days rather than
+    `search/commits`, whose index covers public repositories only. The
+    `max(search, this year)` that used to cover for that printed 2026's
+    total under an all-time label the moment the calendar overtook it,
+    and the two cells read the same number.
+    """
     days = {}
     year = created.year
     today = dt.datetime.now(dt.timezone.utc)
@@ -166,7 +175,7 @@ PAD = 20
 NARROW_PAD = 14
 
 
-def figure_cells(user, all_commits, total_contribs, code_bytes, stars):
+def figure_cells(user, all_time, total_contribs, code_bytes, stars):
     """The figures that say something about the work.
 
     No card title and no @handle: the README section heading already says
@@ -181,7 +190,7 @@ def figure_cells(user, all_commits, total_contribs, code_bytes, stars):
     figure is drawn from the same bytes as the bar.
     """
     year = dt.datetime.now(dt.timezone.utc).year
-    cells = [("Total commits", human(all_commits)),
+    cells = [("Total contributions", human(all_time)),
              (f"Contributions in {year}", human(total_contribs)),
              ("Code written", bytes_human(code_bytes)),
              ("Public repositories", human(user["publicRepos"]["totalCount"]))]
@@ -258,7 +267,7 @@ def legend(top, total, colours, pad, rows_y, cols, size=13.5):
     return out
 
 
-def build_overview(user, all_commits, total_contribs, code_bytes, stars, agg, colours):
+def build_overview(user, all_time, total_contribs, code_bytes, stars, agg, colours):
     """Figures and languages side by side on a wide column, stacked below it.
 
     Both layouts live in the same file and the same box; the height is the
@@ -266,7 +275,7 @@ def build_overview(user, all_commits, total_contribs, code_bytes, stars, agg, co
     breathe rather than crowding the top.
     """
     h = 254
-    cells = figure_cells(user, all_commits, total_contribs, code_bytes, stars)
+    cells = figure_cells(user, all_time, total_contribs, code_bytes, stars)
     total = sum(agg.values()) or 1
     top = agg.most_common(6)
 
@@ -356,7 +365,6 @@ def main():
         user = graphql(PROFILE_Q, login=LOGIN)["user"]
         created = dt.datetime.fromisoformat(user["createdAt"].replace("Z", "+00:00"))
         days = calendar_days(created)
-        commits = rest(f"search/commits?q=author:{LOGIN}&per_page=1")["total_count"]
         # Featured Projects is every public repo carrying a published
         # write-up, newest push first. Detected rather than listed, so a
         # write-up added later shows up without editing the workflow, and a
@@ -377,10 +385,12 @@ def main():
 
     year = dt.datetime.now(dt.timezone.utc).year
     year_total = sum(c for d, c in days.items() if d.startswith(str(year)))
+    # Every contribution since signup. Commit counts are not used: the
+    # commit-only figure omits private repositories, and the private count
+    # that would restore them covers repository creations too, so it
+    # overshoots a cell labelled "commits". The calendar sum is exact.
+    all_time = sum(days.values())
     stars = sum(r["stargazerCount"] for r in user["repositories"]["nodes"])
-    # include_all_commits counts every commit the search index knows about,
-    # which is larger than this calendar year's contributions.
-    all_commits = max(commits, year_total)
 
     agg = collections.Counter()
     colours = {}
@@ -393,7 +403,7 @@ def main():
             colours[name] = edge["node"]["color"]
 
     write(f"{OUTDIR}/stats.svg",
-          build_overview(user, all_commits, year_total, sum(agg.values()), stars,
+          build_overview(user, all_time, year_total, sum(agg.values()), stars,
                          agg, colours))
     for repo in pins:
         write(f"{OUTDIR}/pin-{repo['name']}.svg", build_pin(repo))
