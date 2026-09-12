@@ -10,9 +10,9 @@
 <svg x="0%" y="0" width="50%" height="254">
 <g transform="translate(20,0)">
 <text x="0%" y="76" fill="#7f88a8" font-size="14">Total commits</text>
-<text x="0%" y="112" fill="#c0caf5" font-size="30" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">285</text>
+<text x="0%" y="112" fill="#c0caf5" font-size="30" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">308</text>
 <text x="50%" y="76" fill="#7f88a8" font-size="14">Contributions in 2026</text>
-<text x="50%" y="112" fill="#c0caf5" font-size="30" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">244</text>
+<text x="50%" y="112" fill="#c0caf5" font-size="30" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">308</text>
 <text x="0%" y="162" fill="#7f88a8" font-size="14">Code written</text>
 <text x="0%" y="198" fill="#c0caf5" font-size="30" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">3.05 MB</text>
 <text x="50%" y="162" fill="#7f88a8" font-size="14">Public repositories</text>
@@ -68,9 +68,9 @@
 <g class="n">
 <g transform="translate(14,0)">
 <text x="0%" y="40" fill="#7f88a8" font-size="12.5">Total commits</text>
-<text x="0%" y="70" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">285</text>
+<text x="0%" y="70" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">308</text>
 <text x="50%" y="40" fill="#7f88a8" font-size="12.5">Contributions in 2026</text>
-<text x="50%" y="70" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">244</text>
+<text x="50%" y="70" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">308</text>
 <text x="0%" y="104" fill="#7f88a8" font-size="12.5">Code written</text>
 <text x="0%" y="134" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">3.05 MB</text>
 <text x="50%" y="104" fill="#7f88a8" font-size="12.5">Public repositories</text>
