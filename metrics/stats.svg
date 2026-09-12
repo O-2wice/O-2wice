@@ -9,10 +9,10 @@
 <g class="w">
 <svg x="0%" y="0" width="50%" height="254">
 <g transform="translate(20,0)">
-<text x="0%" y="76" fill="#7f88a8" font-size="14">Total commits</text>
-<text x="0%" y="112" fill="#c0caf5" font-size="30" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">308</text>
+<text x="0%" y="76" fill="#7f88a8" font-size="14">Total contributions</text>
+<text x="0%" y="112" fill="#c0caf5" font-size="30" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">408</text>
 <text x="50%" y="76" fill="#7f88a8" font-size="14">Contributions in 2026</text>
-<text x="50%" y="112" fill="#c0caf5" font-size="30" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">308</text>
+<text x="50%" y="112" fill="#c0caf5" font-size="30" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">309</text>
 <text x="0%" y="162" fill="#7f88a8" font-size="14">Code written</text>
 <text x="0%" y="198" fill="#c0caf5" font-size="30" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">3.05 MB</text>
 <text x="50%" y="162" fill="#7f88a8" font-size="14">Public repositories</text>
@@ -26,12 +26,12 @@
 <clipPath id="barw"><rect x="0" y="0" width="100%" height="10" rx="5"/></clipPath>
 <g clip-path="url(#barw)">
 <rect x="0" y="0" width="100%" height="10" fill="#ffffff" fill-opacity="0.08"/>
-<rect x="0.000%" y="0" width="61.036%" height="10" fill="#3572A5"/>
-<rect x="60.736%" y="0" width="19.876%" height="10" fill="#3D6117"/>
-<rect x="80.312%" y="0" width="14.402%" height="10" fill="#e34c26"/>
-<rect x="94.414%" y="0" width="2.023%" height="10" fill="#dad8d8"/>
-<rect x="96.137%" y="0" width="1.829%" height="10" fill="#663399"/>
-<rect x="97.666%" y="0" width="1.796%" height="10" fill="#f1e05a"/>
+<rect x="0.000%" y="0" width="61.042%" height="10" fill="#3572A5"/>
+<rect x="60.742%" y="0" width="19.873%" height="10" fill="#3D6117"/>
+<rect x="80.315%" y="0" width="14.400%" height="10" fill="#e34c26"/>
+<rect x="94.415%" y="0" width="2.023%" height="10" fill="#dad8d8"/>
+<rect x="96.138%" y="0" width="1.829%" height="10" fill="#663399"/>
+<rect x="97.667%" y="0" width="1.796%" height="10" fill="#f1e05a"/>
 </g></svg>
 <svg x="0.0%" y="0" width="50.0%" height="100%">
 <circle cx="25" cy="120" r="5" fill="#3572A5"/>
@@ -67,10 +67,10 @@
 </g>
 <g class="n">
 <g transform="translate(14,0)">
-<text x="0%" y="40" fill="#7f88a8" font-size="12.5">Total commits</text>
-<text x="0%" y="70" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">308</text>
+<text x="0%" y="40" fill="#7f88a8" font-size="12.5">Total contributions</text>
+<text x="0%" y="70" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">408</text>
 <text x="50%" y="40" fill="#7f88a8" font-size="12.5">Contributions in 2026</text>
-<text x="50%" y="70" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">308</text>
+<text x="50%" y="70" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">309</text>
 <text x="0%" y="104" fill="#7f88a8" font-size="12.5">Code written</text>
 <text x="0%" y="134" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">3.05 MB</text>
 <text x="50%" y="104" fill="#7f88a8" font-size="12.5">Public repositories</text>
@@ -81,10 +81,10 @@
 <clipPath id="barn"><rect x="0" y="0" width="100%" height="10" rx="5"/></clipPath>
 <g clip-path="url(#barn)">
 <rect x="0" y="0" width="100%" height="10" fill="#ffffff" fill-opacity="0.08"/>
-<rect x="0.000%" y="0" width="61.036%" height="10" fill="#3572A5"/>
-<rect x="60.736%" y="0" width="19.876%" height="10" fill="#3D6117"/>
-<rect x="80.312%" y="0" width="14.402%" height="10" fill="#e34c26"/>
-<rect x="94.414%" y="0" width="2.023%" height="10" fill="#dad8d8"/>
+<rect x="0.000%" y="0" width="61.042%" height="10" fill="#3572A5"/>
+<rect x="60.742%" y="0" width="19.873%" height="10" fill="#3D6117"/>
+<rect x="80.315%" y="0" width="14.400%" height="10" fill="#e34c26"/>
+<rect x="94.415%" y="0" width="2.023%" height="10" fill="#dad8d8"/>
 </g></svg>
 <svg x="0.0%" y="0" width="50.0%" height="100%">
 <circle cx="19" cy="210" r="5" fill="#3572A5"/>
