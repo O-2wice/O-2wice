@@ -41,11 +41,11 @@ Away from that: a farm, a serious weakness for pickup trucks, the Hilux and the 
 <div align="center">
 
 <!--START_SECTION:featured-->
-<a href="https://o-2wice.github.io/Federated-Learning-Anomaly-Detection/"><img src="metrics/pin-Federated-Learning-Anomaly-Detection.svg" width="100%" alt="Federated-Learning-Anomaly-Detection"/></a>
-<a href="https://o-2wice.github.io/synthetic-object-detection/"><img src="metrics/pin-synthetic-object-detection.svg" width="100%" alt="synthetic-object-detection"/></a>
+<a href="https://o-2wice.github.io/correctness-aware-nl-query-translation-ocel/"><img src="metrics/pin-correctness-aware-nl-query-translation-ocel.svg" width="100%" alt="correctness-aware-nl-query-translation-ocel"/></a>
 <a href="https://o-2wice.github.io/cross-market-credit-risk-transfer/"><img src="metrics/pin-cross-market-credit-risk-transfer.svg" width="100%" alt="cross-market-credit-risk-transfer"/></a>
 <a href="https://o-2wice.github.io/cifar10-image-colorization/"><img src="metrics/pin-cifar10-image-colorization.svg" width="100%" alt="cifar10-image-colorization"/></a>
-<a href="https://o-2wice.github.io/correctness-aware-nl-query-translation-ocel/"><img src="metrics/pin-correctness-aware-nl-query-translation-ocel.svg" width="100%" alt="correctness-aware-nl-query-translation-ocel"/></a>
+<a href="https://o-2wice.github.io/synthetic-object-detection/"><img src="metrics/pin-synthetic-object-detection.svg" width="100%" alt="synthetic-object-detection"/></a>
+<a href="https://o-2wice.github.io/Federated-Learning-Anomaly-Detection/"><img src="metrics/pin-Federated-Learning-Anomaly-Detection.svg" width="100%" alt="Federated-Learning-Anomaly-Detection"/></a>
 <!--END_SECTION:featured-->
 
 </div>
