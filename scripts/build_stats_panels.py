@@ -37,6 +37,10 @@ README = os.environ.get("README_PATH", "README.md")
 # Jupyter dwarf everything else and say nothing about what he actually writes.
 EXCLUDE_LANGS = {s.strip().lower() for s in
                  os.environ.get("EXCLUDE_LANGS", "Jupyter Notebook").split(",") if s.strip()}
+# Repos that are not projects: never featured, never counted in the
+# language totals, even if their Pages site exists or they turn public.
+EXCLUDE_REPOS = {s.strip().lower() for s in
+                 os.environ.get("EXCLUDE_REPOS", "kodi-youtube-app").split(",") if s.strip()}
 
 API = "https://api.github.com/graphql"
 
@@ -373,6 +377,8 @@ def main():
                          graphql(PUBLIC_Q, login=LOGIN)["user"]["repositories"]["nodes"]]
         pins = []
         for name in names:
+            if name.lower() in EXCLUDE_REPOS:
+                continue
             page = pages_url(name)
             if not page:
                 continue
@@ -395,6 +401,8 @@ def main():
     agg = collections.Counter()
     colours = {}
     for repo in user["repositories"]["nodes"]:
+        if repo["name"].lower() in EXCLUDE_REPOS:
+            continue
         for edge in repo["languages"]["edges"]:
             name = edge["node"]["name"]
             if name.lower() in EXCLUDE_LANGS:
