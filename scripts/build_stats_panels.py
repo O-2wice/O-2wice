@@ -40,7 +40,7 @@ EXCLUDE_LANGS = {s.strip().lower() for s in
 # Repos that are not projects: never featured, never counted in the
 # language totals, even if their Pages site exists or they turn public.
 EXCLUDE_REPOS = {s.strip().lower() for s in
-                 os.environ.get("EXCLUDE_REPOS", "kodi-youtube-app").split(",") if s.strip()}
+                 os.environ.get("EXCLUDE_REPOS", "personal-yt-app").split(",") if s.strip()}
 
 API = "https://api.github.com/graphql"
 
