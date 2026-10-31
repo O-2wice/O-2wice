@@ -12,11 +12,11 @@
 <text x="0%" y="76" fill="#7f88a8" font-size="14">This week</text>
 <text x="0%" y="112" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">13h 8m</text>
 <text x="50%" y="76" fill="#7f88a8" font-size="14">Daily average</text>
-<text x="50%" y="112" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">1h 52m</text>
+<text x="50%" y="112" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">2h 11m</text>
 <text x="0%" y="162" fill="#7f88a8" font-size="14">Best day</text>
 <text x="0%" y="198" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">5h 4m</text>
 <text x="50%" y="162" fill="#7f88a8" font-size="14">Tracked in total</text>
-<text x="50%" y="198" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">507h</text>
+<text x="50%" y="198" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">508h</text>
 </g>
 </svg>
 <line x1="50%" y1="30" x2="50%" y2="224" stroke="#ffffff" stroke-opacity="0.08"/>
@@ -44,11 +44,11 @@
 <text x="0%" y="40" fill="#7f88a8" font-size="12.5">This week</text>
 <text x="0%" y="70" fill="#c0caf5" font-size="22" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">13h 8m</text>
 <text x="50%" y="40" fill="#7f88a8" font-size="12.5">Daily average</text>
-<text x="50%" y="70" fill="#c0caf5" font-size="22" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">1h 52m</text>
+<text x="50%" y="70" fill="#c0caf5" font-size="22" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">2h 11m</text>
 <text x="0%" y="104" fill="#7f88a8" font-size="12.5">Best day</text>
 <text x="0%" y="134" fill="#c0caf5" font-size="22" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">5h 4m</text>
 <text x="50%" y="104" fill="#7f88a8" font-size="12.5">Tracked in total</text>
-<text x="50%" y="134" fill="#c0caf5" font-size="22" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">507h</text>
+<text x="50%" y="134" fill="#c0caf5" font-size="22" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">508h</text>
 </g>
 <text x="14" y="166" fill="#7f88a8" font-size="13.5">Time by language</text>
 <text x="14" y="190" fill="#c0caf5" font-size="13">TeX</text>
