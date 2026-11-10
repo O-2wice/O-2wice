@@ -41,6 +41,7 @@ Away from that: a farm, a serious weakness for pickup trucks, the Hilux and the 
 <div align="center">
 
 <!--START_SECTION:featured-->
+<a href="https://o-2wice.github.io/bitcoin-otc-trust-network-science/"><img src="metrics/pin-bitcoin-otc-trust-network-science.svg" width="100%" alt="bitcoin-otc-trust-network-science"/></a>
 <a href="https://o-2wice.github.io/regression-benchmark-and-forecasting/"><img src="metrics/pin-regression-benchmark-and-forecasting.svg" width="100%" alt="regression-benchmark-and-forecasting"/></a>
 <a href="https://o-2wice.github.io/cifar10-image-colorization/"><img src="metrics/pin-cifar10-image-colorization.svg" width="100%" alt="cifar10-image-colorization"/></a>
 <a href="https://o-2wice.github.io/cross-market-credit-risk-transfer/"><img src="metrics/pin-cross-market-credit-risk-transfer.svg" width="100%" alt="cross-market-credit-risk-transfer"/></a>
