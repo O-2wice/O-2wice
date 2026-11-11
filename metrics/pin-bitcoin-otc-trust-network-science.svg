@@ -11,7 +11,8 @@
 <text x="42" y="36" fill="#70a5fd" font-size="15" font-weight="600">bitcoin-otc-trust-network-science</text>
 <g transform="translate(-98,0)"><rect x="100%" y="20" width="78" height="19" rx="9.5" fill="#bb9af7" fill-opacity="0.16"/></g>
 <g transform="translate(-59.0,0)"><text x="100%" y="33.5" fill="#bb9af7" font-size="10.5" text-anchor="middle">Write-up →</text></g>
-<text x="20" y="64" fill="#7f88a8" font-size="12.5">Network Science 2026 project: evolution of trust ratings in Bitcoin OTC</text>
+<text x="20" y="64" fill="#7f88a8" font-size="12.5">Network science study of the Bitcoin OTC web of trust: structure, network models,</text>
+<text x="20" y="82" fill="#7f88a8" font-size="12.5">degree correlations, robustness, and how reputation concentrated from 2010 to 2016.</text>
 <circle cx="25" cy="104" r="5" fill="#DA5B0B"/>
 <text x="37" y="108" fill="#c0caf5" font-size="12">Jupyter Notebook</text>
 </g>
@@ -20,8 +21,9 @@
 <text x="36" y="28" fill="#70a5fd" font-size="14" font-weight="600">bitcoin-otc-trust-network-s…</text>
 <g transform="translate(-92,0)"><rect x="100%" y="12" width="78" height="19" rx="9.5" fill="#bb9af7" fill-opacity="0.16"/></g>
 <g transform="translate(-53.0,0)"><text x="100%" y="25.5" fill="#bb9af7" font-size="10.5" text-anchor="middle">Write-up →</text></g>
-<text x="14" y="56" fill="#7f88a8" font-size="12">Network Science 2026 project: evolution of trust</text>
-<text x="14" y="73" fill="#7f88a8" font-size="12">ratings in Bitcoin OTC</text>
+<text x="14" y="56" fill="#7f88a8" font-size="12">Network science study of the Bitcoin OTC web of</text>
+<text x="14" y="73" fill="#7f88a8" font-size="12">trust: structure, network models, degree correlations,</text>
+<text x="14" y="90" fill="#7f88a8" font-size="12">robustness, and how reputation concentrated from …</text>
 <circle cx="19" cy="108" r="5" fill="#DA5B0B"/>
 <text x="31" y="112" fill="#c0caf5" font-size="12">Jupyter Notebook</text>
 </g>
