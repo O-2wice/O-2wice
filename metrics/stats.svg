@@ -15,8 +15,8 @@
 <text x="50%" y="112" fill="#c0caf5" font-size="30" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">435</text>
 <text x="0%" y="162" fill="#7f88a8" font-size="14">Code written</text>
 <text x="0%" y="198" fill="#c0caf5" font-size="30" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">3.59 MB</text>
-<text x="50%" y="162" fill="#7f88a8" font-size="14">Public repositories</text>
-<text x="50%" y="198" fill="#c0caf5" font-size="30" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">13</text>
+<text x="50%" y="162" fill="#7f88a8" font-size="14">Stars earned</text>
+<text x="50%" y="198" fill="#c0caf5" font-size="30" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">1</text>
 </g>
 </svg>
 <line x1="50%" y1="30" x2="50%" y2="224" stroke="#ffffff" stroke-opacity="0.08"/>
@@ -73,8 +73,8 @@
 <text x="50%" y="70" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">435</text>
 <text x="0%" y="104" fill="#7f88a8" font-size="12.5">Code written</text>
 <text x="0%" y="134" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">3.59 MB</text>
-<text x="50%" y="104" fill="#7f88a8" font-size="12.5">Public repositories</text>
-<text x="50%" y="134" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">13</text>
+<text x="50%" y="104" fill="#7f88a8" font-size="12.5">Stars earned</text>
+<text x="50%" y="134" fill="#c0caf5" font-size="26" font-weight="600" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">1</text>
 </g>
 <text x="14" y="168" fill="#7f88a8" font-size="13.5">Most used languages</text>
 <svg x="14" y="180" height="10" style="width:calc(100% - 28px)">
